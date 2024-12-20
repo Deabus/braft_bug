@@ -1,0 +1,403 @@
+{:stats {:valid? false,
+         :count 1636,
+         :ok-count 0,
+         :fail-count 0,
+         :info-count 1636,
+         :by-f {:read {:valid? false,
+                       :count 638,
+                       :ok-count 0,
+                       :fail-count 0,
+                       :info-count 638},
+                :txn {:valid? false,
+                      :count 406,
+                      :ok-count 0,
+                      :fail-count 0,
+                      :info-count 406},
+                :write {:valid? false,
+                        :count 592,
+                        :ok-count 0,
+                        :fail-count 0,
+                        :info-count 592}}},
+ :clock {:valid? true},
+ :perf {:latency-graph {:valid? true},
+        :rate-graph {:valid? true},
+        :valid? true},
+ :ex {:valid? true},
+ :assert {:valid? false,
+          :count 185,
+          :matches ({:node "n3",
+                     :line "==16192==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==16475==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==16662==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==17338==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==18642==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==18812==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==19025==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==19213==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==19633==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==19999==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==21363==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "==23794==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==24407==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==26730==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==27306==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==29029==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==29807==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==30012==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==30354==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==31033==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==31967==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==32796==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==33203==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==33437==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==36176==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==38018==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==38199==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==39364==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==39841==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==40077==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==39546==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==41170==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==41376==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==41852==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==42291==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==42536==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==42702==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==47283==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==47484==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==47699==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==48278==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==48736==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==50420==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==50695==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n3",
+                     :line "==50887==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n3",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==19388==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==19959==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==20390==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==20679==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==20868==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==21551==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==21874==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==23010==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==23226==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==23412==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==23910==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==24232==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==24712==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==25476==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==25948==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==28063==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==28672==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==29860==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==33385==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==34198==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==34415==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==34764==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==35209==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==37255==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==37649==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==37888==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==38877==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==40501==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==40679==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==42311==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==42499==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==44076==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==44394==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==44575==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==45677==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==46834==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==47117==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==47338==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==48912==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==49873==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==50204==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==50563==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==51832==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==52024==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==52217==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==52804==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==55320==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."}
+                    {:node "n5",
+                     :line "==55530==ERROR: LeakSanitizer: detected memory leaks"}
+                    {:node "n5",
+                     :line "SUMMARY: AddressSanitizer: 184 byte(s) leaked in 3 allocation(s)."})},
+ :workload {:valid? :unknown,
+            :anomaly-types (:empty-transaction-graph),
+            :anomalies {:empty-transaction-graph true},
+            :not #{},
+            :also-not #{}},
+ :valid? false}

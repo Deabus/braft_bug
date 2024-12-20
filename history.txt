@@ -1,0 +1,3988 @@
+3	:invoke	:read	[[:r 9 nil] [:r 9 nil]]
+4	:invoke	:read	[[:r 9 nil]]
+1	:invoke	:txn	[[:w 9 1] [:r 0 nil]]
+2	:invoke	:write	[[:w 9 2]]
+0	:invoke	:read	[[:r 7 nil]]
+:nemesis	:info	:resume	:all
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+3	:info	:read	[[:r 9 nil] [:r 9 nil]]	:timeout
+1	:info	:txn	[[:w 9 1] [:r 0 nil]]	:timeout
+6	:invoke	:read	[[:r 8 nil] [:r 9 nil]]
+8	:invoke	:txn	[[:w 8 1] [:r 9 nil]]
+4	:info	:read	[[:r 9 nil]]	:timeout
+9	:invoke	:read	[[:r 9 nil]]
+:nemesis	:info	:start-partition	:majorities-ring
+:nemesis	:info	:start-partition	[:isolated {"n4" #{"n5" "n1"}, "n3" #{"n2" "n5"}, "n1" #{"n2" "n4"}, "n5" #{"n4" "n3"}, "n2" #{"n1" "n3"}}]
+2	:info	:write	[[:w 9 2]]	:timeout
+7	:invoke	:read	[[:r 9 nil]]
+:nemesis	:info	:pause	nil
+0	:info	:read	[[:r 7 nil]]	:timeout
+5	:invoke	:read	[[:r 7 nil]]
+:nemesis	:info	:pause	{"n1" "", "n4" "", "n3" ""}
+:nemesis	:info	:start	:all
+9	:info	:read	[[:r 9 nil]]	:timeout
+14	:invoke	:read	[[:r 7 nil] [:r 6 nil]]
+6	:info	:read	[[:r 8 nil] [:r 9 nil]]	:timeout
+7	:info	:read	[[:r 9 nil]]	:timeout
+8	:info	:txn	[[:w 8 1] [:r 9 nil]]	:timeout
+13	:invoke	:write	[[:w 6 1]]
+11	:invoke	:write	[[:w 8 2] [:w 7 1]]
+12	:invoke	:read	[[:r 9 nil] [:r 9 nil]]
+5	:info	:read	[[:r 7 nil]]	:timeout
+10	:invoke	:read	[[:r 9 nil] [:r 7 nil]]
+14	:info	:read	[[:r 7 nil] [:r 6 nil]]	:timeout
+19	:invoke	:read	[[:r 9 nil]]
+13	:info	:write	[[:w 6 1]]	:timeout
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-partition	:minority-third
+18	:invoke	:txn	[[:w 8 3] [:r 7 nil]]
+12	:info	:read	[[:r 9 nil] [:r 9 nil]]	:timeout
+:nemesis	:info	:start-partition	[:isolated {"n4" #{"n2" "n5" "n1" "n3"}, "n2" #{"n4"}, "n5" #{"n4"}, "n1" #{"n4"}, "n3" #{"n4"}}]
+11	:info	:write	[[:w 8 2] [:w 7 1]]	:timeout
+16	:invoke	:read	[[:r 9 nil] [:r 8 nil]]
+17	:invoke	:write	[[:w 8 4]]
+:nemesis	:info	:kill	:minority-third
+10	:info	:read	[[:r 9 nil] [:r 7 nil]]	:timeout
+15	:invoke	:read	[[:r 3 nil] [:r 9 nil]]
+19	:info	:read	[[:r 9 nil]]	:timeout
+24	:invoke	:read	[[:r 7 nil]]
+18	:info	:txn	[[:w 8 3] [:r 7 nil]]	:timeout
+23	:invoke	:write	[[:w 9 3] [:w 9 4]]
+17	:info	:write	[[:w 8 4]]	:timeout
+22	:invoke	:read	[[:r 9 nil]]
+16	:info	:read	[[:r 9 nil] [:r 8 nil]]	:timeout
+15	:info	:read	[[:r 3 nil] [:r 9 nil]]	:timeout
+20	:invoke	:write	[[:w 9 5]]
+21	:invoke	:write	[[:w 9 6]]
+:nemesis	:info	:kill	{"n3" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+23	:info	:write	[[:w 9 3] [:w 9 4]]	:timeout
+28	:invoke	:txn	[[:w 5 1] [:r 9 nil]]
+24	:info	:read	[[:r 7 nil]]	:timeout
+29	:invoke	:write	[[:w 8 5]]
+22	:info	:read	[[:r 9 nil]]	:timeout
+21	:info	:write	[[:w 9 6]]	:timeout
+20	:info	:write	[[:w 9 5]]	:timeout
+26	:invoke	:read	[[:r 6 nil]]
+27	:invoke	:write	[[:w 7 2] [:w 8 6]]
+25	:invoke	:read	[[:r 9 nil]]
+:nemesis	:info	:resume	:all
+28	:info	:txn	[[:w 5 1] [:r 9 nil]]	:timeout
+33	:invoke	:read	[[:r 9 nil]]
+29	:info	:write	[[:w 8 5]]	:timeout
+34	:invoke	:write	[[:w 7 3]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+:nemesis	:info	:resume	:all
+26	:info	:read	[[:r 6 nil]]	:timeout
+31	:invoke	:txn	[[:w 8 7] [:r 9 nil]]
+27	:info	:write	[[:w 7 2] [:w 8 6]]	:timeout
+32	:invoke	:read	[[:r 9 nil]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-node	nil
+25	:info	:read	[[:r 9 nil]]	:timeout
+30	:invoke	:read	[[:r 7 nil]]
+33	:info	:read	[[:r 9 nil]]	:timeout
+38	:invoke	:read	[[:r 8 nil]]
+34	:info	:write	[[:w 7 3]]	:timeout
+39	:invoke	:write	[[:w 9 7] [:w 8 8]]
+32	:info	:read	[[:r 9 nil]]	:timeout
+37	:invoke	:write	[[:w 9 8] [:w 5 2]]
+31	:info	:txn	[[:w 8 7] [:r 9 nil]]	:timeout
+36	:invoke	:txn	[[:w 9 9] [:r 9 nil]]
+30	:info	:read	[[:r 7 nil]]	:timeout
+35	:invoke	:write	[[:w 9 10]]
+38	:info	:read	[[:r 8 nil]]	:timeout
+43	:invoke	:write	[[:w 9 11]]
+39	:info	:write	[[:w 9 7] [:w 8 8]]	:timeout
+37	:info	:write	[[:w 9 8] [:w 5 2]]	:timeout
+44	:invoke	:write	[[:w 6 2]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+36	:info	:txn	[[:w 9 9] [:r 9 nil]]	:timeout
+:nemesis	:info	:pause	:minority
+42	:invoke	:read	[[:r 9 nil]]
+41	:invoke	:txn	[[:r 9 nil] [:w 9 12]]
+35	:info	:write	[[:w 9 10]]	:timeout
+40	:invoke	:read	[[:r 9 nil]]
+:nemesis	:info	:pause	{"n3" "", "n2" ""}
+:nemesis	:info	:resume	:all
+43	:info	:write	[[:w 9 11]]	:timeout
+48	:invoke	:txn	[[:w 9 13] [:r 9 nil]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+:nemesis	:info	:resume	:all
+44	:info	:write	[[:w 6 2]]	:timeout
+49	:invoke	:write	[[:w 9 14]]
+42	:info	:read	[[:r 9 nil]]	:timeout
+47	:invoke	:read	[[:r 6 nil] [:r 8 nil]]
+40	:info	:read	[[:r 9 nil]]	:timeout
+41	:info	:txn	[[:r 9 nil] [:w 9 12]]	:timeout
+45	:invoke	:write	[[:w 5 3]]
+46	:invoke	:txn	[[:w 9 15] [:r 9 nil]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+48	:info	:txn	[[:w 9 13] [:r 9 nil]]	:timeout
+53	:invoke	:txn	[[:w 9 16] [:r 9 nil]]
+49	:info	:write	[[:w 9 14]]	:timeout
+54	:invoke	:write	[[:w 9 17]]
+45	:info	:write	[[:w 5 3]]	:timeout
+47	:info	:read	[[:r 6 nil] [:r 8 nil]]	:timeout
+:nemesis	:info	:start	:all
+52	:invoke	:read	[[:r 9 nil]]
+46	:info	:txn	[[:w 9 15] [:r 9 nil]]	:timeout
+51	:invoke	:txn	[[:r 7 nil] [:w 7 4]]
+50	:invoke	:write	[[:w 9 18]]
+53	:info	:txn	[[:w 9 16] [:r 9 nil]]	:timeout
+58	:invoke	:write	[[:w 7 5] [:w 9 19]]
+54	:info	:write	[[:w 9 17]]	:timeout
+59	:invoke	:txn	[[:w 9 20] [:r 8 nil]]
+52	:info	:read	[[:r 9 nil]]	:timeout
+51	:info	:txn	[[:r 7 nil] [:w 7 4]]	:timeout
+57	:invoke	:read	[[:r 7 nil]]
+56	:invoke	:write	[[:w 9 21]]
+50	:info	:write	[[:w 9 18]]	:timeout
+55	:invoke	:txn	[[:r 9 nil] [:w 3 1]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:pause	:all
+58	:info	:write	[[:w 7 5] [:w 9 19]]	:timeout
+63	:invoke	:write	[[:w 9 22]]
+59	:info	:txn	[[:w 9 20] [:r 8 nil]]	:timeout
+64	:invoke	:write	[[:w 9 23] [:w 9 24]]
+:nemesis	:info	:pause	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+:nemesis	:info	:resume	:all
+56	:info	:write	[[:w 9 21]]	:timeout
+55	:info	:txn	[[:r 9 nil] [:w 3 1]]	:timeout
+61	:invoke	:read	[[:r 9 nil] [:r 5 nil]]
+60	:invoke	:write	[[:w 7 6]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start	:all
+57	:info	:read	[[:r 7 nil]]	:timeout
+62	:invoke	:write	[[:w 9 25] [:w 8 9]]
+63	:info	:write	[[:w 9 22]]	:timeout
+68	:invoke	:write	[[:w 9 26]]
+64	:info	:write	[[:w 9 23] [:w 9 24]]	:timeout
+69	:invoke	:read	[[:r 9 nil]]
+61	:info	:read	[[:r 9 nil] [:r 5 nil]]	:timeout
+66	:invoke	:read	[[:r 9 nil]]
+60	:info	:write	[[:w 7 6]]	:timeout
+65	:invoke	:read	[[:r 8 nil]]
+62	:info	:write	[[:w 9 25] [:w 8 9]]	:timeout
+67	:invoke	:read	[[:r 9 nil]]
+68	:info	:write	[[:w 9 26]]	:timeout
+73	:invoke	:read	[[:r 9 nil] [:r 9 nil]]
+69	:info	:read	[[:r 9 nil]]	:timeout
+74	:invoke	:write	[[:w 7 7]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+66	:info	:read	[[:r 9 nil]]	:timeout
+:nemesis	:info	:start	:all
+71	:invoke	:txn	[[:r 8 nil] [:w 8 10]]
+65	:info	:read	[[:r 8 nil]]	:timeout
+70	:invoke	:read	[[:r 8 nil]]
+67	:info	:read	[[:r 9 nil]]	:timeout
+72	:invoke	:txn	[[:w 8 11] [:r 9 nil]]
+73	:info	:read	[[:r 9 nil] [:r 9 nil]]	:timeout
+78	:invoke	:read	[[:r 8 nil] [:r 9 nil]]
+71	:info	:txn	[[:r 8 nil] [:w 8 10]]	:timeout
+76	:invoke	:read	[[:r 9 nil]]
+74	:info	:write	[[:w 7 7]]	:timeout
+79	:invoke	:write	[[:w 8 12]]
+70	:info	:read	[[:r 8 nil]]	:timeout
+75	:invoke	:write	[[:w 9 27] [:w 9 28]]
+78	:info	:read	[[:r 8 nil] [:r 9 nil]]	:timeout
+83	:invoke	:write	[[:w 8 13]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:resume	:all
+76	:info	:read	[[:r 9 nil]]	:timeout
+81	:invoke	:read	[[:r 9 nil] [:r 2 nil]]
+72	:info	:txn	[[:w 8 11] [:r 9 nil]]	:timeout
+77	:invoke	:read	[[:r 9 nil]]
+75	:info	:write	[[:w 9 27] [:w 9 28]]	:timeout
+80	:invoke	:read	[[:r 9 nil]]
+79	:info	:write	[[:w 8 12]]	:timeout
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-node	"n1"
+84	:invoke	:read	[[:r 8 nil] [:r 8 nil]]
+83	:info	:write	[[:w 8 13]]	:timeout
+88	:invoke	:txn	[[:r 9 nil] [:w 9 29]]
+77	:info	:read	[[:r 9 nil]]	:timeout
+82	:invoke	:write	[[:w 9 30]]
+81	:info	:read	[[:r 9 nil] [:r 2 nil]]	:timeout
+86	:invoke	:write	[[:w 9 31]]
+80	:info	:read	[[:r 9 nil]]	:timeout
+85	:invoke	:write	[[:w 9 32] [:w 10 1]]
+84	:info	:read	[[:r 8 nil] [:r 8 nil]]	:timeout
+89	:invoke	:write	[[:w 8 14]]
+88	:info	:txn	[[:r 9 nil] [:w 9 29]]	:timeout
+93	:invoke	:read	[[:r 7 nil]]
+:nemesis	:info	:stop-node	{"n1" ""}
+86	:info	:write	[[:w 9 31]]	:timeout
+91	:invoke	:write	[[:w 8 15]]
+82	:info	:write	[[:w 9 30]]	:timeout
+85	:info	:write	[[:w 9 32] [:w 10 1]]	:timeout
+87	:invoke	:write	[[:w 8 16]]
+90	:invoke	:read	[[:r 8 nil]]
+89	:info	:write	[[:w 8 14]]	:timeout
+94	:invoke	:write	[[:w 10 2]]
+93	:info	:read	[[:r 7 nil]]	:timeout
+98	:invoke	:txn	[[:r 10 nil] [:w 8 17]]
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+:nemesis	:info	:resume	:all
+91	:info	:write	[[:w 8 15]]	:timeout
+96	:invoke	:txn	[[:r 10 nil] [:w 8 18]]
+87	:info	:write	[[:w 8 16]]	:timeout
+92	:invoke	:write	[[:w 10 3] [:w 10 4]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+90	:info	:read	[[:r 8 nil]]	:timeout
+95	:invoke	:read	[[:r 10 nil]]
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+94	:info	:write	[[:w 10 2]]	:timeout
+99	:invoke	:write	[[:w 10 5] [:w 6 3]]
+98	:info	:txn	[[:r 10 nil] [:w 8 17]]	:timeout
+103	:invoke	:txn	[[:r 8 nil] [:w 8 19]]
+:nemesis	:info	:start-partition	:minority-third
+:nemesis	:info	:start-partition	[:isolated {"n5" #{"n2" "n1" "n4" "n3"}, "n2" #{"n5"}, "n1" #{"n5"}, "n4" #{"n5"}, "n3" #{"n5"}}]
+96	:info	:txn	[[:r 10 nil] [:w 8 18]]	:timeout
+101	:invoke	:read	[[:r 7 nil]]
+:nemesis	:info	:resume	:all
+92	:info	:write	[[:w 10 3] [:w 10 4]]	:timeout
+95	:info	:read	[[:r 10 nil]]	:timeout
+97	:invoke	:read	[[:r 10 nil]]
+100	:invoke	:write	[[:w 10 6]]
+99	:info	:write	[[:w 10 5] [:w 6 3]]	:timeout
+104	:invoke	:txn	[[:r 5 nil] [:w 8 20]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start	:all
+103	:info	:txn	[[:r 8 nil] [:w 8 19]]	:timeout
+108	:invoke	:write	[[:w 7 8] [:w 10 7]]
+101	:info	:read	[[:r 7 nil]]	:timeout
+106	:invoke	:write	[[:w 8 21]]
+100	:info	:write	[[:w 10 6]]	:timeout
+105	:invoke	:read	[[:r 8 nil] [:r 8 nil]]
+97	:info	:read	[[:r 10 nil]]	:timeout
+102	:invoke	:read	[[:r 7 nil]]
+104	:info	:txn	[[:r 5 nil] [:w 8 20]]	:timeout
+109	:invoke	:write	[[:w 7 9] [:w 8 22]]
+108	:info	:write	[[:w 7 8] [:w 10 7]]	:timeout
+113	:invoke	:write	[[:w 10 8]]
+105	:info	:read	[[:r 8 nil] [:r 8 nil]]	:timeout
+110	:invoke	:write	[[:w 10 9] [:w 7 10]]
+106	:info	:write	[[:w 8 21]]	:timeout
+111	:invoke	:read	[[:r 7 nil]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:kill	:minority-third
+109	:info	:write	[[:w 7 9] [:w 8 22]]	:timeout
+114	:invoke	:txn	[[:w 10 10] [:r 10 nil]]
+102	:info	:read	[[:r 7 nil]]	:timeout
+107	:invoke	:read	[[:r 8 nil]]
+113	:info	:write	[[:w 10 8]]	:timeout
+118	:invoke	:write	[[:w 10 11]]
+111	:info	:read	[[:r 7 nil]]	:timeout
+116	:invoke	:write	[[:w 10 12]]
+110	:info	:write	[[:w 10 9] [:w 7 10]]	:timeout
+115	:invoke	:read	[[:r 8 nil]]
+114	:info	:txn	[[:w 10 10] [:r 10 nil]]	:timeout
+:nemesis	:info	:kill	{"n1" ""}
+:nemesis	:info	:start-node	nil
+107	:info	:read	[[:r 8 nil]]	:timeout
+112	:invoke	:txn	[[:r 7 nil] [:w 10 13]]
+119	:invoke	:write	[[:w 10 14]]
+118	:info	:write	[[:w 10 11]]	:timeout
+123	:invoke	:write	[[:w 10 15]]
+116	:info	:write	[[:w 10 12]]	:timeout
+121	:invoke	:read	[[:r 7 nil]]
+115	:info	:read	[[:r 8 nil]]	:timeout
+120	:invoke	:write	[[:w 10 16] [:w 6 4]]
+119	:info	:write	[[:w 10 14]]	:timeout
+112	:info	:txn	[[:r 7 nil] [:w 10 13]]	:timeout
+124	:invoke	:read	[[:r 8 nil] [:r 10 nil]]
+117	:invoke	:write	[[:w 1 1]]
+121	:info	:read	[[:r 7 nil]]	:timeout
+123	:info	:write	[[:w 10 15]]	:timeout
+128	:invoke	:write	[[:w 10 17] [:w 10 18]]
+126	:invoke	:txn	[[:r 6 nil] [:w 8 23]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-node	"n3"
+120	:info	:write	[[:w 10 16] [:w 6 4]]	:timeout
+125	:invoke	:read	[[:r 7 nil]]
+117	:info	:write	[[:w 1 1]]	:timeout
+122	:invoke	:txn	[[:w 8 24] [:r 6 nil]]
+124	:info	:read	[[:r 8 nil] [:r 10 nil]]	:timeout
+129	:invoke	:write	[[:w 7 11]]
+128	:info	:write	[[:w 10 17] [:w 10 18]]	:timeout
+133	:invoke	:write	[[:w 10 19]]
+126	:info	:txn	[[:r 6 nil] [:w 8 23]]	:timeout
+131	:invoke	:write	[[:w 6 5]]
+125	:info	:read	[[:r 7 nil]]	:timeout
+130	:invoke	:write	[[:w 10 20]]
+133	:info	:write	[[:w 10 19]]	:timeout
+138	:invoke	:write	[[:w 8 25] [:w 10 21]]
+:nemesis	:info	:stop-node	{"n3" ""}
+:nemesis	:info	:resume	:all
+122	:info	:txn	[[:w 8 24] [:r 6 nil]]	:timeout
+127	:invoke	:read	[[:r 8 nil]]
+131	:info	:write	[[:w 6 5]]	:timeout
+129	:info	:write	[[:w 7 11]]	:timeout
+134	:invoke	:read	[[:r 5 nil] [:r 10 nil]]
+136	:invoke	:write	[[:w 8 26]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" nil}
+:nemesis	:info	:start-node	nil
+138	:info	:write	[[:w 8 25] [:w 10 21]]	:timeout
+143	:invoke	:read	[[:r 10 nil]]
+130	:info	:write	[[:w 10 20]]	:timeout
+127	:info	:read	[[:r 8 nil]]	:timeout
+135	:invoke	:txn	[[:w 10 22] [:r 10 nil]]
+132	:invoke	:txn	[[:r 7 nil] [:w 10 23]]
+136	:info	:write	[[:w 8 26]]	:timeout
+141	:invoke	:read	[[:r 5 nil]]
+134	:info	:read	[[:r 5 nil] [:r 10 nil]]	:timeout
+139	:invoke	:write	[[:w 8 27] [:w 10 24]]
+143	:info	:read	[[:r 10 nil]]	:timeout
+148	:invoke	:write	[[:w 10 25]]
+141	:info	:read	[[:r 5 nil]]	:timeout
+146	:invoke	:read	[[:r 8 nil] [:r 10 nil]]
+135	:info	:txn	[[:w 10 22] [:r 10 nil]]	:timeout
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:kill	:majority
+140	:invoke	:read	[[:r 4 nil] [:r 10 nil]]
+139	:info	:write	[[:w 8 27] [:w 10 24]]	:timeout
+144	:invoke	:txn	[[:w 8 28] [:r 8 nil]]
+132	:info	:txn	[[:r 7 nil] [:w 10 23]]	:timeout
+137	:invoke	:txn	[[:w 10 26] [:r 10 nil]]
+148	:info	:write	[[:w 10 25]]	:timeout
+153	:invoke	:read	[[:r 8 nil] [:r 10 nil]]
+146	:info	:read	[[:r 8 nil] [:r 10 nil]]	:timeout
+151	:invoke	:read	[[:r 8 nil]]
+140	:info	:read	[[:r 4 nil] [:r 10 nil]]	:timeout
+145	:invoke	:txn	[[:w 7 12] [:r 10 nil]]
+137	:info	:txn	[[:w 10 26] [:r 10 nil]]	:timeout
+142	:invoke	:read	[[:r 8 nil]]
+144	:info	:txn	[[:w 8 28] [:r 8 nil]]	:timeout
+149	:invoke	:read	[[:r 10 nil]]
+:nemesis	:info	:kill	{"n4" "", "n5" "", "n1" ""}
+153	:info	:read	[[:r 8 nil] [:r 10 nil]]	:timeout
+158	:invoke	:txn	[[:r 10 nil] [:w 10 27]]
+151	:info	:read	[[:r 8 nil]]	:timeout
+156	:invoke	:read	[[:r 10 nil]]
+:nemesis	:info	:stop-node	"n2"
+145	:info	:txn	[[:w 7 12] [:r 10 nil]]	:timeout
+150	:invoke	:txn	[[:r 8 nil] [:w 8 29]]
+142	:info	:read	[[:r 8 nil]]	:timeout
+147	:invoke	:write	[[:w 10 28]]
+158	:info	:txn	[[:r 10 nil] [:w 10 27]]	:timeout
+163	:invoke	:write	[[:w 10 29]]
+149	:info	:read	[[:r 10 nil]]	:timeout
+154	:invoke	:txn	[[:w 10 30] [:r 10 nil]]
+156	:info	:read	[[:r 10 nil]]	:timeout
+161	:invoke	:read	[[:r 10 nil] [:r 8 nil]]
+150	:info	:txn	[[:r 8 nil] [:w 8 29]]	:timeout
+155	:invoke	:txn	[[:w 10 31] [:r 7 nil]]
+:nemesis	:info	:stop-node	{"n2" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+:nemesis	:info	:start	:all
+147	:info	:write	[[:w 10 28]]	:timeout
+152	:invoke	:read	[[:r 10 nil] [:r 4 nil]]
+154	:info	:txn	[[:w 10 30] [:r 10 nil]]	:timeout
+159	:invoke	:txn	[[:w 8 30] [:r 8 nil]]
+163	:info	:write	[[:w 10 29]]	:timeout
+168	:invoke	:write	[[:w 10 32] [:w 8 31]]
+161	:info	:read	[[:r 10 nil] [:r 8 nil]]	:timeout
+166	:invoke	:write	[[:w 11 1] [:w 8 32]]
+155	:info	:txn	[[:w 10 31] [:r 7 nil]]	:timeout
+160	:invoke	:read	[[:r 6 nil] [:r 11 nil]]
+152	:info	:read	[[:r 10 nil] [:r 4 nil]]	:timeout
+157	:invoke	:read	[[:r 3 nil] [:r 7 nil]]
+168	:info	:write	[[:w 10 32] [:w 8 31]]	:timeout
+173	:invoke	:read	[[:r 6 nil]]
+166	:info	:write	[[:w 11 1] [:w 8 32]]	:timeout
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+159	:info	:txn	[[:w 8 30] [:r 8 nil]]	:timeout
+:nemesis	:info	:start-node	nil
+164	:invoke	:read	[[:r 11 nil]]
+171	:invoke	:write	[[:w 7 13]]
+160	:info	:read	[[:r 6 nil] [:r 11 nil]]	:timeout
+165	:invoke	:read	[[:r 7 nil]]
+157	:info	:read	[[:r 3 nil] [:r 7 nil]]	:timeout
+162	:invoke	:txn	[[:r 12 nil] [:w 11 2]]
+173	:info	:read	[[:r 6 nil]]	:timeout
+178	:invoke	:read	[[:r 12 nil] [:r 5 nil]]
+171	:info	:write	[[:w 7 13]]	:timeout
+176	:invoke	:read	[[:r 5 nil]]
+164	:info	:read	[[:r 11 nil]]	:timeout
+165	:info	:read	[[:r 7 nil]]	:timeout
+169	:invoke	:read	[[:r 11 nil]]
+170	:invoke	:write	[[:w 7 14]]
+162	:info	:txn	[[:r 12 nil] [:w 11 2]]	:timeout
+167	:invoke	:read	[[:r 11 nil] [:r 11 nil]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-node	nil
+178	:info	:read	[[:r 12 nil] [:r 5 nil]]	:timeout
+183	:invoke	:write	[[:w 11 3] [:w 11 4]]
+176	:info	:read	[[:r 5 nil]]	:timeout
+181	:invoke	:write	[[:w 11 5]]
+169	:info	:read	[[:r 11 nil]]	:timeout
+174	:invoke	:write	[[:w 12 1]]
+170	:info	:write	[[:w 7 14]]	:timeout
+175	:invoke	:write	[[:w 11 6] [:w 11 7]]
+167	:info	:read	[[:r 11 nil] [:r 11 nil]]	:timeout
+172	:invoke	:txn	[[:w 7 15] [:r 11 nil]]
+181	:info	:write	[[:w 11 5]]	:timeout
+186	:invoke	:write	[[:w 11 8]]
+183	:info	:write	[[:w 11 3] [:w 11 4]]	:timeout
+174	:info	:write	[[:w 12 1]]	:timeout
+179	:invoke	:txn	[[:r 11 nil] [:w 11 9]]
+188	:invoke	:write	[[:w 6 6]]
+175	:info	:write	[[:w 11 6] [:w 11 7]]	:timeout
+180	:invoke	:write	[[:w 7 16]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-partition	:minority-third
+:nemesis	:info	:start-partition	[:isolated {"n1" #{"n2" "n5" "n4" "n3"}, "n2" #{"n1"}, "n5" #{"n1"}, "n4" #{"n1"}, "n3" #{"n1"}}]
+:nemesis	:info	:start-node	nil
+186	:info	:write	[[:w 11 8]]	:timeout
+191	:invoke	:read	[[:r 6 nil] [:r 11 nil]]
+172	:info	:txn	[[:w 7 15] [:r 11 nil]]	:timeout
+177	:invoke	:write	[[:w 12 2]]
+188	:info	:write	[[:w 6 6]]	:timeout
+193	:invoke	:write	[[:w 11 10] [:w 11 11]]
+179	:info	:txn	[[:r 11 nil] [:w 11 9]]	:timeout
+184	:invoke	:read	[[:r 7 nil]]
+180	:info	:write	[[:w 7 16]]	:timeout
+185	:invoke	:write	[[:w 12 3] [:w 11 12]]
+191	:info	:read	[[:r 6 nil] [:r 11 nil]]	:timeout
+196	:invoke	:write	[[:w 11 13]]
+193	:info	:write	[[:w 11 10] [:w 11 11]]	:timeout
+177	:info	:write	[[:w 12 2]]	:timeout
+198	:invoke	:txn	[[:r 12 nil] [:w 7 17]]
+182	:invoke	:write	[[:w 12 4]]
+184	:info	:read	[[:r 7 nil]]	:timeout
+189	:invoke	:read	[[:r 11 nil]]
+185	:info	:write	[[:w 12 3] [:w 11 12]]	:timeout
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:kill	:minority-third
+190	:invoke	:read	[[:r 7 nil] [:r 12 nil]]
+196	:info	:write	[[:w 11 13]]	:timeout
+201	:invoke	:write	[[:w 12 5]]
+198	:info	:txn	[[:r 12 nil] [:w 7 17]]	:timeout
+203	:invoke	:write	[[:w 3 2]]
+182	:info	:write	[[:w 12 4]]	:timeout
+189	:info	:read	[[:r 11 nil]]	:timeout
+194	:invoke	:read	[[:r 6 nil]]
+187	:invoke	:txn	[[:r 7 nil] [:w 6 7]]
+201	:info	:write	[[:w 12 5]]	:timeout
+206	:invoke	:txn	[[:w 5 4] [:r 7 nil]]
+190	:info	:read	[[:r 7 nil] [:r 12 nil]]	:timeout
+195	:invoke	:read	[[:r 11 nil]]
+:nemesis	:info	:kill	{"n1" ""}
+:nemesis	:info	:pause	:minority
+203	:info	:write	[[:w 3 2]]	:timeout
+208	:invoke	:txn	[[:w 12 6] [:r 11 nil]]
+194	:info	:read	[[:r 6 nil]]	:timeout
+:nemesis	:info	:pause	{"n3" "", "n5" ""}
+:nemesis	:info	:resume	:all
+199	:invoke	:txn	[[:w 11 14] [:r 6 nil]]
+187	:info	:txn	[[:r 7 nil] [:w 6 7]]	:timeout
+192	:invoke	:read	[[:r 12 nil] [:r 11 nil]]
+206	:info	:txn	[[:w 5 4] [:r 7 nil]]	:timeout
+211	:invoke	:write	[[:w 12 7]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-partition	:majorities-ring
+:nemesis	:info	:start-partition	[:isolated {"n2" #{"n1" "n3"}, "n4" #{"n5" "n3"}, "n1" #{"n2" "n5"}, "n3" #{"n2" "n4"}, "n5" #{"n1" "n4"}}]
+195	:info	:read	[[:r 11 nil]]	:timeout
+200	:invoke	:read	[[:r 11 nil]]
+:nemesis	:info	:start-node	nil
+208	:info	:txn	[[:w 12 6] [:r 11 nil]]	:timeout
+213	:invoke	:read	[[:r 11 nil]]
+199	:info	:txn	[[:w 11 14] [:r 6 nil]]	:timeout
+204	:invoke	:read	[[:r 11 nil]]
+192	:info	:read	[[:r 12 nil] [:r 11 nil]]	:timeout
+197	:invoke	:read	[[:r 4 nil]]
+211	:info	:write	[[:w 12 7]]	:timeout
+216	:invoke	:read	[[:r 12 nil]]
+200	:info	:read	[[:r 11 nil]]	:timeout
+205	:invoke	:read	[[:r 12 nil] [:r 11 nil]]
+213	:info	:read	[[:r 11 nil]]	:timeout
+218	:invoke	:txn	[[:r 7 nil] [:w 11 15]]
+204	:info	:read	[[:r 11 nil]]	:timeout
+209	:invoke	:txn	[[:r 12 nil] [:w 12 8]]
+197	:info	:read	[[:r 4 nil]]	:timeout
+202	:invoke	:write	[[:w 7 18] [:w 11 16]]
+216	:info	:read	[[:r 12 nil]]	:timeout
+221	:invoke	:read	[[:r 7 nil]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-node	"n4"
+205	:info	:read	[[:r 12 nil] [:r 11 nil]]	:timeout
+210	:invoke	:read	[[:r 11 nil]]
+218	:info	:txn	[[:r 7 nil] [:w 11 15]]	:timeout
+223	:invoke	:read	[[:r 11 nil]]
+209	:info	:txn	[[:r 12 nil] [:w 12 8]]	:timeout
+214	:invoke	:txn	[[:r 7 nil] [:w 11 17]]
+221	:info	:read	[[:r 7 nil]]	:timeout
+226	:invoke	:txn	[[:w 7 19] [:r 12 nil]]
+202	:info	:write	[[:w 7 18] [:w 11 16]]	:timeout
+207	:invoke	:txn	[[:r 11 nil] [:w 11 18]]
+210	:info	:read	[[:r 11 nil]]	:timeout
+215	:invoke	:write	[[:w 12 9]]
+223	:info	:read	[[:r 11 nil]]	:timeout
+228	:invoke	:txn	[[:w 12 10] [:r 11 nil]]
+:nemesis	:info	:stop-node	{"n4" ""}
+:nemesis	:info	:start-node	nil
+226	:info	:txn	[[:w 7 19] [:r 12 nil]]	:timeout
+231	:invoke	:write	[[:w 11 19]]
+215	:info	:write	[[:w 12 9]]	:timeout
+220	:invoke	:txn	[[:r 11 nil] [:w 11 20]]
+207	:info	:txn	[[:r 11 nil] [:w 11 18]]	:timeout
+212	:invoke	:read	[[:r 7 nil] [:r 11 nil]]
+214	:info	:txn	[[:r 7 nil] [:w 11 17]]	:timeout
+219	:invoke	:txn	[[:r 11 nil] [:w 11 21]]
+228	:info	:txn	[[:w 12 10] [:r 11 nil]]	:timeout
+233	:invoke	:write	[[:w 11 22] [:w 12 11]]
+220	:info	:txn	[[:r 11 nil] [:w 11 20]]	:timeout
+225	:invoke	:txn	[[:r 11 nil] [:w 11 23]]
+231	:info	:write	[[:w 11 19]]	:timeout
+236	:invoke	:txn	[[:w 12 12] [:r 12 nil]]
+212	:info	:read	[[:r 7 nil] [:r 11 nil]]	:timeout
+217	:invoke	:txn	[[:r 11 nil] [:w 11 24]]
+219	:info	:txn	[[:r 11 nil] [:w 11 21]]	:timeout
+224	:invoke	:read	[[:r 5 nil]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+233	:info	:write	[[:w 11 22] [:w 12 11]]	:timeout
+238	:invoke	:read	[[:r 12 nil]]
+225	:info	:txn	[[:r 11 nil] [:w 11 23]]	:timeout
+230	:invoke	:read	[[:r 11 nil]]
+236	:info	:txn	[[:w 12 12] [:r 12 nil]]	:timeout
+241	:invoke	:read	[[:r 11 nil]]
+217	:info	:txn	[[:r 11 nil] [:w 11 24]]	:timeout
+224	:info	:read	[[:r 5 nil]]	:timeout
+229	:invoke	:read	[[:r 12 nil]]
+238	:info	:read	[[:r 12 nil]]	:timeout
+:nemesis	:info	:kill	:majority
+230	:info	:read	[[:r 11 nil]]	:timeout
+243	:invoke	:read	[[:r 11 nil]]
+235	:invoke	:read	[[:r 12 nil] [:r 3 nil]]
+222	:invoke	:write	[[:w 11 25] [:w 11 26]]
+241	:info	:read	[[:r 11 nil]]	:timeout
+246	:invoke	:read	[[:r 11 nil]]
+229	:info	:read	[[:r 12 nil]]	:timeout
+234	:invoke	:read	[[:r 12 nil]]
+243	:info	:read	[[:r 11 nil]]	:timeout
+248	:invoke	:write	[[:w 11 27] [:w 0 1]]
+235	:info	:read	[[:r 12 nil] [:r 3 nil]]	:timeout
+222	:info	:write	[[:w 11 25] [:w 11 26]]	:timeout
+246	:info	:read	[[:r 11 nil]]	:timeout
+240	:invoke	:read	[[:r 7 nil]]
+251	:invoke	:read	[[:r 12 nil]]
+:nemesis	:info	:kill	{"n1" "", "n3" "", "n4" ""}
+:nemesis	:info	:resume	:all
+227	:invoke	:read	[[:r 12 nil] [:r 7 nil]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-node	nil
+234	:info	:read	[[:r 12 nil]]	:timeout
+239	:invoke	:read	[[:r 11 nil]]
+248	:info	:write	[[:w 11 27] [:w 0 1]]	:timeout
+253	:invoke	:txn	[[:w 12 13] [:r 11 nil]]
+240	:info	:read	[[:r 7 nil]]	:timeout
+245	:invoke	:txn	[[:r 7 nil] [:w 6 8]]
+251	:info	:read	[[:r 12 nil]]	:timeout
+256	:invoke	:txn	[[:w 12 14] [:r 6 nil]]
+227	:info	:read	[[:r 12 nil] [:r 7 nil]]	:timeout
+239	:info	:read	[[:r 11 nil]]	:timeout
+244	:invoke	:read	[[:r 11 nil]]
+232	:invoke	:read	[[:r 12 nil]]
+253	:info	:txn	[[:w 12 13] [:r 11 nil]]	:timeout
+258	:invoke	:txn	[[:w 6 9] [:r 11 nil]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-partition	nil
+245	:info	:txn	[[:r 7 nil] [:w 6 8]]	:timeout
+:nemesis	:info	:stop-partition	:network-healed
+250	:invoke	:read	[[:r 11 nil]]
+256	:info	:txn	[[:w 12 14] [:r 6 nil]]	:timeout
+261	:invoke	:read	[[:r 6 nil]]
+:nemesis	:info	:resume	:all
+232	:info	:read	[[:r 12 nil]]	:timeout
+237	:invoke	:write	[[:w 12 15]]
+244	:info	:read	[[:r 11 nil]]	:timeout
+249	:invoke	:write	[[:w 6 10]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-partition	:minority-third
+:nemesis	:info	:start-partition	[:isolated {"n5" #{"n2" "n1" "n4" "n3"}, "n2" #{"n5"}, "n1" #{"n5"}, "n4" #{"n5"}, "n3" #{"n5"}}]
+250	:info	:read	[[:r 11 nil]]	:timeout
+255	:invoke	:write	[[:w 11 28]]
+:nemesis	:info	:stop-node	"n1"
+258	:info	:txn	[[:w 6 9] [:r 11 nil]]	:timeout
+263	:invoke	:write	[[:w 11 29] [:w 11 30]]
+261	:info	:read	[[:r 6 nil]]	:timeout
+266	:invoke	:read	[[:r 11 nil]]
+237	:info	:write	[[:w 12 15]]	:timeout
+242	:invoke	:write	[[:w 12 16]]
+249	:info	:write	[[:w 6 10]]	:timeout
+254	:invoke	:txn	[[:w 11 31] [:r 6 nil]]
+255	:info	:write	[[:w 11 28]]	:timeout
+260	:invoke	:read	[[:r 11 nil]]
+266	:info	:read	[[:r 11 nil]]	:timeout
+263	:info	:write	[[:w 11 29] [:w 11 30]]	:timeout
+268	:invoke	:write	[[:w 11 32] [:w 2 1]]
+271	:invoke	:txn	[[:w 12 17] [:r 3 nil]]
+:nemesis	:info	:stop-node	{"n1" ""}
+:nemesis	:info	:resume	:all
+242	:info	:write	[[:w 12 16]]	:timeout
+247	:invoke	:txn	[[:w 12 18] [:r 12 nil]]
+254	:info	:txn	[[:w 11 31] [:r 6 nil]]	:timeout
+259	:invoke	:read	[[:r 12 nil]]
+260	:info	:read	[[:r 11 nil]]	:timeout
+265	:invoke	:read	[[:r 11 nil]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+:nemesis	:info	:resume	:all
+268	:info	:write	[[:w 11 32] [:w 2 1]]	:timeout
+273	:invoke	:read	[[:r 11 nil]]
+271	:info	:txn	[[:w 12 17] [:r 3 nil]]	:timeout
+276	:invoke	:write	[[:w 6 11] [:w 12 19]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:pause	:minority-third
+247	:info	:txn	[[:w 12 18] [:r 12 nil]]	:timeout
+252	:invoke	:write	[[:w 7 20]]
+259	:info	:read	[[:r 12 nil]]	:timeout
+:nemesis	:info	:pause	{"n3" ""}
+:nemesis	:info	:start-partition	:one
+264	:invoke	:write	[[:w 13 1]]
+:nemesis	:info	:start-partition	[:isolated {"n1" #{"n2" "n5" "n4" "n3"}, "n2" #{"n1"}, "n5" #{"n1"}, "n4" #{"n1"}, "n3" #{"n1"}}]
+265	:info	:read	[[:r 11 nil]]	:timeout
+270	:invoke	:write	[[:w 13 2] [:w 13 3]]
+:nemesis	:info	:stop-node	"n1"
+273	:info	:read	[[:r 11 nil]]	:timeout
+278	:invoke	:write	[[:w 13 4]]
+276	:info	:write	[[:w 6 11] [:w 12 19]]	:timeout
+281	:invoke	:write	[[:w 12 20]]
+252	:info	:write	[[:w 7 20]]	:timeout
+257	:invoke	:write	[[:w 13 5]]
+264	:info	:write	[[:w 13 1]]	:timeout
+270	:info	:write	[[:w 13 2] [:w 13 3]]	:timeout
+269	:invoke	:read	[[:r 6 nil]]
+275	:invoke	:read	[[:r 6 nil] [:r 13 nil]]
+278	:info	:write	[[:w 13 4]]	:timeout
+283	:invoke	:write	[[:w 13 6]]
+281	:info	:write	[[:w 12 20]]	:timeout
+286	:invoke	:txn	[[:r 7 nil] [:w 12 21]]
+257	:info	:write	[[:w 13 5]]	:timeout
+262	:invoke	:write	[[:w 12 22]]
+269	:info	:read	[[:r 6 nil]]	:timeout
+274	:invoke	:txn	[[:r 7 nil] [:w 7 21]]
+:nemesis	:info	:stop-node	{"n1" ""}
+:nemesis	:info	:start	:all
+275	:info	:read	[[:r 6 nil] [:r 13 nil]]	:timeout
+280	:invoke	:write	[[:w 7 22]]
+283	:info	:write	[[:w 13 6]]	:timeout
+288	:invoke	:read	[[:r 12 nil]]
+286	:info	:txn	[[:r 7 nil] [:w 12 21]]	:timeout
+291	:invoke	:write	[[:w 12 23]]
+262	:info	:write	[[:w 12 22]]	:timeout
+267	:invoke	:write	[[:w 12 24] [:w 13 7]]
+280	:info	:write	[[:w 7 22]]	:timeout
+285	:invoke	:write	[[:w 13 8]]
+274	:info	:txn	[[:r 7 nil] [:w 7 21]]	:timeout
+279	:invoke	:read	[[:r 13 nil]]
+288	:info	:read	[[:r 12 nil]]	:timeout
+293	:invoke	:write	[[:w 6 12] [:w 13 9]]
+291	:info	:write	[[:w 12 23]]	:timeout
+296	:invoke	:write	[[:w 12 25]]
+267	:info	:write	[[:w 12 24] [:w 13 7]]	:timeout
+272	:invoke	:read	[[:r 7 nil]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:resume	:all
+279	:info	:read	[[:r 13 nil]]	:timeout
+284	:invoke	:read	[[:r 13 nil]]
+285	:info	:write	[[:w 13 8]]	:timeout
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-partition	:minority-third
+:nemesis	:info	:start-partition	[:isolated {"n3" #{"n2" "n5" "n1" "n4"}, "n2" #{"n3"}, "n5" #{"n3"}, "n1" #{"n3"}, "n4" #{"n3"}}]
+290	:invoke	:txn	[[:w 13 10] [:r 13 nil]]
+:nemesis	:info	:stop-node	"n3"
+296	:info	:write	[[:w 12 25]]	:timeout
+301	:invoke	:read	[[:r 4 nil]]
+293	:info	:write	[[:w 6 12] [:w 13 9]]	:timeout
+298	:invoke	:txn	[[:w 13 11] [:r 13 nil]]
+272	:info	:read	[[:r 7 nil]]	:timeout
+277	:invoke	:txn	[[:w 13 12] [:r 13 nil]]
+284	:info	:read	[[:r 13 nil]]	:timeout
+289	:invoke	:write	[[:w 12 26] [:w 12 27]]
+290	:info	:txn	[[:w 13 10] [:r 13 nil]]	:timeout
+295	:invoke	:read	[[:r 13 nil] [:r 12 nil]]
+301	:info	:read	[[:r 4 nil]]	:timeout
+306	:invoke	:txn	[[:r 2 nil] [:w 13 13]]
+298	:info	:txn	[[:w 13 11] [:r 13 nil]]	:timeout
+303	:invoke	:txn	[[:r 13 nil] [:w 6 13]]
+277	:info	:txn	[[:w 13 12] [:r 13 nil]]	:timeout
+282	:invoke	:read	[[:r 5 nil] [:r 13 nil]]
+289	:info	:write	[[:w 12 26] [:w 12 27]]	:timeout
+294	:invoke	:txn	[[:w 7 23] [:r 4 nil]]
+295	:info	:read	[[:r 13 nil] [:r 12 nil]]	:timeout
+300	:invoke	:write	[[:w 13 14]]
+:nemesis	:info	:stop-node	{"n3" ""}
+:nemesis	:info	:start-node	nil
+306	:info	:txn	[[:r 2 nil] [:w 13 13]]	:timeout
+311	:invoke	:txn	[[:r 12 nil] [:w 7 24]]
+303	:info	:txn	[[:r 13 nil] [:w 6 13]]	:timeout
+308	:invoke	:write	[[:w 13 15]]
+282	:info	:read	[[:r 5 nil] [:r 13 nil]]	:timeout
+287	:invoke	:txn	[[:w 6 14] [:r 7 nil]]
+294	:info	:txn	[[:w 7 23] [:r 4 nil]]	:timeout
+299	:invoke	:txn	[[:r 13 nil] [:w 6 15]]
+311	:info	:txn	[[:r 12 nil] [:w 7 24]]	:timeout
+316	:invoke	:write	[[:w 12 28]]
+300	:info	:write	[[:w 13 14]]	:timeout
+305	:invoke	:txn	[[:r 13 nil] [:w 13 16]]
+308	:info	:write	[[:w 13 15]]	:timeout
+313	:invoke	:read	[[:r 13 nil]]
+287	:info	:txn	[[:w 6 14] [:r 7 nil]]	:timeout
+292	:invoke	:write	[[:w 13 17]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+316	:info	:write	[[:w 12 28]]	:timeout
+321	:invoke	:read	[[:r 13 nil]]
+:nemesis	:info	:start	:all
+299	:info	:txn	[[:r 13 nil] [:w 6 15]]	:timeout
+304	:invoke	:write	[[:w 7 25] [:w 13 18]]
+305	:info	:txn	[[:r 13 nil] [:w 13 16]]	:timeout
+310	:invoke	:txn	[[:r 6 nil] [:w 7 26]]
+313	:info	:read	[[:r 13 nil]]	:timeout
+318	:invoke	:write	[[:w 7 27]]
+292	:info	:write	[[:w 13 17]]	:timeout
+297	:invoke	:write	[[:w 12 29] [:w 6 16]]
+321	:info	:read	[[:r 13 nil]]	:timeout
+326	:invoke	:write	[[:w 13 19]]
+304	:info	:write	[[:w 7 25] [:w 13 18]]	:timeout
+309	:invoke	:read	[[:r 7 nil]]
+310	:info	:txn	[[:r 6 nil] [:w 7 26]]	:timeout
+315	:invoke	:read	[[:r 12 nil]]
+318	:info	:write	[[:w 7 27]]	:timeout
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:kill	:all
+323	:invoke	:write	[[:w 7 28]]
+326	:info	:write	[[:w 13 19]]	:timeout
+331	:invoke	:read	[[:r 12 nil]]
+297	:info	:write	[[:w 12 29] [:w 6 16]]	:timeout
+302	:invoke	:write	[[:w 12 30] [:w 13 20]]
+309	:info	:read	[[:r 7 nil]]	:timeout
+314	:invoke	:read	[[:r 7 nil] [:r 12 nil]]
+315	:info	:read	[[:r 12 nil]]	:timeout
+320	:invoke	:write	[[:w 12 31]]
+323	:info	:write	[[:w 7 28]]	:timeout
+328	:invoke	:txn	[[:w 13 21] [:r 6 nil]]
+331	:info	:read	[[:r 12 nil]]	:timeout
+336	:invoke	:txn	[[:r 12 nil] [:w 13 22]]
+302	:info	:write	[[:w 12 30] [:w 13 20]]	:timeout
+307	:invoke	:txn	[[:w 7 29] [:r 7 nil]]
+314	:info	:read	[[:r 7 nil] [:r 12 nil]]	:timeout
+320	:info	:write	[[:w 12 31]]	:timeout
+325	:invoke	:read	[[:r 13 nil] [:r 7 nil]]
+319	:invoke	:write	[[:w 13 23] [:w 13 24]]
+:nemesis	:info	:kill	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-node	nil
+328	:info	:txn	[[:w 13 21] [:r 6 nil]]	:timeout
+333	:invoke	:write	[[:w 13 25]]
+336	:info	:txn	[[:r 12 nil] [:w 13 22]]	:timeout
+341	:invoke	:txn	[[:w 13 26] [:r 13 nil]]
+307	:info	:txn	[[:w 7 29] [:r 7 nil]]	:timeout
+312	:invoke	:write	[[:w 4 1]]
+325	:info	:read	[[:r 13 nil] [:r 7 nil]]	:timeout
+330	:invoke	:read	[[:r 13 nil]]
+319	:info	:write	[[:w 13 23] [:w 13 24]]	:timeout
+324	:invoke	:write	[[:w 13 27] [:w 12 32]]
+341	:info	:txn	[[:w 13 26] [:r 13 nil]]	:timeout
+346	:invoke	:read	[[:r 13 nil] [:r 13 nil]]
+333	:info	:write	[[:w 13 25]]	:timeout
+338	:invoke	:read	[[:r 13 nil] [:r 13 nil]]
+312	:info	:write	[[:w 4 1]]	:timeout
+317	:invoke	:read	[[:r 13 nil]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:resume	:all
+330	:info	:read	[[:r 13 nil]]	:timeout
+335	:invoke	:txn	[[:r 13 nil] [:w 14 1]]
+324	:info	:write	[[:w 13 27] [:w 12 32]]	:timeout
+329	:invoke	:read	[[:r 6 nil]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-node	"n5"
+346	:info	:read	[[:r 13 nil] [:r 13 nil]]	:timeout
+351	:invoke	:txn	[[:r 14 nil] [:w 14 2]]
+338	:info	:read	[[:r 13 nil] [:r 13 nil]]	:timeout
+317	:info	:read	[[:r 13 nil]]	:timeout
+322	:invoke	:read	[[:r 14 nil]]
+343	:invoke	:write	[[:w 14 3]]
+335	:info	:txn	[[:r 13 nil] [:w 14 1]]	:timeout
+340	:invoke	:read	[[:r 13 nil] [:r 13 nil]]
+329	:info	:read	[[:r 6 nil]]	:timeout
+334	:invoke	:write	[[:w 14 4] [:w 13 28]]
+351	:info	:txn	[[:r 14 nil] [:w 14 2]]	:timeout
+356	:invoke	:read	[[:r 13 nil] [:r 13 nil]]
+322	:info	:read	[[:r 14 nil]]	:timeout
+327	:invoke	:write	[[:w 14 5] [:w 13 29]]
+343	:info	:write	[[:w 14 3]]	:timeout
+348	:invoke	:read	[[:r 13 nil]]
+:nemesis	:info	:stop-node	{"n5" ""}
+:nemesis	:info	:kill	:minority-third
+340	:info	:read	[[:r 13 nil] [:r 13 nil]]	:timeout
+345	:invoke	:txn	[[:w 14 6] [:r 7 nil]]
+334	:info	:write	[[:w 14 4] [:w 13 28]]	:timeout
+339	:invoke	:read	[[:r 13 nil] [:r 13 nil]]
+356	:info	:read	[[:r 13 nil] [:r 13 nil]]	:timeout
+361	:invoke	:write	[[:w 13 30]]
+327	:info	:write	[[:w 14 5] [:w 13 29]]	:timeout
+332	:invoke	:txn	[[:w 6 17] [:r 13 nil]]
+348	:info	:read	[[:r 13 nil]]	:timeout
+353	:invoke	:txn	[[:r 5 nil] [:w 13 31]]
+345	:info	:txn	[[:w 14 6] [:r 7 nil]]	:timeout
+350	:invoke	:write	[[:w 7 30]]
+339	:info	:read	[[:r 13 nil] [:r 13 nil]]	:timeout
+344	:invoke	:read	[[:r 14 nil]]
+361	:info	:write	[[:w 13 30]]	:timeout
+366	:invoke	:read	[[:r 14 nil]]
+:nemesis	:info	:kill	{"n2" ""}
+:nemesis	:info	:kill	:all
+332	:info	:txn	[[:w 6 17] [:r 13 nil]]	:timeout
+337	:invoke	:write	[[:w 14 7]]
+353	:info	:txn	[[:r 5 nil] [:w 13 31]]	:timeout
+358	:invoke	:read	[[:r 13 nil] [:r 13 nil]]
+350	:info	:write	[[:w 7 30]]	:timeout
+355	:invoke	:txn	[[:r 13 nil] [:w 14 8]]
+344	:info	:read	[[:r 14 nil]]	:timeout
+349	:invoke	:write	[[:w 13 32]]
+366	:info	:read	[[:r 14 nil]]	:timeout
+371	:invoke	:read	[[:r 15 nil]]
+358	:info	:read	[[:r 13 nil] [:r 13 nil]]	:timeout
+363	:invoke	:read	[[:r 15 nil]]
+337	:info	:write	[[:w 14 7]]	:timeout
+342	:invoke	:write	[[:w 15 1]]
+355	:info	:txn	[[:r 13 nil] [:w 14 8]]	:timeout
+360	:invoke	:read	[[:r 4 nil] [:r 15 nil]]
+:nemesis	:info	:kill	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:resume	:all
+349	:info	:write	[[:w 13 32]]	:timeout
+354	:invoke	:read	[[:r 14 nil] [:r 15 nil]]
+371	:info	:read	[[:r 15 nil]]	:timeout
+376	:invoke	:read	[[:r 15 nil] [:r 5 nil]]
+363	:info	:read	[[:r 15 nil]]	:timeout
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-partition	:one
+:nemesis	:info	:start-partition	[:isolated {"n1" #{"n2" "n5" "n4" "n3"}, "n2" #{"n1"}, "n5" #{"n1"}, "n4" #{"n1"}, "n3" #{"n1"}}]
+368	:invoke	:write	[[:w 14 9]]
+342	:info	:write	[[:w 15 1]]	:timeout
+:nemesis	:info	:start	:all
+347	:invoke	:write	[[:w 15 2]]
+360	:info	:read	[[:r 4 nil] [:r 15 nil]]	:timeout
+365	:invoke	:txn	[[:r 15 nil] [:w 7 31]]
+354	:info	:read	[[:r 14 nil] [:r 15 nil]]	:timeout
+359	:invoke	:read	[[:r 7 nil]]
+376	:info	:read	[[:r 15 nil] [:r 5 nil]]	:timeout
+381	:invoke	:txn	[[:r 14 nil] [:w 15 3]]
+368	:info	:write	[[:w 14 9]]	:timeout
+373	:invoke	:write	[[:w 7 32]]
+347	:info	:write	[[:w 15 2]]	:timeout
+352	:invoke	:write	[[:w 15 4]]
+365	:info	:txn	[[:r 15 nil] [:w 7 31]]	:timeout
+370	:invoke	:write	[[:w 14 10] [:w 15 5]]
+359	:info	:read	[[:r 7 nil]]	:timeout
+364	:invoke	:read	[[:r 15 nil] [:r 6 nil]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-partition	:majority
+:nemesis	:info	:start-partition	[:isolated {"n4" #{"n2" "n5" "n1"}, "n3" #{"n2" "n5" "n1"}, "n2" #{"n4" "n3"}, "n5" #{"n4" "n3"}, "n1" #{"n4" "n3"}}]
+:nemesis	:info	:pause	:all
+381	:info	:txn	[[:r 14 nil] [:w 15 3]]	:timeout
+386	:invoke	:txn	[[:r 15 nil] [:w 16 1]]
+370	:info	:write	[[:w 14 10] [:w 15 5]]	:timeout
+375	:invoke	:read	[[:r 6 nil] [:r 16 nil]]
+373	:info	:write	[[:w 7 32]]	:timeout
+378	:invoke	:write	[[:w 15 6]]
+352	:info	:write	[[:w 15 4]]	:timeout
+357	:invoke	:read	[[:r 14 nil]]
+:nemesis	:info	:pause	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+:nemesis	:info	:resume	:all
+364	:info	:read	[[:r 15 nil] [:r 6 nil]]	:timeout
+369	:invoke	:write	[[:w 14 11]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-node	"n2"
+386	:info	:txn	[[:r 15 nil] [:w 16 1]]	:timeout
+391	:invoke	:write	[[:w 14 12] [:w 15 7]]
+378	:info	:write	[[:w 15 6]]	:timeout
+383	:invoke	:txn	[[:r 15 nil] [:w 14 13]]
+375	:info	:read	[[:r 6 nil] [:r 16 nil]]	:timeout
+380	:invoke	:write	[[:w 14 14]]
+357	:info	:read	[[:r 14 nil]]	:timeout
+362	:invoke	:write	[[:w 4 2] [:w 15 8]]
+369	:info	:write	[[:w 14 11]]	:timeout
+374	:invoke	:read	[[:r 15 nil] [:r 14 nil]]
+391	:info	:write	[[:w 14 12] [:w 15 7]]	:timeout
+396	:invoke	:txn	[[:r 14 nil] [:w 15 9]]
+383	:info	:txn	[[:r 15 nil] [:w 14 13]]	:timeout
+388	:invoke	:read	[[:r 15 nil] [:r 14 nil]]
+:nemesis	:info	:stop-node	{"n2" ""}
+:nemesis	:info	:resume	:all
+380	:info	:write	[[:w 14 14]]	:timeout
+385	:invoke	:write	[[:w 14 15]]
+362	:info	:write	[[:w 4 2] [:w 15 8]]	:timeout
+374	:info	:read	[[:r 15 nil] [:r 14 nil]]	:timeout
+379	:invoke	:write	[[:w 15 10]]
+396	:info	:txn	[[:r 14 nil] [:w 15 9]]	:timeout
+401	:invoke	:write	[[:w 15 11] [:w 15 12]]
+367	:invoke	:write	[[:w 15 13]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-partition	:majorities-ring
+:nemesis	:info	:start-partition	[:isolated {"n3" #{"n1" "n4"}, "n5" #{"n2" "n1"}, "n4" #{"n2" "n3"}, "n1" #{"n5" "n3"}, "n2" #{"n5" "n4"}}]
+388	:info	:read	[[:r 15 nil] [:r 14 nil]]	:timeout
+393	:invoke	:read	[[:r 15 nil]]
+:nemesis	:info	:resume	:all
+385	:info	:write	[[:w 14 15]]	:timeout
+390	:invoke	:read	[[:r 15 nil]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-node	nil
+401	:info	:write	[[:w 15 11] [:w 15 12]]	:timeout
+406	:invoke	:read	[[:r 15 nil]]
+379	:info	:write	[[:w 15 10]]	:timeout
+384	:invoke	:write	[[:w 14 16]]
+367	:info	:write	[[:w 15 13]]	:timeout
+372	:invoke	:read	[[:r 15 nil]]
+393	:info	:read	[[:r 15 nil]]	:timeout
+398	:invoke	:read	[[:r 5 nil] [:r 16 nil]]
+390	:info	:read	[[:r 15 nil]]	:timeout
+395	:invoke	:txn	[[:w 5 5] [:r 6 nil]]
+406	:info	:read	[[:r 15 nil]]	:timeout
+411	:invoke	:write	[[:w 16 2]]
+384	:info	:write	[[:w 14 16]]	:timeout
+389	:invoke	:write	[[:w 16 3]]
+372	:info	:read	[[:r 15 nil]]	:timeout
+377	:invoke	:write	[[:w 15 14]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-node	"n4"
+398	:info	:read	[[:r 5 nil] [:r 16 nil]]	:timeout
+403	:invoke	:read	[[:r 14 nil]]
+395	:info	:txn	[[:w 5 5] [:r 6 nil]]	:timeout
+400	:invoke	:txn	[[:r 14 nil] [:w 16 4]]
+411	:info	:write	[[:w 16 2]]	:timeout
+416	:invoke	:txn	[[:w 15 15] [:r 15 nil]]
+389	:info	:write	[[:w 16 3]]	:timeout
+394	:invoke	:write	[[:w 6 18]]
+377	:info	:write	[[:w 15 14]]	:timeout
+382	:invoke	:write	[[:w 5 6] [:w 15 16]]
+403	:info	:read	[[:r 14 nil]]	:timeout
+408	:invoke	:write	[[:w 3 3] [:w 15 17]]
+400	:info	:txn	[[:r 14 nil] [:w 16 4]]	:timeout
+405	:invoke	:read	[[:r 16 nil]]
+:nemesis	:info	:stop-node	{"n4" ""}
+:nemesis	:info	:pause	:all
+416	:info	:txn	[[:w 15 15] [:r 15 nil]]	:timeout
+421	:invoke	:write	[[:w 15 18] [:w 14 17]]
+394	:info	:write	[[:w 6 18]]	:timeout
+399	:invoke	:read	[[:r 15 nil] [:r 15 nil]]
+:nemesis	:info	:pause	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-partition	:majority
+:nemesis	:info	:start-partition	[:isolated {"n5" #{"n2" "n1" "n3"}, "n4" #{"n2" "n1" "n3"}, "n2" #{"n5" "n4"}, "n1" #{"n5" "n4"}, "n3" #{"n5" "n4"}}]
+408	:info	:write	[[:w 3 3] [:w 15 17]]	:timeout
+413	:invoke	:write	[[:w 15 19] [:w 15 20]]
+:nemesis	:info	:resume	:all
+382	:info	:write	[[:w 5 6] [:w 15 16]]	:timeout
+387	:invoke	:read	[[:r 15 nil]]
+405	:info	:read	[[:r 16 nil]]	:timeout
+410	:invoke	:read	[[:r 15 nil]]
+421	:info	:write	[[:w 15 18] [:w 14 17]]	:timeout
+426	:invoke	:read	[[:r 15 nil]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:pause	:minority-third
+399	:info	:read	[[:r 15 nil] [:r 15 nil]]	:timeout
+404	:invoke	:write	[[:w 6 19] [:w 6 20]]
+:nemesis	:info	:pause	{"n2" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+:nemesis	:info	:resume	:all
+413	:info	:write	[[:w 15 19] [:w 15 20]]	:timeout
+418	:invoke	:txn	[[:r 16 nil] [:w 15 21]]
+387	:info	:read	[[:r 15 nil]]	:timeout
+392	:invoke	:read	[[:r 14 nil]]
+426	:info	:read	[[:r 15 nil]]	:timeout
+431	:invoke	:write	[[:w 15 22] [:w 15 23]]
+410	:info	:read	[[:r 15 nil]]	:timeout
+415	:invoke	:write	[[:w 14 18]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-partition	:majorities-ring
+:nemesis	:info	:start-partition	[:isolated {"n2" #{"n4" "n3"}, "n1" #{"n5" "n4"}, "n3" #{"n2" "n5"}, "n4" #{"n2" "n1"}, "n5" #{"n1" "n3"}}]
+404	:info	:write	[[:w 6 19] [:w 6 20]]	:timeout
+409	:invoke	:txn	[[:w 15 24] [:r 15 nil]]
+:nemesis	:info	:resume	:all
+418	:info	:txn	[[:r 16 nil] [:w 15 21]]	:timeout
+423	:invoke	:txn	[[:w 15 25] [:r 6 nil]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+:nemesis	:info	:start-node	nil
+392	:info	:read	[[:r 14 nil]]	:timeout
+397	:invoke	:txn	[[:r 15 nil] [:w 15 26]]
+431	:info	:write	[[:w 15 22] [:w 15 23]]	:timeout
+436	:invoke	:write	[[:w 15 27]]
+415	:info	:write	[[:w 14 18]]	:timeout
+420	:invoke	:write	[[:w 15 28]]
+409	:info	:txn	[[:w 15 24] [:r 15 nil]]	:timeout
+414	:invoke	:write	[[:w 14 19]]
+423	:info	:txn	[[:w 15 25] [:r 6 nil]]	:timeout
+428	:invoke	:txn	[[:r 14 nil] [:w 15 29]]
+397	:info	:txn	[[:r 15 nil] [:w 15 26]]	:timeout
+436	:info	:write	[[:w 15 27]]	:timeout
+441	:invoke	:write	[[:w 15 30]]
+420	:info	:write	[[:w 15 28]]	:timeout
+414	:info	:write	[[:w 14 19]]	:timeout
+419	:invoke	:write	[[:w 15 31]]
+425	:invoke	:read	[[:r 15 nil]]
+402	:invoke	:write	[[:w 14 20]]
+428	:info	:txn	[[:r 14 nil] [:w 15 29]]	:timeout
+433	:invoke	:txn	[[:r 14 nil] [:w 14 21]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-node	nil
+441	:info	:write	[[:w 15 30]]	:timeout
+446	:invoke	:read	[[:r 15 nil] [:r 15 nil]]
+402	:info	:write	[[:w 14 20]]	:timeout
+407	:invoke	:txn	[[:w 15 32] [:r 15 nil]]
+425	:info	:read	[[:r 15 nil]]	:timeout
+419	:info	:write	[[:w 15 31]]	:timeout
+430	:invoke	:read	[[:r 15 nil] [:r 16 nil]]
+424	:invoke	:write	[[:w 17 1] [:w 5 7]]
+433	:info	:txn	[[:r 14 nil] [:w 14 21]]	:timeout
+438	:invoke	:txn	[[:w 16 5] [:r 17 nil]]
+446	:info	:read	[[:r 15 nil] [:r 15 nil]]	:timeout
+451	:invoke	:txn	[[:r 17 nil] [:w 6 21]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:kill	:minority
+430	:info	:read	[[:r 15 nil] [:r 16 nil]]	:timeout
+435	:invoke	:write	[[:w 17 2] [:w 16 6]]
+424	:info	:write	[[:w 17 1] [:w 5 7]]	:timeout
+407	:info	:txn	[[:w 15 32] [:r 15 nil]]	:timeout
+438	:info	:txn	[[:w 16 5] [:r 17 nil]]	:timeout
+412	:invoke	:txn	[[:w 17 3] [:r 17 nil]]
+443	:invoke	:write	[[:w 14 22] [:w 14 23]]
+429	:invoke	:write	[[:w 17 4]]
+451	:info	:txn	[[:r 17 nil] [:w 6 21]]	:timeout
+456	:invoke	:txn	[[:w 14 24] [:r 17 nil]]
+435	:info	:write	[[:w 17 2] [:w 16 6]]	:timeout
+440	:invoke	:txn	[[:w 17 5] [:r 14 nil]]
+443	:info	:write	[[:w 14 22] [:w 14 23]]	:timeout
+448	:invoke	:write	[[:w 17 6] [:w 17 7]]
+412	:info	:txn	[[:w 17 3] [:r 17 nil]]	:timeout
+417	:invoke	:txn	[[:r 14 nil] [:w 17 8]]
+429	:info	:write	[[:w 17 4]]	:timeout
+456	:info	:txn	[[:w 14 24] [:r 17 nil]]	:timeout
+434	:invoke	:read	[[:r 16 nil] [:r 17 nil]]
+461	:invoke	:txn	[[:r 14 nil] [:w 17 9]]
+440	:info	:txn	[[:w 17 5] [:r 14 nil]]	:timeout
+:nemesis	:info	:kill	{"n5" "", "n3" ""}
+:nemesis	:info	:pause	:minority
+445	:invoke	:txn	[[:r 14 nil] [:w 14 25]]
+:nemesis	:info	:pause	{"n2" "", "n4" ""}
+:nemesis	:info	:start-node	nil
+448	:info	:write	[[:w 17 6] [:w 17 7]]	:timeout
+453	:invoke	:write	[[:w 17 10]]
+417	:info	:txn	[[:r 14 nil] [:w 17 8]]	:timeout
+422	:invoke	:write	[[:w 17 11]]
+461	:info	:txn	[[:r 14 nil] [:w 17 9]]	:timeout
+434	:info	:read	[[:r 16 nil] [:r 17 nil]]	:timeout
+466	:invoke	:txn	[[:r 17 nil] [:w 17 12]]
+439	:invoke	:write	[[:w 17 13] [:w 14 26]]
+445	:info	:txn	[[:r 14 nil] [:w 14 25]]	:timeout
+450	:invoke	:write	[[:w 3 4]]
+453	:info	:write	[[:w 17 10]]	:timeout
+458	:invoke	:read	[[:r 16 nil]]
+422	:info	:write	[[:w 17 11]]	:timeout
+427	:invoke	:txn	[[:r 17 nil] [:w 17 14]]
+439	:info	:write	[[:w 17 13] [:w 14 26]]	:timeout
+444	:invoke	:txn	[[:w 6 22] [:r 17 nil]]
+466	:info	:txn	[[:r 17 nil] [:w 17 12]]	:timeout
+471	:invoke	:write	[[:w 14 27]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:kill	:minority-third
+450	:info	:write	[[:w 3 4]]	:timeout
+455	:invoke	:txn	[[:r 17 nil] [:w 17 15]]
+458	:info	:read	[[:r 16 nil]]	:timeout
+463	:invoke	:read	[[:r 16 nil]]
+427	:info	:txn	[[:r 17 nil] [:w 17 14]]	:timeout
+432	:invoke	:read	[[:r 14 nil] [:r 17 nil]]
+444	:info	:txn	[[:w 6 22] [:r 17 nil]]	:timeout
+471	:info	:write	[[:w 14 27]]	:timeout
+449	:invoke	:txn	[[:r 14 nil] [:w 17 16]]
+476	:invoke	:read	[[:r 17 nil] [:r 16 nil]]
+463	:info	:read	[[:r 16 nil]]	:timeout
+468	:invoke	:read	[[:r 16 nil] [:r 3 nil]]
+455	:info	:txn	[[:r 17 nil] [:w 17 15]]	:timeout
+460	:invoke	:txn	[[:w 17 17] [:r 16 nil]]
+:nemesis	:info	:kill	{"n1" ""}
+:nemesis	:info	:stop-node	"n2"
+432	:info	:read	[[:r 14 nil] [:r 17 nil]]	:timeout
+437	:invoke	:write	[[:w 5 8]]
+449	:info	:txn	[[:r 14 nil] [:w 17 16]]	:timeout
+476	:info	:read	[[:r 17 nil] [:r 16 nil]]	:timeout
+454	:invoke	:txn	[[:r 17 nil] [:w 4 3]]
+481	:invoke	:write	[[:w 17 18]]
+468	:info	:read	[[:r 16 nil] [:r 3 nil]]	:timeout
+473	:invoke	:write	[[:w 6 23]]
+460	:info	:txn	[[:w 17 17] [:r 16 nil]]	:timeout
+465	:invoke	:write	[[:w 17 19] [:w 17 20]]
+437	:info	:write	[[:w 5 8]]	:timeout
+442	:invoke	:txn	[[:r 17 nil] [:w 17 21]]
+454	:info	:txn	[[:r 17 nil] [:w 4 3]]	:timeout
+481	:info	:write	[[:w 17 18]]	:timeout
+459	:invoke	:txn	[[:w 17 22] [:r 17 nil]]
+486	:invoke	:read	[[:r 17 nil]]
+:nemesis	:info	:stop-node	{"n2" ""}
+:nemesis	:info	:start	:all
+473	:info	:write	[[:w 6 23]]	:timeout
+478	:invoke	:write	[[:w 17 23]]
+465	:info	:write	[[:w 17 19] [:w 17 20]]	:timeout
+470	:invoke	:write	[[:w 14 28] [:w 17 24]]
+442	:info	:txn	[[:r 17 nil] [:w 17 21]]	:timeout
+447	:invoke	:read	[[:r 17 nil]]
+459	:info	:txn	[[:w 17 22] [:r 17 nil]]	:timeout
+486	:info	:read	[[:r 17 nil]]	:timeout
+464	:invoke	:read	[[:r 17 nil]]
+491	:invoke	:txn	[[:w 17 25] [:r 16 nil]]
+478	:info	:write	[[:w 17 23]]	:timeout
+483	:invoke	:write	[[:w 16 7] [:w 17 26]]
+470	:info	:write	[[:w 14 28] [:w 17 24]]	:timeout
+475	:invoke	:txn	[[:r 16 nil] [:w 14 29]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-partition	:majority
+:nemesis	:info	:start-partition	[:isolated {"n2" #{"n1" "n4" "n3"}, "n5" #{"n1" "n4" "n3"}, "n1" #{"n2" "n5"}, "n4" #{"n2" "n5"}, "n3" #{"n2" "n5"}}]
+464	:info	:read	[[:r 17 nil]]	:timeout
+469	:invoke	:write	[[:w 17 27]]
+:nemesis	:info	:kill	:one
+491	:info	:txn	[[:w 17 25] [:r 16 nil]]	:timeout
+496	:invoke	:txn	[[:w 17 28] [:r 17 nil]]
+447	:info	:read	[[:r 17 nil]]	:timeout
+452	:invoke	:read	[[:r 17 nil]]
+483	:info	:write	[[:w 16 7] [:w 17 26]]	:timeout
+488	:invoke	:write	[[:w 14 30]]
+475	:info	:txn	[[:r 16 nil] [:w 14 29]]	:timeout
+480	:invoke	:read	[[:r 17 nil] [:r 17 nil]]
+469	:info	:write	[[:w 17 27]]	:timeout
+474	:invoke	:write	[[:w 17 29]]
+496	:info	:txn	[[:w 17 28] [:r 17 nil]]	:timeout
+501	:invoke	:txn	[[:r 17 nil] [:w 16 8]]
+452	:info	:read	[[:r 17 nil]]	:timeout
+457	:invoke	:read	[[:r 17 nil]]
+480	:info	:read	[[:r 17 nil] [:r 17 nil]]	:timeout
+485	:invoke	:read	[[:r 17 nil]]
+488	:info	:write	[[:w 14 30]]	:timeout
+493	:invoke	:txn	[[:r 17 nil] [:w 14 31]]
+:nemesis	:info	:kill	{"n3" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+474	:info	:write	[[:w 17 29]]	:timeout
+479	:invoke	:read	[[:r 17 nil]]
+:nemesis	:info	:pause	:minority
+501	:info	:txn	[[:r 17 nil] [:w 16 8]]	:timeout
+506	:invoke	:write	[[:w 6 24] [:w 14 32]]
+457	:info	:read	[[:r 17 nil]]	:timeout
+462	:invoke	:read	[[:r 17 nil]]
+:nemesis	:info	:pause	{"n4" "", "n3" ""}
+:nemesis	:info	:kill	:minority-third
+485	:info	:read	[[:r 17 nil]]	:timeout
+493	:info	:txn	[[:r 17 nil] [:w 14 31]]	:timeout
+490	:invoke	:read	[[:r 1 nil] [:r 17 nil]]
+498	:invoke	:read	[[:r 17 nil] [:r 17 nil]]
+479	:info	:read	[[:r 17 nil]]	:timeout
+484	:invoke	:write	[[:w 17 30]]
+506	:info	:write	[[:w 6 24] [:w 14 32]]	:timeout
+511	:invoke	:read	[[:r 14 nil]]
+462	:info	:read	[[:r 17 nil]]	:timeout
+467	:invoke	:read	[[:r 14 nil]]
+490	:info	:read	[[:r 1 nil] [:r 17 nil]]	:timeout
+495	:invoke	:read	[[:r 6 nil]]
+498	:info	:read	[[:r 17 nil] [:r 17 nil]]	:timeout
+503	:invoke	:read	[[:r 6 nil] [:r 17 nil]]
+:nemesis	:info	:kill	{"n2" ""}
+:nemesis	:info	:start-node	nil
+484	:info	:write	[[:w 17 30]]	:timeout
+489	:invoke	:txn	[[:w 16 9] [:r 18 nil]]
+467	:info	:read	[[:r 14 nil]]	:timeout
+511	:info	:read	[[:r 14 nil]]	:timeout
+472	:invoke	:read	[[:r 17 nil]]
+516	:invoke	:write	[[:w 18 1] [:w 17 31]]
+503	:info	:read	[[:r 6 nil] [:r 17 nil]]	:timeout
+508	:invoke	:txn	[[:w 16 10] [:r 17 nil]]
+495	:info	:read	[[:r 6 nil]]	:timeout
+500	:invoke	:read	[[:r 17 nil]]
+489	:info	:txn	[[:w 16 9] [:r 18 nil]]	:timeout
+494	:invoke	:read	[[:r 17 nil]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+472	:info	:read	[[:r 17 nil]]	:timeout
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+477	:invoke	:txn	[[:w 16 11] [:r 17 nil]]
+508	:info	:txn	[[:w 16 10] [:r 17 nil]]	:timeout
+516	:info	:write	[[:w 18 1] [:w 17 31]]	:timeout
+513	:invoke	:read	[[:r 17 nil]]
+500	:info	:read	[[:r 17 nil]]	:timeout
+505	:invoke	:read	[[:r 18 nil]]
+:nemesis	:info	:stop-node	"n5"
+521	:invoke	:read	[[:r 18 nil] [:r 17 nil]]
+494	:info	:read	[[:r 17 nil]]	:timeout
+499	:invoke	:txn	[[:r 18 nil] [:w 18 2]]
+477	:info	:txn	[[:w 16 11] [:r 17 nil]]	:timeout
+482	:invoke	:read	[[:r 16 nil]]
+513	:info	:read	[[:r 17 nil]]	:timeout
+518	:invoke	:read	[[:r 16 nil] [:r 17 nil]]
+505	:info	:read	[[:r 18 nil]]	:timeout
+510	:invoke	:write	[[:w 17 32] [:w 16 12]]
+521	:info	:read	[[:r 18 nil] [:r 17 nil]]	:timeout
+526	:invoke	:txn	[[:r 17 nil] [:w 16 13]]
+499	:info	:txn	[[:r 18 nil] [:w 18 2]]	:timeout
+504	:invoke	:txn	[[:r 17 nil] [:w 18 3]]
+482	:info	:read	[[:r 16 nil]]	:timeout
+518	:info	:read	[[:r 16 nil] [:r 17 nil]]	:timeout
+487	:invoke	:txn	[[:w 18 4] [:r 17 nil]]
+523	:invoke	:txn	[[:w 18 5] [:r 17 nil]]
+510	:info	:write	[[:w 17 32] [:w 16 12]]	:timeout
+:nemesis	:info	:stop-node	{"n5" ""}
+:nemesis	:info	:start-partition	:one
+:nemesis	:info	:start-partition	[:isolated {"n4" #{"n2" "n5" "n1" "n3"}, "n2" #{"n4"}, "n5" #{"n4"}, "n1" #{"n4"}, "n3" #{"n4"}}]
+515	:invoke	:txn	[[:w 18 6] [:r 18 nil]]
+526	:info	:txn	[[:r 17 nil] [:w 16 13]]	:timeout
+531	:invoke	:write	[[:w 18 7]]
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+504	:info	:txn	[[:r 17 nil] [:w 18 3]]	:timeout
+509	:invoke	:read	[[:r 17 nil] [:r 17 nil]]
+487	:info	:txn	[[:w 18 4] [:r 17 nil]]	:timeout
+492	:invoke	:read	[[:r 17 nil]]
+:nemesis	:info	:start-node	nil
+523	:info	:txn	[[:w 18 5] [:r 17 nil]]	:timeout
+528	:invoke	:txn	[[:w 4 4] [:r 18 nil]]
+515	:info	:txn	[[:w 18 6] [:r 18 nil]]	:timeout
+520	:invoke	:read	[[:r 18 nil] [:r 18 nil]]
+531	:info	:write	[[:w 18 7]]	:timeout
+536	:invoke	:write	[[:w 19 1]]
+509	:info	:read	[[:r 17 nil] [:r 17 nil]]	:timeout
+514	:invoke	:read	[[:r 4 nil]]
+492	:info	:read	[[:r 17 nil]]	:timeout
+497	:invoke	:read	[[:r 19 nil]]
+528	:info	:txn	[[:w 4 4] [:r 18 nil]]	:timeout
+533	:invoke	:read	[[:r 6 nil] [:r 16 nil]]
+520	:info	:read	[[:r 18 nil] [:r 18 nil]]	:timeout
+525	:invoke	:read	[[:r 16 nil]]
+514	:info	:read	[[:r 4 nil]]	:timeout
+519	:invoke	:read	[[:r 18 nil]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:kill	:minority
+536	:info	:write	[[:w 19 1]]	:timeout
+541	:invoke	:write	[[:w 5 9]]
+497	:info	:read	[[:r 19 nil]]	:timeout
+502	:invoke	:write	[[:w 6 25]]
+533	:info	:read	[[:r 6 nil] [:r 16 nil]]	:timeout
+538	:invoke	:write	[[:w 19 2] [:w 18 8]]
+525	:info	:read	[[:r 16 nil]]	:timeout
+530	:invoke	:write	[[:w 18 9] [:w 18 10]]
+541	:info	:write	[[:w 5 9]]	:timeout
+546	:invoke	:read	[[:r 19 nil]]
+519	:info	:read	[[:r 18 nil]]	:timeout
+524	:invoke	:txn	[[:w 19 3] [:r 16 nil]]
+502	:info	:write	[[:w 6 25]]	:timeout
+507	:invoke	:write	[[:w 18 11] [:w 19 4]]
+538	:info	:write	[[:w 19 2] [:w 18 8]]	:timeout
+543	:invoke	:read	[[:r 18 nil]]
+:nemesis	:info	:kill	{"n1" "", "n5" ""}
+:nemesis	:info	:pause	:one
+530	:info	:write	[[:w 18 9] [:w 18 10]]	:timeout
+535	:invoke	:txn	[[:w 6 26] [:r 19 nil]]
+:nemesis	:info	:pause	{"n1" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+546	:info	:read	[[:r 19 nil]]	:timeout
+551	:invoke	:read	[[:r 18 nil]]
+524	:info	:txn	[[:w 19 3] [:r 16 nil]]	:timeout
+529	:invoke	:write	[[:w 18 12] [:w 19 5]]
+543	:info	:read	[[:r 18 nil]]	:timeout
+548	:invoke	:write	[[:w 19 6] [:w 16 14]]
+507	:info	:write	[[:w 18 11] [:w 19 4]]	:timeout
+512	:invoke	:read	[[:r 18 nil] [:r 18 nil]]
+:nemesis	:info	:kill	:minority-third
+535	:info	:txn	[[:w 6 26] [:r 19 nil]]	:timeout
+540	:invoke	:write	[[:w 19 7]]
+551	:info	:read	[[:r 18 nil]]	:timeout
+556	:invoke	:write	[[:w 19 8]]
+529	:info	:write	[[:w 18 12] [:w 19 5]]	:timeout
+534	:invoke	:write	[[:w 19 9]]
+548	:info	:write	[[:w 19 6] [:w 16 14]]	:timeout
+553	:invoke	:write	[[:w 19 10]]
+512	:info	:read	[[:r 18 nil] [:r 18 nil]]	:timeout
+517	:invoke	:write	[[:w 19 11] [:w 18 13]]
+540	:info	:write	[[:w 19 7]]	:timeout
+545	:invoke	:read	[[:r 18 nil] [:r 19 nil]]
+556	:info	:write	[[:w 19 8]]	:timeout
+561	:invoke	:read	[[:r 18 nil]]
+534	:info	:write	[[:w 19 9]]	:timeout
+539	:invoke	:read	[[:r 16 nil] [:r 19 nil]]
+:nemesis	:info	:kill	{"n5" ""}
+:nemesis	:info	:start-node	nil
+553	:info	:write	[[:w 19 10]]	:timeout
+558	:invoke	:write	[[:w 2 2]]
+517	:info	:write	[[:w 19 11] [:w 18 13]]	:timeout
+522	:invoke	:write	[[:w 19 12] [:w 2 3]]
+545	:info	:read	[[:r 18 nil] [:r 19 nil]]	:timeout
+550	:invoke	:read	[[:r 19 nil]]
+539	:info	:read	[[:r 16 nil] [:r 19 nil]]	:timeout
+544	:invoke	:txn	[[:r 19 nil] [:w 6 27]]
+561	:info	:read	[[:r 18 nil]]	:timeout
+566	:invoke	:write	[[:w 6 28]]
+558	:info	:write	[[:w 2 2]]	:timeout
+563	:invoke	:read	[[:r 18 nil]]
+522	:info	:write	[[:w 19 12] [:w 2 3]]	:timeout
+550	:info	:read	[[:r 19 nil]]	:timeout
+527	:invoke	:txn	[[:w 19 13] [:r 19 nil]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-node	nil
+555	:invoke	:read	[[:r 19 nil]]
+544	:info	:txn	[[:r 19 nil] [:w 6 27]]	:timeout
+549	:invoke	:read	[[:r 19 nil] [:r 19 nil]]
+566	:info	:write	[[:w 6 28]]	:timeout
+571	:invoke	:read	[[:r 16 nil]]
+527	:info	:txn	[[:w 19 13] [:r 19 nil]]	:timeout
+532	:invoke	:txn	[[:w 19 14] [:r 19 nil]]
+563	:info	:read	[[:r 18 nil]]	:timeout
+568	:invoke	:write	[[:w 19 15]]
+555	:info	:read	[[:r 19 nil]]	:timeout
+560	:invoke	:write	[[:w 18 14]]
+549	:info	:read	[[:r 19 nil] [:r 19 nil]]	:timeout
+554	:invoke	:read	[[:r 18 nil] [:r 18 nil]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+532	:info	:txn	[[:w 19 14] [:r 19 nil]]	:timeout
+571	:info	:read	[[:r 16 nil]]	:timeout
+576	:invoke	:write	[[:w 18 15] [:w 19 16]]
+:nemesis	:info	:pause	:one
+537	:invoke	:read	[[:r 19 nil] [:r 6 nil]]
+568	:info	:write	[[:w 19 15]]	:timeout
+573	:invoke	:read	[[:r 19 nil] [:r 4 nil]]
+560	:info	:write	[[:w 18 14]]	:timeout
+565	:invoke	:txn	[[:r 16 nil] [:w 19 17]]
+:nemesis	:info	:pause	{"n3" ""}
+:nemesis	:info	:kill	nil
+554	:info	:read	[[:r 18 nil] [:r 18 nil]]	:timeout
+559	:invoke	:txn	[[:r 19 nil] [:w 19 18]]
+576	:info	:write	[[:w 18 15] [:w 19 16]]	:timeout
+581	:invoke	:read	[[:r 16 nil] [:r 19 nil]]
+537	:info	:read	[[:r 19 nil] [:r 6 nil]]	:timeout
+573	:info	:read	[[:r 19 nil] [:r 4 nil]]	:timeout
+578	:invoke	:write	[[:w 18 16] [:w 19 19]]
+542	:invoke	:write	[[:w 18 17] [:w 19 20]]
+565	:info	:txn	[[:r 16 nil] [:w 19 17]]	:timeout
+570	:invoke	:read	[[:r 19 nil] [:r 6 nil]]
+581	:info	:read	[[:r 16 nil] [:r 19 nil]]	:timeout
+586	:invoke	:write	[[:w 19 21]]
+559	:info	:txn	[[:r 19 nil] [:w 19 18]]	:timeout
+578	:info	:write	[[:w 18 16] [:w 19 19]]	:timeout
+542	:info	:write	[[:w 18 17] [:w 19 20]]	:timeout
+547	:invoke	:read	[[:r 19 nil] [:r 18 nil]]
+:nemesis	:info	:kill	{"n5" ""}
+:nemesis	:info	:pause	:majority
+564	:invoke	:write	[[:w 19 22] [:w 6 29]]
+583	:invoke	:txn	[[:w 19 23] [:r 3 nil]]
+570	:info	:read	[[:r 19 nil] [:r 6 nil]]	:timeout
+575	:invoke	:txn	[[:w 18 18] [:r 19 nil]]
+:nemesis	:info	:pause	{"n5" "", "n1" "", "n2" ""}
+:nemesis	:info	:kill	:majority
+586	:info	:write	[[:w 19 21]]	:timeout
+591	:invoke	:read	[[:r 19 nil]]
+547	:info	:read	[[:r 19 nil] [:r 18 nil]]	:timeout
+552	:invoke	:read	[[:r 19 nil] [:r 16 nil]]
+564	:info	:write	[[:w 19 22] [:w 6 29]]	:timeout
+569	:invoke	:read	[[:r 18 nil] [:r 19 nil]]
+575	:info	:txn	[[:w 18 18] [:r 19 nil]]	:timeout
+580	:invoke	:read	[[:r 19 nil]]
+583	:info	:txn	[[:w 19 23] [:r 3 nil]]	:timeout
+588	:invoke	:txn	[[:w 18 19] [:r 19 nil]]
+591	:info	:read	[[:r 19 nil]]	:timeout
+596	:invoke	:txn	[[:r 19 nil] [:w 19 24]]
+552	:info	:read	[[:r 19 nil] [:r 16 nil]]	:timeout
+557	:invoke	:write	[[:w 19 25]]
+:nemesis	:info	:kill	{"n3" "", "n4" "", "n2" ""}
+:nemesis	:info	:start	:all
+569	:info	:read	[[:r 18 nil] [:r 19 nil]]	:timeout
+574	:invoke	:read	[[:r 5 nil] [:r 18 nil]]
+580	:info	:read	[[:r 19 nil]]	:timeout
+585	:invoke	:read	[[:r 19 nil] [:r 16 nil]]
+588	:info	:txn	[[:w 18 19] [:r 19 nil]]	:timeout
+593	:invoke	:txn	[[:w 18 20] [:r 16 nil]]
+596	:info	:txn	[[:r 19 nil] [:w 19 24]]	:timeout
+601	:invoke	:read	[[:r 19 nil]]
+557	:info	:write	[[:w 19 25]]	:timeout
+562	:invoke	:txn	[[:w 18 21] [:r 3 nil]]
+574	:info	:read	[[:r 5 nil] [:r 18 nil]]	:timeout
+579	:invoke	:read	[[:r 18 nil] [:r 19 nil]]
+585	:info	:read	[[:r 19 nil] [:r 16 nil]]	:timeout
+590	:invoke	:txn	[[:r 19 nil] [:w 18 22]]
+593	:info	:txn	[[:w 18 20] [:r 16 nil]]	:timeout
+598	:invoke	:read	[[:r 16 nil]]
+601	:info	:read	[[:r 19 nil]]	:timeout
+606	:invoke	:txn	[[:w 19 26] [:r 19 nil]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:kill	:all
+562	:info	:txn	[[:w 18 21] [:r 3 nil]]	:timeout
+567	:invoke	:read	[[:r 18 nil]]
+590	:info	:txn	[[:r 19 nil] [:w 18 22]]	:timeout
+595	:invoke	:read	[[:r 19 nil]]
+579	:info	:read	[[:r 18 nil] [:r 19 nil]]	:timeout
+584	:invoke	:txn	[[:w 18 23] [:r 19 nil]]
+598	:info	:read	[[:r 16 nil]]	:timeout
+603	:invoke	:txn	[[:w 19 27] [:r 19 nil]]
+567	:info	:read	[[:r 18 nil]]	:timeout
+572	:invoke	:txn	[[:w 19 28] [:r 19 nil]]
+606	:info	:txn	[[:w 19 26] [:r 19 nil]]	:timeout
+611	:invoke	:txn	[[:w 19 29] [:r 16 nil]]
+595	:info	:read	[[:r 19 nil]]	:timeout
+600	:invoke	:write	[[:w 6 30]]
+603	:info	:txn	[[:w 19 27] [:r 19 nil]]	:timeout
+608	:invoke	:read	[[:r 18 nil]]
+584	:info	:txn	[[:w 18 23] [:r 19 nil]]	:timeout
+:nemesis	:info	:kill	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+589	:invoke	:write	[[:w 19 30]]
+572	:info	:txn	[[:w 19 28] [:r 19 nil]]	:timeout
+611	:info	:txn	[[:w 19 29] [:r 16 nil]]	:timeout
+616	:invoke	:read	[[:r 19 nil]]
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+577	:invoke	:read	[[:r 19 nil]]
+600	:info	:write	[[:w 6 30]]	:timeout
+605	:invoke	:write	[[:w 18 24]]
+608	:info	:read	[[:r 18 nil]]	:timeout
+613	:invoke	:read	[[:r 16 nil]]
+:nemesis	:info	:start	:all
+589	:info	:write	[[:w 19 30]]	:timeout
+594	:invoke	:txn	[[:r 5 nil] [:w 19 31]]
+616	:info	:read	[[:r 19 nil]]	:timeout
+621	:invoke	:write	[[:w 16 15]]
+577	:info	:read	[[:r 19 nil]]	:timeout
+582	:invoke	:write	[[:w 6 31]]
+605	:info	:write	[[:w 18 24]]	:timeout
+610	:invoke	:write	[[:w 18 25]]
+613	:info	:read	[[:r 16 nil]]	:timeout
+618	:invoke	:read	[[:r 19 nil]]
+594	:info	:txn	[[:r 5 nil] [:w 19 31]]	:timeout
+599	:invoke	:write	[[:w 19 32]]
+621	:info	:write	[[:w 16 15]]	:timeout
+626	:invoke	:write	[[:w 16 16]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+582	:info	:write	[[:w 6 31]]	:timeout
+587	:invoke	:txn	[[:w 16 17] [:r 18 nil]]
+610	:info	:write	[[:w 18 25]]	:timeout
+615	:invoke	:write	[[:w 20 1] [:w 20 2]]
+618	:info	:read	[[:r 19 nil]]	:timeout
+599	:info	:write	[[:w 19 32]]	:timeout
+604	:invoke	:txn	[[:r 18 nil] [:w 20 3]]
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+:nemesis	:info	:resume	:all
+623	:invoke	:write	[[:w 20 4]]
+626	:info	:write	[[:w 16 16]]	:timeout
+631	:invoke	:txn	[[:r 18 nil] [:w 18 26]]
+587	:info	:txn	[[:w 16 17] [:r 18 nil]]	:timeout
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+592	:invoke	:write	[[:w 20 5]]
+615	:info	:write	[[:w 20 1] [:w 20 2]]	:timeout
+620	:invoke	:write	[[:w 18 27]]
+:nemesis	:info	:start-node	nil
+604	:info	:txn	[[:r 18 nil] [:w 20 3]]	:timeout
+609	:invoke	:write	[[:w 20 6] [:w 20 7]]
+623	:info	:write	[[:w 20 4]]	:timeout
+628	:invoke	:txn	[[:w 20 8] [:r 6 nil]]
+631	:info	:txn	[[:r 18 nil] [:w 18 26]]	:timeout
+636	:invoke	:txn	[[:r 20 nil] [:w 20 9]]
+592	:info	:write	[[:w 20 5]]	:timeout
+597	:invoke	:write	[[:w 16 18]]
+620	:info	:write	[[:w 18 27]]	:timeout
+625	:invoke	:read	[[:r 20 nil]]
+609	:info	:write	[[:w 20 6] [:w 20 7]]	:timeout
+614	:invoke	:write	[[:w 20 10] [:w 20 11]]
+628	:info	:txn	[[:w 20 8] [:r 6 nil]]	:timeout
+633	:invoke	:read	[[:r 20 nil]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start	:all
+636	:info	:txn	[[:r 20 nil] [:w 20 9]]	:timeout
+641	:invoke	:read	[[:r 20 nil] [:r 20 nil]]
+597	:info	:write	[[:w 16 18]]	:timeout
+602	:invoke	:read	[[:r 16 nil]]
+625	:info	:read	[[:r 20 nil]]	:timeout
+630	:invoke	:txn	[[:w 6 32] [:r 20 nil]]
+614	:info	:write	[[:w 20 10] [:w 20 11]]	:timeout
+619	:invoke	:txn	[[:r 20 nil] [:w 18 28]]
+633	:info	:read	[[:r 20 nil]]	:timeout
+638	:invoke	:write	[[:w 20 12]]
+641	:info	:read	[[:r 20 nil] [:r 20 nil]]	:timeout
+646	:invoke	:read	[[:r 20 nil]]
+602	:info	:read	[[:r 16 nil]]	:timeout
+630	:info	:txn	[[:w 6 32] [:r 20 nil]]	:timeout
+635	:invoke	:write	[[:w 16 19]]
+607	:invoke	:write	[[:w 20 13]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:resume	:all
+619	:info	:txn	[[:r 20 nil] [:w 18 28]]	:timeout
+624	:invoke	:read	[[:r 16 nil] [:r 6 nil]]
+638	:info	:write	[[:w 20 12]]	:timeout
+643	:invoke	:txn	[[:w 20 14] [:r 18 nil]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" nil, "n4" "", "n5" ""}
+:nemesis	:info	:kill	nil
+646	:info	:read	[[:r 20 nil]]	:timeout
+651	:invoke	:read	[[:r 20 nil] [:r 6 nil]]
+635	:info	:write	[[:w 16 19]]	:timeout
+640	:invoke	:txn	[[:r 20 nil] [:w 20 15]]
+643	:info	:txn	[[:w 20 14] [:r 18 nil]]	:timeout
+648	:invoke	:txn	[[:w 20 16] [:r 16 nil]]
+607	:info	:write	[[:w 20 13]]	:timeout
+624	:info	:read	[[:r 16 nil] [:r 6 nil]]	:timeout
+612	:invoke	:read	[[:r 2 nil]]
+629	:invoke	:read	[[:r 20 nil] [:r 18 nil]]
+651	:info	:read	[[:r 20 nil] [:r 6 nil]]	:timeout
+656	:invoke	:read	[[:r 20 nil]]
+640	:info	:txn	[[:r 20 nil] [:w 20 15]]	:timeout
+645	:invoke	:write	[[:w 16 20]]
+612	:info	:read	[[:r 2 nil]]	:timeout
+617	:invoke	:read	[[:r 18 nil]]
+648	:info	:txn	[[:w 20 16] [:r 16 nil]]	:timeout
+653	:invoke	:read	[[:r 5 nil]]
+:nemesis	:info	:kill	{"n4" "", "n1" "", "n3" "", "n5" "", "n2" ""}
+:nemesis	:info	:start	:all
+629	:info	:read	[[:r 20 nil] [:r 18 nil]]	:timeout
+634	:invoke	:txn	[[:r 18 nil] [:w 20 17]]
+656	:info	:read	[[:r 20 nil]]	:timeout
+661	:invoke	:txn	[[:r 5 nil] [:w 20 18]]
+645	:info	:write	[[:w 16 20]]	:timeout
+650	:invoke	:write	[[:w 18 29] [:w 20 19]]
+617	:info	:read	[[:r 18 nil]]	:timeout
+622	:invoke	:txn	[[:r 18 nil] [:w 16 21]]
+653	:info	:read	[[:r 5 nil]]	:timeout
+658	:invoke	:read	[[:r 20 nil]]
+634	:info	:txn	[[:r 18 nil] [:w 20 17]]	:timeout
+639	:invoke	:txn	[[:w 18 30] [:r 6 nil]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-node	nil
+650	:info	:write	[[:w 18 29] [:w 20 19]]	:timeout
+661	:info	:txn	[[:r 5 nil] [:w 20 18]]	:timeout
+655	:invoke	:txn	[[:r 16 nil] [:w 20 20]]
+666	:invoke	:read	[[:r 20 nil]]
+622	:info	:txn	[[:r 18 nil] [:w 16 21]]	:timeout
+627	:invoke	:txn	[[:r 5 nil] [:w 18 31]]
+658	:info	:read	[[:r 20 nil]]	:timeout
+663	:invoke	:read	[[:r 20 nil]]
+639	:info	:txn	[[:w 18 30] [:r 6 nil]]	:timeout
+644	:invoke	:write	[[:w 18 32]]
+655	:info	:txn	[[:r 16 nil] [:w 20 20]]	:timeout
+660	:invoke	:txn	[[:w 16 22] [:r 20 nil]]
+666	:info	:read	[[:r 20 nil]]	:timeout
+671	:invoke	:write	[[:w 20 21]]
+627	:info	:txn	[[:r 5 nil] [:w 18 31]]	:timeout
+663	:info	:read	[[:r 20 nil]]	:timeout
+668	:invoke	:write	[[:w 16 23]]
+632	:invoke	:txn	[[:r 18 nil] [:w 20 22]]
+644	:info	:write	[[:w 18 32]]	:timeout
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start	:all
+649	:invoke	:write	[[:w 20 23]]
+660	:info	:txn	[[:w 16 22] [:r 20 nil]]	:timeout
+665	:invoke	:write	[[:w 20 24]]
+671	:info	:write	[[:w 20 21]]	:timeout
+676	:invoke	:write	[[:w 20 25]]
+668	:info	:write	[[:w 16 23]]	:timeout
+673	:invoke	:txn	[[:w 21 1] [:r 20 nil]]
+632	:info	:txn	[[:r 18 nil] [:w 20 22]]	:timeout
+637	:invoke	:read	[[:r 16 nil]]
+649	:info	:write	[[:w 20 23]]	:timeout
+654	:invoke	:write	[[:w 20 26] [:w 20 27]]
+665	:info	:write	[[:w 20 24]]	:timeout
+670	:invoke	:write	[[:w 20 28]]
+673	:info	:txn	[[:w 21 1] [:r 20 nil]]	:timeout
+676	:info	:write	[[:w 20 25]]	:timeout
+678	:invoke	:read	[[:r 20 nil]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+654	:info	:write	[[:w 20 26] [:w 20 27]]	:timeout
+681	:invoke	:txn	[[:r 16 nil] [:w 5 10]]
+659	:invoke	:read	[[:r 5 nil]]
+637	:info	:read	[[:r 16 nil]]	:timeout
+642	:invoke	:txn	[[:r 20 nil] [:w 16 24]]
+670	:info	:write	[[:w 20 28]]	:timeout
+675	:invoke	:read	[[:r 21 nil] [:r 20 nil]]
+:nemesis	:info	:pause	:one
+681	:info	:txn	[[:r 16 nil] [:w 5 10]]	:timeout
+686	:invoke	:read	[[:r 21 nil]]
+678	:info	:read	[[:r 20 nil]]	:timeout
+:nemesis	:info	:pause	{"n2" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+683	:invoke	:txn	[[:r 6 nil] [:w 20 29]]
+:nemesis	:info	:resume	:all
+659	:info	:read	[[:r 5 nil]]	:timeout
+664	:invoke	:txn	[[:w 16 25] [:r 20 nil]]
+675	:info	:read	[[:r 21 nil] [:r 20 nil]]	:timeout
+642	:info	:txn	[[:r 20 nil] [:w 16 24]]	:timeout
+680	:invoke	:txn	[[:r 20 nil] [:w 20 30]]
+647	:invoke	:write	[[:w 21 2]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start	:all
+683	:info	:txn	[[:r 6 nil] [:w 20 29]]	:timeout
+688	:invoke	:read	[[:r 20 nil]]
+686	:info	:read	[[:r 21 nil]]	:timeout
+691	:invoke	:txn	[[:r 21 nil] [:w 20 31]]
+664	:info	:txn	[[:w 16 25] [:r 20 nil]]	:timeout
+680	:info	:txn	[[:r 20 nil] [:w 20 30]]	:timeout
+647	:info	:write	[[:w 21 2]]	:timeout
+669	:invoke	:read	[[:r 16 nil]]
+652	:invoke	:txn	[[:w 5 11] [:r 6 nil]]
+685	:invoke	:txn	[[:r 21 nil] [:w 20 32]]
+691	:info	:txn	[[:r 21 nil] [:w 20 31]]	:timeout
+696	:invoke	:txn	[[:r 6 nil] [:w 21 3]]
+688	:info	:read	[[:r 20 nil]]	:timeout
+693	:invoke	:txn	[[:r 20 nil] [:w 16 26]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+669	:info	:read	[[:r 16 nil]]	:timeout
+674	:invoke	:read	[[:r 22 nil]]
+:nemesis	:info	:resume	:all
+652	:info	:txn	[[:w 5 11] [:r 6 nil]]	:timeout
+657	:invoke	:read	[[:r 22 nil] [:r 21 nil]]
+685	:info	:txn	[[:r 21 nil] [:w 20 32]]	:timeout
+690	:invoke	:read	[[:r 22 nil] [:r 22 nil]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+696	:info	:txn	[[:r 6 nil] [:w 21 3]]	:timeout
+701	:invoke	:write	[[:w 16 27]]
+693	:info	:txn	[[:r 20 nil] [:w 16 26]]	:timeout
+698	:invoke	:read	[[:r 21 nil] [:r 21 nil]]
+:nemesis	:info	:stop-node	"n3"
+690	:info	:read	[[:r 22 nil] [:r 22 nil]]	:timeout
+695	:invoke	:write	[[:w 16 28]]
+674	:info	:read	[[:r 22 nil]]	:timeout
+679	:invoke	:txn	[[:w 22 1] [:r 22 nil]]
+657	:info	:read	[[:r 22 nil] [:r 21 nil]]	:timeout
+662	:invoke	:write	[[:w 22 2]]
+701	:info	:write	[[:w 16 27]]	:timeout
+706	:invoke	:txn	[[:r 21 nil] [:w 23 1]]
+698	:info	:read	[[:r 21 nil] [:r 21 nil]]	:timeout
+703	:invoke	:read	[[:r 16 nil] [:r 21 nil]]
+695	:info	:write	[[:w 16 28]]	:timeout
+700	:invoke	:read	[[:r 16 nil]]
+679	:info	:txn	[[:w 22 1] [:r 22 nil]]	:timeout
+684	:invoke	:txn	[[:w 21 4] [:r 3 nil]]
+662	:info	:write	[[:w 22 2]]	:timeout
+667	:invoke	:write	[[:w 21 5]]
+:nemesis	:info	:stop-node	{"n3" ""}
+:nemesis	:info	:start-partition	:one
+706	:info	:txn	[[:r 21 nil] [:w 23 1]]	:timeout
+:nemesis	:info	:start-partition	[:isolated {"n5" #{"n2" "n1" "n4" "n3"}, "n2" #{"n5"}, "n1" #{"n5"}, "n4" #{"n5"}, "n3" #{"n5"}}]
+:nemesis	:info	:start	:all
+711	:invoke	:read	[[:r 22 nil]]
+703	:info	:read	[[:r 16 nil] [:r 21 nil]]	:timeout
+708	:invoke	:txn	[[:w 22 3] [:r 23 nil]]
+700	:info	:read	[[:r 16 nil]]	:timeout
+705	:invoke	:write	[[:w 21 6]]
+684	:info	:txn	[[:w 21 4] [:r 3 nil]]	:timeout
+689	:invoke	:read	[[:r 22 nil]]
+667	:info	:write	[[:w 21 5]]	:timeout
+672	:invoke	:read	[[:r 21 nil]]
+711	:info	:read	[[:r 22 nil]]	:timeout
+716	:invoke	:txn	[[:w 22 4] [:r 21 nil]]
+705	:info	:write	[[:w 21 6]]	:timeout
+708	:info	:txn	[[:w 22 3] [:r 23 nil]]	:timeout
+710	:invoke	:read	[[:r 16 nil]]
+689	:info	:read	[[:r 22 nil]]	:timeout
+694	:invoke	:read	[[:r 22 nil] [:r 22 nil]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+713	:invoke	:read	[[:r 22 nil]]
+:nemesis	:info	:start	:all
+672	:info	:read	[[:r 21 nil]]	:timeout
+677	:invoke	:write	[[:w 21 7]]
+716	:info	:txn	[[:w 22 4] [:r 21 nil]]	:timeout
+721	:invoke	:write	[[:w 22 5]]
+710	:info	:read	[[:r 16 nil]]	:timeout
+715	:invoke	:write	[[:w 22 6] [:w 23 2]]
+694	:info	:read	[[:r 22 nil] [:r 22 nil]]	:timeout
+699	:invoke	:txn	[[:w 21 8] [:r 23 nil]]
+713	:info	:read	[[:r 22 nil]]	:timeout
+718	:invoke	:txn	[[:w 22 7] [:r 21 nil]]
+721	:info	:write	[[:w 22 5]]	:timeout
+726	:invoke	:read	[[:r 22 nil] [:r 5 nil]]
+715	:info	:write	[[:w 22 6] [:w 23 2]]	:timeout
+720	:invoke	:read	[[:r 22 nil]]
+677	:info	:write	[[:w 21 7]]	:timeout
+682	:invoke	:read	[[:r 21 nil]]
+699	:info	:txn	[[:w 21 8] [:r 23 nil]]	:timeout
+704	:invoke	:read	[[:r 22 nil]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:pause	:minority
+718	:info	:txn	[[:w 22 7] [:r 21 nil]]	:timeout
+723	:invoke	:read	[[:r 16 nil]]
+:nemesis	:info	:pause	{"n5" "", "n4" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+:nemesis	:info	:resume	:all
+682	:info	:read	[[:r 21 nil]]	:timeout
+687	:invoke	:txn	[[:r 16 nil] [:w 22 8]]
+726	:info	:read	[[:r 22 nil] [:r 5 nil]]	:timeout
+720	:info	:read	[[:r 22 nil]]	:timeout
+725	:invoke	:txn	[[:w 22 9] [:r 21 nil]]
+731	:invoke	:write	[[:w 23 3] [:w 21 9]]
+704	:info	:read	[[:r 22 nil]]	:timeout
+709	:invoke	:write	[[:w 21 10]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+723	:info	:read	[[:r 16 nil]]	:timeout
+728	:invoke	:write	[[:w 22 10]]
+:nemesis	:info	:pause	:majority
+:nemesis	:info	:pause	{"n5" "", "n3" "", "n2" ""}
+687	:info	:txn	[[:r 16 nil] [:w 22 8]]	:timeout
+692	:invoke	:read	[[:r 16 nil] [:r 22 nil]]
+:nemesis	:info	:pause	:one
+731	:info	:write	[[:w 23 3] [:w 21 9]]	:timeout
+725	:info	:txn	[[:w 22 9] [:r 21 nil]]	:timeout
+736	:invoke	:read	[[:r 21 nil] [:r 21 nil]]
+:nemesis	:info	:pause	{"n2" ""}
+709	:info	:write	[[:w 21 10]]	:timeout
+730	:invoke	:write	[[:w 22 11]]
+714	:invoke	:write	[[:w 22 12]]
+728	:info	:write	[[:w 22 10]]	:timeout
+733	:invoke	:txn	[[:r 23 nil] [:w 21 11]]
+:nemesis	:info	:stop-node	"n5"
+692	:info	:read	[[:r 16 nil] [:r 22 nil]]	:timeout
+697	:invoke	:read	[[:r 21 nil]]
+736	:info	:read	[[:r 21 nil] [:r 21 nil]]	:timeout
+741	:invoke	:txn	[[:w 22 13] [:r 23 nil]]
+730	:info	:write	[[:w 22 11]]	:timeout
+735	:invoke	:write	[[:w 21 12]]
+733	:info	:txn	[[:r 23 nil] [:w 21 11]]	:timeout
+738	:invoke	:write	[[:w 22 14]]
+697	:info	:read	[[:r 21 nil]]	:timeout
+714	:info	:write	[[:w 22 12]]	:timeout
+719	:invoke	:read	[[:r 22 nil]]
+702	:invoke	:write	[[:w 21 13]]
+741	:info	:txn	[[:w 22 13] [:r 23 nil]]	:timeout
+746	:invoke	:write	[[:w 21 14] [:w 23 4]]
+:nemesis	:info	:stop-node	{"n5" ""}
+:nemesis	:info	:stop-node	"n5"
+735	:info	:write	[[:w 21 12]]	:timeout
+740	:invoke	:read	[[:r 22 nil]]
+738	:info	:write	[[:w 22 14]]	:timeout
+743	:invoke	:write	[[:w 22 15] [:w 16 29]]
+719	:info	:read	[[:r 22 nil]]	:timeout
+702	:info	:write	[[:w 21 13]]	:timeout
+724	:invoke	:txn	[[:r 23 nil] [:w 22 16]]
+707	:invoke	:write	[[:w 5 12]]
+746	:info	:write	[[:w 21 14] [:w 23 4]]	:timeout
+751	:invoke	:read	[[:r 22 nil]]
+740	:info	:read	[[:r 22 nil]]	:timeout
+745	:invoke	:txn	[[:w 21 15] [:r 22 nil]]
+:nemesis	:info	:stop-node	{"n5" ""}
+:nemesis	:info	:kill	nil
+743	:info	:write	[[:w 22 15] [:w 16 29]]	:timeout
+748	:invoke	:write	[[:w 22 17]]
+707	:info	:write	[[:w 5 12]]	:timeout
+712	:invoke	:write	[[:w 22 18] [:w 5 13]]
+724	:info	:txn	[[:r 23 nil] [:w 22 16]]	:timeout
+729	:invoke	:txn	[[:w 16 30] [:r 22 nil]]
+751	:info	:read	[[:r 22 nil]]	:timeout
+756	:invoke	:read	[[:r 21 nil] [:r 16 nil]]
+745	:info	:txn	[[:w 21 15] [:r 22 nil]]	:timeout
+750	:invoke	:read	[[:r 22 nil]]
+748	:info	:write	[[:w 22 17]]	:timeout
+753	:invoke	:write	[[:w 22 19] [:w 21 16]]
+712	:info	:write	[[:w 22 18] [:w 5 13]]	:timeout
+717	:invoke	:write	[[:w 21 17] [:w 16 31]]
+756	:info	:read	[[:r 21 nil] [:r 16 nil]]	:timeout
+729	:info	:txn	[[:w 16 30] [:r 22 nil]]	:timeout
+761	:invoke	:read	[[:r 22 nil]]
+:nemesis	:info	:kill	{"n5" "", "n4" "", "n2" ""}
+:nemesis	:info	:start	:all
+734	:invoke	:read	[[:r 22 nil]]
+750	:info	:read	[[:r 22 nil]]	:timeout
+755	:invoke	:txn	[[:w 21 18] [:r 22 nil]]
+753	:info	:write	[[:w 22 19] [:w 21 16]]	:timeout
+758	:invoke	:txn	[[:w 21 19] [:r 22 nil]]
+717	:info	:write	[[:w 21 17] [:w 16 31]]	:timeout
+722	:invoke	:write	[[:w 22 20]]
+734	:info	:read	[[:r 22 nil]]	:timeout
+739	:invoke	:write	[[:w 22 21] [:w 22 22]]
+761	:info	:read	[[:r 22 nil]]	:timeout
+766	:invoke	:read	[[:r 22 nil]]
+755	:info	:txn	[[:w 21 18] [:r 22 nil]]	:timeout
+760	:invoke	:write	[[:w 22 23]]
+722	:info	:write	[[:w 22 20]]	:timeout
+758	:info	:txn	[[:w 21 19] [:r 22 nil]]	:timeout
+763	:invoke	:read	[[:r 22 nil] [:r 16 nil]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:pause	:minority
+727	:invoke	:read	[[:r 21 nil]]
+739	:info	:write	[[:w 22 21] [:w 22 22]]	:timeout
+744	:invoke	:txn	[[:r 22 nil] [:w 16 32]]
+:nemesis	:info	:pause	{"n2" "", "n1" ""}
+:nemesis	:info	:stop-node	"n5"
+763	:info	:read	[[:r 22 nil] [:r 16 nil]]	:timeout
+768	:invoke	:txn	[[:w 22 24] [:r 5 nil]]
+766	:info	:read	[[:r 22 nil]]	:timeout
+771	:invoke	:write	[[:w 22 25] [:w 23 5]]
+760	:info	:write	[[:w 22 23]]	:timeout
+765	:invoke	:read	[[:r 21 nil]]
+727	:info	:read	[[:r 21 nil]]	:timeout
+732	:invoke	:write	[[:w 22 26]]
+744	:info	:txn	[[:r 22 nil] [:w 16 32]]	:timeout
+749	:invoke	:txn	[[:r 21 nil] [:w 22 27]]
+771	:info	:write	[[:w 22 25] [:w 23 5]]	:timeout
+776	:invoke	:read	[[:r 22 nil] [:r 22 nil]]
+768	:info	:txn	[[:w 22 24] [:r 5 nil]]	:timeout
+773	:invoke	:txn	[[:w 22 28] [:r 16 nil]]
+765	:info	:read	[[:r 21 nil]]	:timeout
+770	:invoke	:read	[[:r 5 nil] [:r 22 nil]]
+732	:info	:write	[[:w 22 26]]	:timeout
+737	:invoke	:write	[[:w 21 20]]
+:nemesis	:info	:stop-node	{"n5" ""}
+:nemesis	:info	:kill	:minority
+776	:info	:read	[[:r 22 nil] [:r 22 nil]]	:timeout
+781	:invoke	:read	[[:r 21 nil]]
+749	:info	:txn	[[:r 21 nil] [:w 22 27]]	:timeout
+754	:invoke	:txn	[[:w 22 29] [:r 22 nil]]
+770	:info	:read	[[:r 5 nil] [:r 22 nil]]	:timeout
+775	:invoke	:read	[[:r 22 nil]]
+773	:info	:txn	[[:w 22 28] [:r 16 nil]]	:timeout
+778	:invoke	:write	[[:w 21 21]]
+737	:info	:write	[[:w 21 20]]	:timeout
+742	:invoke	:txn	[[:w 21 22] [:r 24 nil]]
+781	:info	:read	[[:r 21 nil]]	:timeout
+786	:invoke	:read	[[:r 24 nil]]
+:nemesis	:info	:kill	{"n4" "", "n3" ""}
+775	:info	:read	[[:r 22 nil]]	:timeout
+754	:info	:txn	[[:w 22 29] [:r 22 nil]]	:timeout
+:nemesis	:info	:start	:all
+780	:invoke	:txn	[[:w 24 1] [:r 24 nil]]
+778	:info	:write	[[:w 21 21]]	:timeout
+783	:invoke	:txn	[[:w 21 23] [:r 21 nil]]
+759	:invoke	:write	[[:w 22 30]]
+742	:info	:txn	[[:w 21 22] [:r 24 nil]]	:timeout
+747	:invoke	:write	[[:w 23 6]]
+786	:info	:read	[[:r 24 nil]]	:timeout
+791	:invoke	:write	[[:w 22 31] [:w 21 24]]
+780	:info	:txn	[[:w 24 1] [:r 24 nil]]	:timeout
+785	:invoke	:txn	[[:r 21 nil] [:w 22 32]]
+783	:info	:txn	[[:w 21 23] [:r 21 nil]]	:timeout
+788	:invoke	:txn	[[:r 22 nil] [:w 5 14]]
+759	:info	:write	[[:w 22 30]]	:timeout
+764	:invoke	:read	[[:r 22 nil]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start	:all
+747	:info	:write	[[:w 23 6]]	:timeout
+752	:invoke	:read	[[:r 25 nil]]
+791	:info	:write	[[:w 22 31] [:w 21 24]]	:timeout
+796	:invoke	:txn	[[:w 21 25] [:r 23 nil]]
+785	:info	:txn	[[:r 21 nil] [:w 22 32]]	:timeout
+790	:invoke	:read	[[:r 21 nil] [:r 25 nil]]
+788	:info	:txn	[[:r 22 nil] [:w 5 14]]	:timeout
+793	:invoke	:read	[[:r 21 nil]]
+764	:info	:read	[[:r 22 nil]]	:timeout
+769	:invoke	:write	[[:w 5 15]]
+752	:info	:read	[[:r 25 nil]]	:timeout
+757	:invoke	:read	[[:r 24 nil] [:r 21 nil]]
+796	:info	:txn	[[:w 21 25] [:r 23 nil]]	:timeout
+801	:invoke	:write	[[:w 24 2]]
+793	:info	:read	[[:r 21 nil]]	:timeout
+798	:invoke	:txn	[[:w 21 26] [:r 25 nil]]
+790	:info	:read	[[:r 21 nil] [:r 25 nil]]	:timeout
+795	:invoke	:write	[[:w 23 7]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:resume	:all
+769	:info	:write	[[:w 5 15]]	:timeout
+774	:invoke	:read	[[:r 25 nil]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:kill	:one
+757	:info	:read	[[:r 24 nil] [:r 21 nil]]	:timeout
+762	:invoke	:read	[[:r 21 nil]]
+801	:info	:write	[[:w 24 2]]	:timeout
+806	:invoke	:read	[[:r 25 nil]]
+798	:info	:txn	[[:w 21 26] [:r 25 nil]]	:timeout
+795	:info	:write	[[:w 23 7]]	:timeout
+800	:invoke	:write	[[:w 21 27]]
+803	:invoke	:read	[[:r 25 nil]]
+774	:info	:read	[[:r 25 nil]]	:timeout
+779	:invoke	:write	[[:w 21 28]]
+762	:info	:read	[[:r 21 nil]]	:timeout
+767	:invoke	:write	[[:w 25 1]]
+806	:info	:read	[[:r 25 nil]]	:timeout
+811	:invoke	:write	[[:w 5 16]]
+800	:info	:write	[[:w 21 27]]	:timeout
+805	:invoke	:write	[[:w 25 2] [:w 21 29]]
+803	:info	:read	[[:r 25 nil]]	:timeout
+808	:invoke	:write	[[:w 24 3] [:w 25 3]]
+:nemesis	:info	:kill	{"n1" ""}
+:nemesis	:info	:start-node	nil
+779	:info	:write	[[:w 21 28]]	:timeout
+784	:invoke	:write	[[:w 4 5]]
+767	:info	:write	[[:w 25 1]]	:timeout
+772	:invoke	:write	[[:w 24 4] [:w 21 30]]
+811	:info	:write	[[:w 5 16]]	:timeout
+816	:invoke	:txn	[[:r 23 nil] [:w 21 31]]
+805	:info	:write	[[:w 25 2] [:w 21 29]]	:timeout
+810	:invoke	:read	[[:r 5 nil] [:r 25 nil]]
+808	:info	:write	[[:w 24 3] [:w 25 3]]	:timeout
+813	:invoke	:write	[[:w 25 4] [:w 25 5]]
+784	:info	:write	[[:w 4 5]]	:timeout
+789	:invoke	:read	[[:r 25 nil]]
+772	:info	:write	[[:w 24 4] [:w 21 30]]	:timeout
+777	:invoke	:txn	[[:r 4 nil] [:w 24 5]]
+816	:info	:txn	[[:r 23 nil] [:w 21 31]]	:timeout
+821	:invoke	:read	[[:r 21 nil]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+810	:info	:read	[[:r 5 nil] [:r 25 nil]]	:timeout
+815	:invoke	:read	[[:r 25 nil]]
+:nemesis	:info	:start-node	nil
+813	:info	:write	[[:w 25 4] [:w 25 5]]	:timeout
+818	:invoke	:read	[[:r 23 nil] [:r 25 nil]]
+777	:info	:txn	[[:r 4 nil] [:w 24 5]]	:timeout
+782	:invoke	:read	[[:r 23 nil]]
+821	:info	:read	[[:r 21 nil]]	:timeout
+826	:invoke	:read	[[:r 21 nil]]
+789	:info	:read	[[:r 25 nil]]	:timeout
+794	:invoke	:read	[[:r 23 nil]]
+815	:info	:read	[[:r 25 nil]]	:timeout
+820	:invoke	:txn	[[:r 25 nil] [:w 25 6]]
+818	:info	:read	[[:r 23 nil] [:r 25 nil]]	:timeout
+823	:invoke	:write	[[:w 23 8]]
+826	:info	:read	[[:r 21 nil]]	:timeout
+831	:invoke	:txn	[[:w 25 7] [:r 21 nil]]
+794	:info	:read	[[:r 23 nil]]	:timeout
+799	:invoke	:read	[[:r 25 nil]]
+782	:info	:read	[[:r 23 nil]]	:timeout
+787	:invoke	:txn	[[:w 25 8] [:r 21 nil]]
+820	:info	:txn	[[:r 25 nil] [:w 25 6]]	:timeout
+825	:invoke	:read	[[:r 21 nil]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+823	:info	:write	[[:w 23 8]]	:timeout
+828	:invoke	:write	[[:w 21 32]]
+831	:info	:txn	[[:w 25 7] [:r 21 nil]]	:timeout
+836	:invoke	:txn	[[:r 25 nil] [:w 24 6]]
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+:nemesis	:info	:resume	:all
+787	:info	:txn	[[:w 25 8] [:r 21 nil]]	:timeout
+792	:invoke	:read	[[:r 21 nil]]
+799	:info	:read	[[:r 25 nil]]	:timeout
+804	:invoke	:read	[[:r 25 nil]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-node	"n1"
+825	:info	:read	[[:r 21 nil]]	:timeout
+830	:invoke	:read	[[:r 25 nil]]
+828	:info	:write	[[:w 21 32]]	:timeout
+833	:invoke	:txn	[[:w 25 9] [:r 24 nil]]
+836	:info	:txn	[[:r 25 nil] [:w 24 6]]	:timeout
+841	:invoke	:read	[[:r 4 nil]]
+792	:info	:read	[[:r 21 nil]]	:timeout
+797	:invoke	:write	[[:w 24 7]]
+804	:info	:read	[[:r 25 nil]]	:timeout
+809	:invoke	:read	[[:r 21 nil]]
+830	:info	:read	[[:r 25 nil]]	:timeout
+835	:invoke	:txn	[[:r 25 nil] [:w 25 10]]
+833	:info	:txn	[[:w 25 9] [:r 24 nil]]	:timeout
+838	:invoke	:read	[[:r 24 nil]]
+:nemesis	:info	:stop-node	{"n1" ""}
+:nemesis	:info	:stop-node	"n3"
+841	:info	:read	[[:r 4 nil]]	:timeout
+846	:invoke	:write	[[:w 25 11]]
+797	:info	:write	[[:w 24 7]]	:timeout
+802	:invoke	:write	[[:w 24 8]]
+809	:info	:read	[[:r 21 nil]]	:timeout
+814	:invoke	:write	[[:w 24 9]]
+835	:info	:txn	[[:r 25 nil] [:w 25 10]]	:timeout
+840	:invoke	:write	[[:w 25 12] [:w 25 13]]
+838	:info	:read	[[:r 24 nil]]	:timeout
+846	:info	:write	[[:w 25 11]]	:timeout
+843	:invoke	:write	[[:w 26 1] [:w 26 2]]
+851	:invoke	:write	[[:w 25 14]]
+814	:info	:write	[[:w 24 9]]	:timeout
+819	:invoke	:read	[[:r 5 nil]]
+840	:info	:write	[[:w 25 12] [:w 25 13]]	:timeout
+802	:info	:write	[[:w 24 8]]	:timeout
+:nemesis	:info	:stop-node	{"n3" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+:nemesis	:info	:resume	:all
+807	:invoke	:read	[[:r 26 nil] [:r 26 nil]]
+845	:invoke	:read	[[:r 26 nil]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:pause	:majority
+851	:info	:write	[[:w 25 14]]	:timeout
+856	:invoke	:txn	[[:r 26 nil] [:w 25 15]]
+843	:info	:write	[[:w 26 1] [:w 26 2]]	:timeout
+848	:invoke	:read	[[:r 24 nil]]
+:nemesis	:info	:pause	{"n1" "", "n2" "", "n3" ""}
+:nemesis	:info	:kill	:minority
+819	:info	:read	[[:r 5 nil]]	:timeout
+824	:invoke	:read	[[:r 23 nil]]
+845	:info	:read	[[:r 26 nil]]	:timeout
+807	:info	:read	[[:r 26 nil] [:r 26 nil]]	:timeout
+850	:invoke	:txn	[[:w 25 16] [:r 24 nil]]
+812	:invoke	:read	[[:r 26 nil]]
+856	:info	:txn	[[:r 26 nil] [:w 25 15]]	:timeout
+861	:invoke	:write	[[:w 25 17] [:w 26 3]]
+848	:info	:read	[[:r 24 nil]]	:timeout
+853	:invoke	:txn	[[:r 26 nil] [:w 25 18]]
+824	:info	:read	[[:r 23 nil]]	:timeout
+829	:invoke	:txn	[[:w 25 19] [:r 3 nil]]
+812	:info	:read	[[:r 26 nil]]	:timeout
+817	:invoke	:write	[[:w 25 20] [:w 25 21]]
+850	:info	:txn	[[:w 25 16] [:r 24 nil]]	:timeout
+855	:invoke	:read	[[:r 25 nil] [:r 25 nil]]
+:nemesis	:info	:kill	{"n4" "", "n1" ""}
+:nemesis	:info	:start-partition	:majority
+861	:info	:write	[[:w 25 17] [:w 26 3]]	:timeout
+866	:invoke	:txn	[[:r 26 nil] [:w 26 4]]
+:nemesis	:info	:start-partition	[:isolated {"n1" #{"n2" "n5" "n4"}, "n3" #{"n2" "n5" "n4"}, "n2" #{"n1" "n3"}, "n5" #{"n1" "n3"}, "n4" #{"n1" "n3"}}]
+853	:info	:txn	[[:r 26 nil] [:w 25 18]]	:timeout
+858	:invoke	:read	[[:r 25 nil]]
+829	:info	:txn	[[:w 25 19] [:r 3 nil]]	:timeout
+834	:invoke	:write	[[:w 5 17]]
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+817	:info	:write	[[:w 25 20] [:w 25 21]]	:timeout
+822	:invoke	:read	[[:r 26 nil] [:r 24 nil]]
+:nemesis	:info	:kill	:majority
+855	:info	:read	[[:r 25 nil] [:r 25 nil]]	:timeout
+860	:invoke	:read	[[:r 24 nil] [:r 25 nil]]
+866	:info	:txn	[[:r 26 nil] [:w 26 4]]	:timeout
+858	:info	:read	[[:r 25 nil]]	:timeout
+871	:invoke	:read	[[:r 25 nil] [:r 26 nil]]
+863	:invoke	:read	[[:r 25 nil] [:r 25 nil]]
+834	:info	:write	[[:w 5 17]]	:timeout
+839	:invoke	:read	[[:r 24 nil]]
+822	:info	:read	[[:r 26 nil] [:r 24 nil]]	:timeout
+827	:invoke	:txn	[[:r 25 nil] [:w 25 22]]
+860	:info	:read	[[:r 24 nil] [:r 25 nil]]	:timeout
+865	:invoke	:txn	[[:r 25 nil] [:w 26 5]]
+871	:info	:read	[[:r 25 nil] [:r 26 nil]]	:timeout
+863	:info	:read	[[:r 25 nil] [:r 25 nil]]	:timeout
+:nemesis	:info	:kill	{"n1" "", "n3" "", "n4" ""}
+:nemesis	:info	:start	:all
+868	:invoke	:write	[[:w 25 23]]
+876	:invoke	:write	[[:w 25 24]]
+839	:info	:read	[[:r 24 nil]]	:timeout
+844	:invoke	:write	[[:w 26 6] [:w 25 25]]
+827	:info	:txn	[[:r 25 nil] [:w 25 22]]	:timeout
+832	:invoke	:write	[[:w 25 26]]
+865	:info	:txn	[[:r 25 nil] [:w 26 5]]	:timeout
+870	:invoke	:read	[[:r 25 nil]]
+876	:info	:write	[[:w 25 24]]	:timeout
+868	:info	:write	[[:w 25 23]]	:timeout
+873	:invoke	:write	[[:w 26 7] [:w 25 27]]
+844	:info	:write	[[:w 26 6] [:w 25 25]]	:timeout
+881	:invoke	:read	[[:r 5 nil]]
+849	:invoke	:write	[[:w 25 28]]
+832	:info	:write	[[:w 25 26]]	:timeout
+837	:invoke	:write	[[:w 26 8] [:w 26 9]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+870	:info	:read	[[:r 25 nil]]	:timeout
+875	:invoke	:write	[[:w 25 29] [:w 26 10]]
+:nemesis	:info	:stop-node	"n4"
+873	:info	:write	[[:w 26 7] [:w 25 27]]	:timeout
+878	:invoke	:write	[[:w 26 11]]
+881	:info	:read	[[:r 5 nil]]	:timeout
+886	:invoke	:read	[[:r 25 nil]]
+837	:info	:write	[[:w 26 8] [:w 26 9]]	:timeout
+842	:invoke	:write	[[:w 25 30]]
+849	:info	:write	[[:w 25 28]]	:timeout
+854	:invoke	:read	[[:r 25 nil] [:r 25 nil]]
+875	:info	:write	[[:w 25 29] [:w 26 10]]	:timeout
+880	:invoke	:txn	[[:w 25 31] [:r 25 nil]]
+878	:info	:write	[[:w 26 11]]	:timeout
+883	:invoke	:read	[[:r 24 nil]]
+886	:info	:read	[[:r 25 nil]]	:timeout
+891	:invoke	:write	[[:w 26 12] [:w 24 10]]
+842	:info	:write	[[:w 25 30]]	:timeout
+854	:info	:read	[[:r 25 nil] [:r 25 nil]]	:timeout
+:nemesis	:info	:stop-node	{"n4" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+847	:invoke	:read	[[:r 25 nil]]
+880	:info	:txn	[[:w 25 31] [:r 25 nil]]	:timeout
+885	:invoke	:write	[[:w 23 9] [:w 25 32]]
+859	:invoke	:write	[[:w 24 11] [:w 24 12]]
+883	:info	:read	[[:r 24 nil]]	:timeout
+888	:invoke	:read	[[:r 25 nil] [:r 25 nil]]
+:nemesis	:info	:kill	nil
+891	:info	:write	[[:w 26 12] [:w 24 10]]	:timeout
+896	:invoke	:read	[[:r 25 nil]]
+885	:info	:write	[[:w 23 9] [:w 25 32]]	:timeout
+890	:invoke	:write	[[:w 27 1]]
+847	:info	:read	[[:r 25 nil]]	:timeout
+852	:invoke	:write	[[:w 27 2]]
+859	:info	:write	[[:w 24 11] [:w 24 12]]	:timeout
+864	:invoke	:read	[[:r 3 nil]]
+888	:info	:read	[[:r 25 nil] [:r 25 nil]]	:timeout
+893	:invoke	:txn	[[:r 26 nil] [:w 26 13]]
+896	:info	:read	[[:r 25 nil]]	:timeout
+901	:invoke	:write	[[:w 27 3]]
+890	:info	:write	[[:w 27 1]]	:timeout
+895	:invoke	:write	[[:w 27 4] [:w 24 13]]
+:nemesis	:info	:kill	{"n3" ""}
+:nemesis	:info	:stop-node	"n5"
+852	:info	:write	[[:w 27 2]]	:timeout
+857	:invoke	:read	[[:r 26 nil] [:r 27 nil]]
+864	:info	:read	[[:r 3 nil]]	:timeout
+869	:invoke	:txn	[[:w 23 10] [:r 5 nil]]
+893	:info	:txn	[[:r 26 nil] [:w 26 13]]	:timeout
+898	:invoke	:write	[[:w 26 14]]
+901	:info	:write	[[:w 27 3]]	:timeout
+906	:invoke	:write	[[:w 26 15]]
+895	:info	:write	[[:w 27 4] [:w 24 13]]	:timeout
+900	:invoke	:read	[[:r 23 nil] [:r 27 nil]]
+857	:info	:read	[[:r 26 nil] [:r 27 nil]]	:timeout
+862	:invoke	:read	[[:r 27 nil] [:r 27 nil]]
+869	:info	:txn	[[:w 23 10] [:r 5 nil]]	:timeout
+874	:invoke	:write	[[:w 27 5] [:w 26 16]]
+898	:info	:write	[[:w 26 14]]	:timeout
+903	:invoke	:write	[[:w 27 6] [:w 5 18]]
+:nemesis	:info	:stop-node	{"n5" ""}
+:nemesis	:info	:start	:all
+906	:info	:write	[[:w 26 15]]	:timeout
+900	:info	:read	[[:r 23 nil] [:r 27 nil]]	:timeout
+911	:invoke	:write	[[:w 2 4] [:w 3 5]]
+905	:invoke	:txn	[[:w 23 11] [:r 27 nil]]
+862	:info	:read	[[:r 27 nil] [:r 27 nil]]	:timeout
+867	:invoke	:write	[[:w 26 17]]
+874	:info	:write	[[:w 27 5] [:w 26 16]]	:timeout
+879	:invoke	:txn	[[:w 26 18] [:r 23 nil]]
+903	:info	:write	[[:w 27 6] [:w 5 18]]	:timeout
+908	:invoke	:read	[[:r 27 nil]]
+905	:info	:txn	[[:w 23 11] [:r 27 nil]]	:timeout
+910	:invoke	:write	[[:w 27 7]]
+867	:info	:write	[[:w 26 17]]	:timeout
+872	:invoke	:write	[[:w 24 14] [:w 27 8]]
+911	:info	:write	[[:w 2 4] [:w 3 5]]	:timeout
+916	:invoke	:write	[[:w 27 9]]
+908	:info	:read	[[:r 27 nil]]	:timeout
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:resume	:all
+879	:info	:txn	[[:w 26 18] [:r 23 nil]]	:timeout
+913	:invoke	:txn	[[:w 26 19] [:r 27 nil]]
+884	:invoke	:write	[[:w 27 10]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:kill	:minority
+910	:info	:write	[[:w 27 7]]	:timeout
+915	:invoke	:txn	[[:r 23 nil] [:w 27 11]]
+872	:info	:write	[[:w 24 14] [:w 27 8]]	:timeout
+877	:invoke	:read	[[:r 27 nil]]
+913	:info	:txn	[[:w 26 19] [:r 27 nil]]	:timeout
+918	:invoke	:txn	[[:w 26 20] [:r 26 nil]]
+916	:info	:write	[[:w 27 9]]	:timeout
+921	:invoke	:read	[[:r 27 nil] [:r 27 nil]]
+884	:info	:write	[[:w 27 10]]	:timeout
+889	:invoke	:read	[[:r 27 nil]]
+915	:info	:txn	[[:r 23 nil] [:w 27 11]]	:timeout
+920	:invoke	:txn	[[:r 27 nil] [:w 23 12]]
+877	:info	:read	[[:r 27 nil]]	:timeout
+918	:info	:txn	[[:w 26 20] [:r 26 nil]]	:timeout
+882	:invoke	:read	[[:r 26 nil] [:r 3 nil]]
+:nemesis	:info	:kill	{"n5" "", "n3" ""}
+:nemesis	:info	:pause	:one
+921	:info	:read	[[:r 27 nil] [:r 27 nil]]	:timeout
+926	:invoke	:read	[[:r 27 nil]]
+889	:info	:read	[[:r 27 nil]]	:timeout
+894	:invoke	:read	[[:r 27 nil] [:r 27 nil]]
+:nemesis	:info	:pause	{"n4" ""}
+:nemesis	:info	:start-partition	:majority
+923	:invoke	:read	[[:r 24 nil]]
+:nemesis	:info	:start-partition	[:isolated {"n4" #{"n2" "n5" "n1"}, "n3" #{"n2" "n5" "n1"}, "n2" #{"n4" "n3"}, "n5" #{"n4" "n3"}, "n1" #{"n4" "n3"}}]
+:nemesis	:info	:start	:all
+920	:info	:txn	[[:r 27 nil] [:w 23 12]]	:timeout
+925	:invoke	:write	[[:w 23 13] [:w 24 15]]
+882	:info	:read	[[:r 26 nil] [:r 3 nil]]	:timeout
+887	:invoke	:read	[[:r 27 nil]]
+926	:info	:read	[[:r 27 nil]]	:timeout
+931	:invoke	:write	[[:w 5 19]]
+923	:info	:read	[[:r 24 nil]]	:timeout
+894	:info	:read	[[:r 27 nil] [:r 27 nil]]	:timeout
+928	:invoke	:txn	[[:r 27 nil] [:w 27 12]]
+899	:invoke	:write	[[:w 27 13]]
+925	:info	:write	[[:w 23 13] [:w 24 15]]	:timeout
+930	:invoke	:write	[[:w 26 21]]
+887	:info	:read	[[:r 27 nil]]	:timeout
+892	:invoke	:txn	[[:r 26 nil] [:w 26 22]]
+931	:info	:write	[[:w 5 19]]	:timeout
+936	:invoke	:txn	[[:r 27 nil] [:w 27 14]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:pause	:all
+928	:info	:txn	[[:r 27 nil] [:w 27 12]]	:timeout
+933	:invoke	:txn	[[:w 4 6] [:r 26 nil]]
+899	:info	:write	[[:w 27 13]]	:timeout
+904	:invoke	:txn	[[:r 26 nil] [:w 26 23]]
+930	:info	:write	[[:w 26 21]]	:timeout
+935	:invoke	:txn	[[:r 27 nil] [:w 27 15]]
+:nemesis	:info	:pause	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+:nemesis	:info	:resume	:all
+892	:info	:txn	[[:r 26 nil] [:w 26 22]]	:timeout
+897	:invoke	:read	[[:r 27 nil] [:r 27 nil]]
+936	:info	:txn	[[:r 27 nil] [:w 27 14]]	:timeout
+941	:invoke	:write	[[:w 27 16]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:pause	:one
+933	:info	:txn	[[:w 4 6] [:r 26 nil]]	:timeout
+938	:invoke	:write	[[:w 27 17] [:w 27 18]]
+904	:info	:txn	[[:r 26 nil] [:w 26 23]]	:timeout
+909	:invoke	:write	[[:w 27 19] [:w 26 24]]
+:nemesis	:info	:pause	{"n2" ""}
+:nemesis	:info	:start-node	nil
+935	:info	:txn	[[:r 27 nil] [:w 27 15]]	:timeout
+940	:invoke	:read	[[:r 23 nil]]
+897	:info	:read	[[:r 27 nil] [:r 27 nil]]	:timeout
+902	:invoke	:read	[[:r 27 nil] [:r 26 nil]]
+941	:info	:write	[[:w 27 16]]	:timeout
+946	:invoke	:write	[[:w 23 14]]
+938	:info	:write	[[:w 27 17] [:w 27 18]]	:timeout
+943	:invoke	:write	[[:w 26 25]]
+909	:info	:write	[[:w 27 19] [:w 26 24]]	:timeout
+914	:invoke	:write	[[:w 27 20]]
+940	:info	:read	[[:r 23 nil]]	:timeout
+945	:invoke	:write	[[:w 27 21]]
+902	:info	:read	[[:r 27 nil] [:r 26 nil]]	:timeout
+907	:invoke	:write	[[:w 26 26] [:w 27 22]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start	:all
+946	:info	:write	[[:w 23 14]]	:timeout
+951	:invoke	:write	[[:w 27 23] [:w 27 24]]
+943	:info	:write	[[:w 26 25]]	:timeout
+948	:invoke	:write	[[:w 24 16]]
+945	:info	:write	[[:w 27 21]]	:timeout
+950	:invoke	:read	[[:r 27 nil]]
+914	:info	:write	[[:w 27 20]]	:timeout
+919	:invoke	:read	[[:r 27 nil]]
+907	:info	:write	[[:w 26 26] [:w 27 22]]	:timeout
+912	:invoke	:read	[[:r 27 nil]]
+951	:info	:write	[[:w 27 23] [:w 27 24]]	:timeout
+956	:invoke	:read	[[:r 26 nil] [:r 27 nil]]
+948	:info	:write	[[:w 24 16]]	:timeout
+953	:invoke	:read	[[:r 27 nil]]
+950	:info	:read	[[:r 27 nil]]	:timeout
+919	:info	:read	[[:r 27 nil]]	:timeout
+955	:invoke	:txn	[[:r 27 nil] [:w 27 25]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+924	:invoke	:txn	[[:r 24 nil] [:w 26 27]]
+:nemesis	:info	:kill	:majority
+912	:info	:read	[[:r 27 nil]]	:timeout
+917	:invoke	:txn	[[:w 27 26] [:r 27 nil]]
+953	:info	:read	[[:r 27 nil]]	:timeout
+958	:invoke	:read	[[:r 24 nil]]
+956	:info	:read	[[:r 26 nil] [:r 27 nil]]	:timeout
+961	:invoke	:read	[[:r 3 nil] [:r 26 nil]]
+955	:info	:txn	[[:r 27 nil] [:w 27 25]]	:timeout
+960	:invoke	:txn	[[:r 26 nil] [:w 27 27]]
+924	:info	:txn	[[:r 24 nil] [:w 26 27]]	:timeout
+929	:invoke	:read	[[:r 27 nil]]
+917	:info	:txn	[[:w 27 26] [:r 27 nil]]	:timeout
+922	:invoke	:read	[[:r 27 nil] [:r 24 nil]]
+960	:info	:txn	[[:r 26 nil] [:w 27 27]]	:timeout
+965	:invoke	:write	[[:w 4 7]]
+958	:info	:read	[[:r 24 nil]]	:timeout
+963	:invoke	:txn	[[:w 26 28] [:r 27 nil]]
+961	:info	:read	[[:r 3 nil] [:r 26 nil]]	:timeout
+929	:info	:read	[[:r 27 nil]]	:timeout
+966	:invoke	:write	[[:w 27 28] [:w 26 29]]
+934	:invoke	:write	[[:w 26 30]]
+:nemesis	:info	:kill	{"n4" "", "n3" "", "n2" ""}
+:nemesis	:info	:start	:all
+922	:info	:read	[[:r 27 nil] [:r 24 nil]]	:timeout
+927	:invoke	:write	[[:w 26 31]]
+965	:info	:write	[[:w 4 7]]	:timeout
+970	:invoke	:read	[[:r 26 nil]]
+963	:info	:txn	[[:w 26 28] [:r 27 nil]]	:timeout
+968	:invoke	:read	[[:r 27 nil]]
+966	:info	:write	[[:w 27 28] [:w 26 29]]	:timeout
+971	:invoke	:read	[[:r 27 nil]]
+934	:info	:write	[[:w 26 30]]	:timeout
+939	:invoke	:write	[[:w 27 29] [:w 27 30]]
+927	:info	:write	[[:w 26 31]]	:timeout
+932	:invoke	:write	[[:w 27 31]]
+970	:info	:read	[[:r 26 nil]]	:timeout
+975	:invoke	:write	[[:w 24 17]]
+968	:info	:read	[[:r 27 nil]]	:timeout
+973	:invoke	:write	[[:w 27 32]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+971	:info	:read	[[:r 27 nil]]	:timeout
+976	:invoke	:txn	[[:r 26 nil] [:w 26 32]]
+:nemesis	:info	:kill	:all
+939	:info	:write	[[:w 27 29] [:w 27 30]]	:timeout
+944	:invoke	:write	[[:w 0 2] [:w 23 15]]
+932	:info	:write	[[:w 27 31]]	:timeout
+975	:info	:write	[[:w 24 17]]	:timeout
+937	:invoke	:txn	[[:w 23 16] [:r 24 nil]]
+980	:invoke	:txn	[[:w 23 17] [:r 28 nil]]
+973	:info	:write	[[:w 27 32]]	:timeout
+978	:invoke	:read	[[:r 24 nil]]
+976	:info	:txn	[[:r 26 nil] [:w 26 32]]	:timeout
+981	:invoke	:write	[[:w 24 18]]
+937	:info	:txn	[[:w 23 16] [:r 24 nil]]	:timeout
+942	:invoke	:write	[[:w 28 1] [:w 4 8]]
+944	:info	:write	[[:w 0 2] [:w 23 15]]	:timeout
+980	:info	:txn	[[:w 23 17] [:r 28 nil]]	:timeout
+949	:invoke	:write	[[:w 28 2]]
+978	:info	:read	[[:r 24 nil]]	:timeout
+981	:info	:write	[[:w 24 18]]	:timeout
+985	:invoke	:read	[[:r 5 nil] [:r 28 nil]]
+:nemesis	:info	:kill	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+986	:invoke	:write	[[:w 29 1] [:w 28 3]]
+:nemesis	:info	:start	:all
+983	:invoke	:read	[[:r 24 nil] [:r 29 nil]]
+942	:info	:write	[[:w 28 1] [:w 4 8]]	:timeout
+947	:invoke	:read	[[:r 24 nil]]
+949	:info	:write	[[:w 28 2]]	:timeout
+954	:invoke	:read	[[:r 28 nil]]
+985	:info	:read	[[:r 5 nil] [:r 28 nil]]	:timeout
+990	:invoke	:read	[[:r 24 nil] [:r 28 nil]]
+983	:info	:read	[[:r 24 nil] [:r 29 nil]]	:timeout
+986	:info	:write	[[:w 29 1] [:w 28 3]]	:timeout
+988	:invoke	:read	[[:r 28 nil]]
+947	:info	:read	[[:r 24 nil]]	:timeout
+991	:invoke	:read	[[:r 3 nil] [:r 28 nil]]
+952	:invoke	:read	[[:r 24 nil]]
+954	:info	:read	[[:r 28 nil]]	:timeout
+959	:invoke	:write	[[:w 28 4]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-partition	:minority-third
+:nemesis	:info	:start-partition	[:isolated {"n3" #{"n2" "n5" "n1" "n4"}, "n2" #{"n3"}, "n5" #{"n3"}, "n1" #{"n3"}, "n4" #{"n3"}}]
+990	:info	:read	[[:r 24 nil] [:r 28 nil]]	:timeout
+995	:invoke	:write	[[:w 28 5] [:w 28 6]]
+988	:info	:read	[[:r 28 nil]]	:timeout
+993	:invoke	:read	[[:r 28 nil]]
+952	:info	:read	[[:r 24 nil]]	:timeout
+957	:invoke	:read	[[:r 5 nil] [:r 28 nil]]
+:nemesis	:info	:pause	:majority
+991	:info	:read	[[:r 3 nil] [:r 28 nil]]	:timeout
+996	:invoke	:write	[[:w 28 7] [:w 5 20]]
+959	:info	:write	[[:w 28 4]]	:timeout
+964	:invoke	:write	[[:w 28 8] [:w 29 2]]
+:nemesis	:info	:pause	{"n3" "", "n1" "", "n5" ""}
+:nemesis	:info	:start-partition	:minority-third
+:nemesis	:info	:start-partition	[:isolated {"n4" #{"n2" "n5" "n1" "n3"}, "n2" #{"n4"}, "n5" #{"n4"}, "n1" #{"n4"}, "n3" #{"n4"}}]
+995	:info	:write	[[:w 28 5] [:w 28 6]]	:timeout
+1000	:invoke	:read	[[:r 29 nil]]
+993	:info	:read	[[:r 28 nil]]	:timeout
+998	:invoke	:read	[[:r 29 nil]]
+957	:info	:read	[[:r 5 nil] [:r 28 nil]]	:timeout
+962	:invoke	:write	[[:w 28 9] [:w 24 19]]
+996	:info	:write	[[:w 28 7] [:w 5 20]]	:timeout
+964	:info	:write	[[:w 28 8] [:w 29 2]]	:timeout
+969	:invoke	:write	[[:w 24 20]]
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+1001	:invoke	:txn	[[:r 29 nil] [:w 28 10]]
+1000	:info	:read	[[:r 29 nil]]	:timeout
+1005	:invoke	:write	[[:w 5 21] [:w 29 3]]
+998	:info	:read	[[:r 29 nil]]	:timeout
+1003	:invoke	:read	[[:r 28 nil]]
+:nemesis	:info	:pause	:all
+962	:info	:write	[[:w 28 9] [:w 24 19]]	:timeout
+967	:invoke	:txn	[[:r 28 nil] [:w 28 11]]
+969	:info	:write	[[:w 24 20]]	:timeout
+974	:invoke	:read	[[:r 28 nil]]
+:nemesis	:info	:pause	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-partition	:majorities-ring
+1001	:info	:txn	[[:r 29 nil] [:w 28 10]]	:timeout
+1006	:invoke	:read	[[:r 29 nil]]
+:nemesis	:info	:start-partition	[:isolated {"n2" #{"n5" "n4"}, "n1" #{"n4" "n3"}, "n5" #{"n2" "n3"}, "n4" #{"n2" "n1"}, "n3" #{"n5" "n1"}}]
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+:nemesis	:info	:resume	:all
+1005	:info	:write	[[:w 5 21] [:w 29 3]]	:timeout
+1010	:invoke	:write	[[:w 29 4]]
+1003	:info	:read	[[:r 28 nil]]	:timeout
+1008	:invoke	:txn	[[:r 28 nil] [:w 28 12]]
+967	:info	:txn	[[:r 28 nil] [:w 28 11]]	:timeout
+972	:invoke	:write	[[:w 23 18]]
+974	:info	:read	[[:r 28 nil]]	:timeout
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-node	"n1"
+979	:invoke	:write	[[:w 24 21]]
+1006	:info	:read	[[:r 29 nil]]	:timeout
+1011	:invoke	:write	[[:w 24 22]]
+1008	:info	:txn	[[:r 28 nil] [:w 28 12]]	:timeout
+1013	:invoke	:write	[[:w 28 13] [:w 28 14]]
+972	:info	:write	[[:w 23 18]]	:timeout
+977	:invoke	:txn	[[:w 29 5] [:r 28 nil]]
+1010	:info	:write	[[:w 29 4]]	:timeout
+1015	:invoke	:read	[[:r 29 nil] [:r 28 nil]]
+979	:info	:write	[[:w 24 21]]	:timeout
+984	:invoke	:write	[[:w 29 6]]
+1011	:info	:write	[[:w 24 22]]	:timeout
+1016	:invoke	:write	[[:w 28 15]]
+:nemesis	:info	:stop-node	{"n1" ""}
+:nemesis	:info	:start-partition	:majorities-ring
+:nemesis	:info	:start-partition	[:isolated {"n5" #{"n2" "n4"}, "n3" #{"n2" "n1"}, "n4" #{"n5" "n1"}, "n2" #{"n5" "n3"}, "n1" #{"n4" "n3"}}]
+1013	:info	:write	[[:w 28 13] [:w 28 14]]	:timeout
+1018	:invoke	:write	[[:w 28 16]]
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+977	:info	:txn	[[:w 29 5] [:r 28 nil]]	:timeout
+984	:info	:write	[[:w 29 6]]	:timeout
+989	:invoke	:read	[[:r 28 nil] [:r 28 nil]]
+982	:invoke	:write	[[:w 28 17] [:w 24 23]]
+:nemesis	:info	:start-node	nil
+1015	:info	:read	[[:r 29 nil] [:r 28 nil]]	:timeout
+1020	:invoke	:write	[[:w 29 7]]
+1016	:info	:write	[[:w 28 15]]	:timeout
+1021	:invoke	:write	[[:w 28 18]]
+1018	:info	:write	[[:w 28 16]]	:timeout
+1023	:invoke	:read	[[:r 23 nil] [:r 29 nil]]
+989	:info	:read	[[:r 28 nil] [:r 28 nil]]	:timeout
+994	:invoke	:read	[[:r 28 nil]]
+982	:info	:write	[[:w 28 17] [:w 24 23]]	:timeout
+1020	:info	:write	[[:w 29 7]]	:timeout
+1025	:invoke	:txn	[[:w 28 19] [:r 29 nil]]
+987	:invoke	:read	[[:r 23 nil]]
+1021	:info	:write	[[:w 28 18]]	:timeout
+1026	:invoke	:write	[[:w 24 24] [:w 29 8]]
+1023	:info	:read	[[:r 23 nil] [:r 29 nil]]	:timeout
+1028	:invoke	:write	[[:w 24 25]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-node	nil
+994	:info	:read	[[:r 28 nil]]	:timeout
+999	:invoke	:txn	[[:w 23 19] [:r 28 nil]]
+1025	:info	:txn	[[:w 28 19] [:r 29 nil]]	:timeout
+1030	:invoke	:write	[[:w 24 26]]
+987	:info	:read	[[:r 23 nil]]	:timeout
+992	:invoke	:read	[[:r 29 nil] [:r 28 nil]]
+1026	:info	:write	[[:w 24 24] [:w 29 8]]	:timeout
+1031	:invoke	:txn	[[:w 3 6] [:r 28 nil]]
+1028	:info	:write	[[:w 24 25]]	:timeout
+1033	:invoke	:read	[[:r 29 nil]]
+1030	:info	:write	[[:w 24 26]]	:timeout
+1035	:invoke	:read	[[:r 5 nil]]
+999	:info	:txn	[[:w 23 19] [:r 28 nil]]	:timeout
+1004	:invoke	:read	[[:r 5 nil] [:r 29 nil]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+992	:info	:read	[[:r 29 nil] [:r 28 nil]]	:timeout
+997	:invoke	:read	[[:r 29 nil] [:r 29 nil]]
+:nemesis	:info	:pause	:all
+1031	:info	:txn	[[:w 3 6] [:r 28 nil]]	:timeout
+1036	:invoke	:txn	[[:w 29 9] [:r 29 nil]]
+1033	:info	:read	[[:r 29 nil]]	:timeout
+1038	:invoke	:write	[[:w 28 20] [:w 28 21]]
+:nemesis	:info	:pause	{"n1" "", "n2" "", "n3" nil, "n4" "", "n5" ""}
+:nemesis	:info	:resume	:all
+1035	:info	:read	[[:r 5 nil]]	:timeout
+1040	:invoke	:write	[[:w 29 10]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+1004	:info	:read	[[:r 5 nil] [:r 29 nil]]	:timeout
+:nemesis	:info	:resume	:all
+1036	:info	:txn	[[:w 29 9] [:r 29 nil]]	:timeout
+1009	:invoke	:read	[[:r 29 nil]]
+1041	:invoke	:read	[[:r 28 nil]]
+997	:info	:read	[[:r 29 nil] [:r 29 nil]]	:timeout
+1038	:info	:write	[[:w 28 20] [:w 28 21]]	:timeout
+1002	:invoke	:write	[[:w 24 27]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-node	"n2"
+1043	:invoke	:write	[[:w 23 20]]
+1040	:info	:write	[[:w 29 10]]	:timeout
+1045	:invoke	:read	[[:r 28 nil]]
+1009	:info	:read	[[:r 29 nil]]	:timeout
+1014	:invoke	:read	[[:r 28 nil]]
+1041	:info	:read	[[:r 28 nil]]	:timeout
+1046	:invoke	:txn	[[:w 5 22] [:r 28 nil]]
+1002	:info	:write	[[:w 24 27]]	:timeout
+1007	:invoke	:read	[[:r 28 nil]]
+1043	:info	:write	[[:w 23 20]]	:timeout
+1048	:invoke	:write	[[:w 29 11] [:w 29 12]]
+1045	:info	:read	[[:r 28 nil]]	:timeout
+1050	:invoke	:txn	[[:w 29 13] [:r 28 nil]]
+1046	:info	:txn	[[:w 5 22] [:r 28 nil]]	:timeout
+1051	:invoke	:read	[[:r 23 nil]]
+1014	:info	:read	[[:r 28 nil]]	:timeout
+:nemesis	:info	:stop-node	{"n2" ""}
+:nemesis	:info	:pause	:minority
+1019	:invoke	:write	[[:w 28 22] [:w 28 23]]
+1007	:info	:read	[[:r 28 nil]]	:timeout
+1012	:invoke	:read	[[:r 28 nil]]
+1048	:info	:write	[[:w 29 11] [:w 29 12]]	:timeout
+1050	:info	:txn	[[:w 29 13] [:r 28 nil]]	:timeout
+1053	:invoke	:write	[[:w 24 28]]
+:nemesis	:info	:pause	{"n3" "", "n1" ""}
+1055	:invoke	:write	[[:w 29 14]]
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+1051	:info	:read	[[:r 23 nil]]	:timeout
+1056	:invoke	:read	[[:r 28 nil]]
+:nemesis	:info	:kill	:one
+1019	:info	:write	[[:w 28 22] [:w 28 23]]	:timeout
+1024	:invoke	:read	[[:r 24 nil] [:r 28 nil]]
+1012	:info	:read	[[:r 28 nil]]	:timeout
+1017	:invoke	:txn	[[:w 28 24] [:r 24 nil]]
+1053	:info	:write	[[:w 24 28]]	:timeout
+1058	:invoke	:write	[[:w 28 25]]
+1055	:info	:write	[[:w 29 14]]	:timeout
+1060	:invoke	:write	[[:w 5 23]]
+1056	:info	:read	[[:r 28 nil]]	:timeout
+1061	:invoke	:txn	[[:r 28 nil] [:w 28 26]]
+1017	:info	:txn	[[:w 28 24] [:r 24 nil]]	:timeout
+1022	:invoke	:write	[[:w 29 15]]
+1024	:info	:read	[[:r 24 nil] [:r 28 nil]]	:timeout
+1029	:invoke	:write	[[:w 28 27]]
+:nemesis	:info	:kill	{"n5" ""}
+:nemesis	:info	:resume	:all
+1060	:info	:write	[[:w 5 23]]	:timeout
+1065	:invoke	:read	[[:r 28 nil] [:r 28 nil]]
+1058	:info	:write	[[:w 28 25]]	:timeout
+1063	:invoke	:read	[[:r 28 nil]]
+1061	:info	:txn	[[:r 28 nil] [:w 28 26]]	:timeout
+1066	:invoke	:write	[[:w 29 16]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+1022	:info	:write	[[:w 29 15]]	:timeout
+1027	:invoke	:write	[[:w 29 17]]
+1029	:info	:write	[[:w 28 27]]	:timeout
+1034	:invoke	:read	[[:r 29 nil] [:r 28 nil]]
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+1065	:info	:read	[[:r 28 nil] [:r 28 nil]]	:timeout
+1070	:invoke	:txn	[[:r 29 nil] [:w 28 28]]
+1063	:info	:read	[[:r 28 nil]]	:timeout
+1068	:invoke	:write	[[:w 24 29] [:w 28 29]]
+1066	:info	:write	[[:w 29 16]]	:timeout
+1071	:invoke	:write	[[:w 28 30]]
+:nemesis	:info	:stop-node	"n1"
+1027	:info	:write	[[:w 29 17]]	:timeout
+1032	:invoke	:read	[[:r 29 nil] [:r 23 nil]]
+1034	:info	:read	[[:r 29 nil] [:r 28 nil]]	:timeout
+1039	:invoke	:txn	[[:w 28 31] [:r 28 nil]]
+1070	:info	:txn	[[:r 29 nil] [:w 28 28]]	:timeout
+1068	:info	:write	[[:w 24 29] [:w 28 29]]	:timeout
+1075	:invoke	:read	[[:r 28 nil]]
+1071	:info	:write	[[:w 28 30]]	:timeout
+1076	:invoke	:write	[[:w 28 32] [:w 4 9]]
+1073	:invoke	:txn	[[:w 29 18] [:r 24 nil]]
+1039	:info	:txn	[[:w 28 31] [:r 28 nil]]	:timeout
+1044	:invoke	:txn	[[:w 29 19] [:r 29 nil]]
+1032	:info	:read	[[:r 29 nil] [:r 23 nil]]	:timeout
+1037	:invoke	:read	[[:r 28 nil]]
+:nemesis	:info	:stop-node	{"n1" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+1076	:info	:write	[[:w 28 32] [:w 4 9]]	:timeout
+1081	:invoke	:write	[[:w 29 20] [:w 30 1]]
+1073	:info	:txn	[[:w 29 18] [:r 24 nil]]	:timeout
+1075	:info	:read	[[:r 28 nil]]	:timeout
+1078	:invoke	:write	[[:w 30 2]]
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+:nemesis	:info	:resume	:all
+1080	:invoke	:txn	[[:w 30 3] [:r 30 nil]]
+1044	:info	:txn	[[:w 29 19] [:r 29 nil]]	:timeout
+1049	:invoke	:read	[[:r 24 nil] [:r 30 nil]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+1037	:info	:read	[[:r 28 nil]]	:timeout
+1042	:invoke	:write	[[:w 30 4]]
+:nemesis	:info	:start-partition	:majority
+:nemesis	:info	:start-partition	[:isolated {"n5" #{"n2" "n1" "n3"}, "n4" #{"n2" "n1" "n3"}, "n2" #{"n5" "n4"}, "n1" #{"n5" "n4"}, "n3" #{"n5" "n4"}}]
+1081	:info	:write	[[:w 29 20] [:w 30 1]]	:timeout
+1086	:invoke	:read	[[:r 30 nil]]
+1078	:info	:write	[[:w 30 2]]	:timeout
+1083	:invoke	:read	[[:r 5 nil]]
+:nemesis	:info	:resume	:all
+1080	:info	:txn	[[:w 30 3] [:r 30 nil]]	:timeout
+1085	:invoke	:write	[[:w 24 30] [:w 30 5]]
+1049	:info	:read	[[:r 24 nil] [:r 30 nil]]	:timeout
+1054	:invoke	:write	[[:w 3 7]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+1042	:info	:write	[[:w 30 4]]	:timeout
+1047	:invoke	:read	[[:r 30 nil] [:r 29 nil]]
+:nemesis	:info	:start-node	nil
+1086	:info	:read	[[:r 30 nil]]	:timeout
+1091	:invoke	:write	[[:w 24 31] [:w 3 8]]
+1085	:info	:write	[[:w 24 30] [:w 30 5]]	:timeout
+1090	:invoke	:read	[[:r 30 nil]]
+1083	:info	:read	[[:r 5 nil]]	:timeout
+1088	:invoke	:write	[[:w 30 6]]
+1054	:info	:write	[[:w 3 7]]	:timeout
+1059	:invoke	:write	[[:w 29 21]]
+1047	:info	:read	[[:r 30 nil] [:r 29 nil]]	:timeout
+1052	:invoke	:read	[[:r 30 nil]]
+1091	:info	:write	[[:w 24 31] [:w 3 8]]	:timeout
+1096	:invoke	:txn	[[:r 30 nil] [:w 30 7]]
+1059	:info	:write	[[:w 29 21]]	:timeout
+1064	:invoke	:txn	[[:w 30 8] [:r 30 nil]]
+1090	:info	:read	[[:r 30 nil]]	:timeout
+1095	:invoke	:read	[[:r 30 nil]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start	:all
+1088	:info	:write	[[:w 30 6]]	:timeout
+1093	:invoke	:read	[[:r 4 nil] [:r 29 nil]]
+1052	:info	:read	[[:r 30 nil]]	:timeout
+1096	:info	:txn	[[:r 30 nil] [:w 30 7]]	:timeout
+1057	:invoke	:txn	[[:w 24 32] [:r 29 nil]]
+1101	:invoke	:write	[[:w 30 9] [:w 30 10]]
+1095	:info	:read	[[:r 30 nil]]	:timeout
+1100	:invoke	:txn	[[:r 30 nil] [:w 30 11]]
+1064	:info	:txn	[[:w 30 8] [:r 30 nil]]	:timeout
+1069	:invoke	:read	[[:r 30 nil] [:r 30 nil]]
+1093	:info	:read	[[:r 4 nil] [:r 29 nil]]	:timeout
+1098	:invoke	:read	[[:r 30 nil] [:r 29 nil]]
+1101	:info	:write	[[:w 30 9] [:w 30 10]]	:timeout
+1106	:invoke	:txn	[[:w 29 22] [:r 30 nil]]
+1057	:info	:txn	[[:w 24 32] [:r 29 nil]]	:timeout
+1062	:invoke	:read	[[:r 30 nil]]
+1100	:info	:txn	[[:r 30 nil] [:w 30 11]]	:timeout
+1105	:invoke	:write	[[:w 5 24]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:resume	:all
+1106	:info	:txn	[[:w 29 22] [:r 30 nil]]	:timeout
+1111	:invoke	:read	[[:r 24 nil]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:resume	:all
+1069	:info	:read	[[:r 30 nil] [:r 30 nil]]	:timeout
+1074	:invoke	:write	[[:w 29 23]]
+1098	:info	:read	[[:r 30 nil] [:r 29 nil]]	:timeout
+1103	:invoke	:write	[[:w 30 12]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:pause	nil
+1105	:info	:write	[[:w 5 24]]	:timeout
+1110	:invoke	:write	[[:w 30 13]]
+1062	:info	:read	[[:r 30 nil]]	:timeout
+1067	:invoke	:write	[[:w 30 14]]
+:nemesis	:info	:pause	{"n3" "", "n2" "", "n1" "", "n4" ""}
+:nemesis	:info	:start-node	nil
+1111	:info	:read	[[:r 24 nil]]	:timeout
+1116	:invoke	:read	[[:r 29 nil]]
+1074	:info	:write	[[:w 29 23]]	:timeout
+1079	:invoke	:txn	[[:r 30 nil] [:w 30 15]]
+1103	:info	:write	[[:w 30 12]]	:timeout
+1108	:invoke	:read	[[:r 30 nil]]
+1110	:info	:write	[[:w 30 13]]	:timeout
+1115	:invoke	:read	[[:r 5 nil]]
+1067	:info	:write	[[:w 30 14]]	:timeout
+1072	:invoke	:read	[[:r 30 nil]]
+1116	:info	:read	[[:r 29 nil]]	:timeout
+1121	:invoke	:txn	[[:w 30 16] [:r 29 nil]]
+1108	:info	:read	[[:r 30 nil]]	:timeout
+1113	:invoke	:write	[[:w 30 17] [:w 30 18]]
+1079	:info	:txn	[[:r 30 nil] [:w 30 15]]	:timeout
+1115	:info	:read	[[:r 5 nil]]	:timeout
+1120	:invoke	:read	[[:r 30 nil] [:r 24 nil]]
+1084	:invoke	:txn	[[:w 23 21] [:r 30 nil]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-node	nil
+1072	:info	:read	[[:r 30 nil]]	:timeout
+1077	:invoke	:write	[[:w 30 19]]
+1121	:info	:txn	[[:w 30 16] [:r 29 nil]]	:timeout
+1126	:invoke	:read	[[:r 24 nil]]
+1113	:info	:write	[[:w 30 17] [:w 30 18]]	:timeout
+1118	:invoke	:txn	[[:w 29 24] [:r 29 nil]]
+1120	:info	:read	[[:r 30 nil] [:r 24 nil]]	:timeout
+1125	:invoke	:read	[[:r 30 nil] [:r 30 nil]]
+1084	:info	:txn	[[:w 23 21] [:r 30 nil]]	:timeout
+1089	:invoke	:txn	[[:w 30 20] [:r 29 nil]]
+1077	:info	:write	[[:w 30 19]]	:timeout
+1082	:invoke	:read	[[:r 29 nil] [:r 30 nil]]
+1126	:info	:read	[[:r 24 nil]]	:timeout
+1131	:invoke	:read	[[:r 29 nil]]
+1118	:info	:txn	[[:w 29 24] [:r 29 nil]]	:timeout
+1123	:invoke	:read	[[:r 30 nil]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+1125	:info	:read	[[:r 30 nil] [:r 30 nil]]	:timeout
+1130	:invoke	:txn	[[:r 30 nil] [:w 30 21]]
+:nemesis	:info	:pause	nil
+1089	:info	:txn	[[:w 30 20] [:r 29 nil]]	:timeout
+1094	:invoke	:read	[[:r 30 nil]]
+1082	:info	:read	[[:r 29 nil] [:r 30 nil]]	:timeout
+:nemesis	:info	:pause	{"n4" "", "n1" "", "n3" "", "n5" ""}
+:nemesis	:info	:resume	:all
+1087	:invoke	:write	[[:w 30 22]]
+1131	:info	:read	[[:r 29 nil]]	:timeout
+1136	:invoke	:write	[[:w 29 25]]
+1123	:info	:read	[[:r 30 nil]]	:timeout
+1128	:invoke	:read	[[:r 5 nil] [:r 23 nil]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+:nemesis	:info	:resume	:all
+1130	:info	:txn	[[:r 30 nil] [:w 30 21]]	:timeout
+1135	:invoke	:txn	[[:r 30 nil] [:w 30 23]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:kill	:majority
+1094	:info	:read	[[:r 30 nil]]	:timeout
+1099	:invoke	:write	[[:w 29 26] [:w 29 27]]
+1136	:info	:write	[[:w 29 25]]	:timeout
+1141	:invoke	:read	[[:r 30 nil]]
+1087	:info	:write	[[:w 30 22]]	:timeout
+1128	:info	:read	[[:r 5 nil] [:r 23 nil]]	:timeout
+1133	:invoke	:read	[[:r 30 nil] [:r 30 nil]]
+1092	:invoke	:write	[[:w 30 24]]
+1135	:info	:txn	[[:r 30 nil] [:w 30 23]]	:timeout
+1140	:invoke	:txn	[[:w 30 25] [:r 30 nil]]
+1099	:info	:write	[[:w 29 26] [:w 29 27]]	:timeout
+1104	:invoke	:write	[[:w 30 26]]
+1141	:info	:read	[[:r 30 nil]]	:timeout
+1133	:info	:read	[[:r 30 nil] [:r 30 nil]]	:timeout
+1146	:invoke	:read	[[:r 29 nil]]
+1092	:info	:write	[[:w 30 24]]	:timeout
+1138	:invoke	:write	[[:w 30 27]]
+:nemesis	:info	:kill	{"n3" "", "n5" "", "n2" ""}
+:nemesis	:info	:start-partition	:majority
+:nemesis	:info	:start-partition	[:isolated {"n1" #{"n2" "n5" "n4"}, "n3" #{"n2" "n5" "n4"}, "n2" #{"n1" "n3"}, "n5" #{"n1" "n3"}, "n4" #{"n1" "n3"}}]
+1140	:info	:txn	[[:w 30 25] [:r 30 nil]]	:timeout
+1145	:invoke	:read	[[:r 31 nil]]
+:nemesis	:info	:start-partition	:one
+1097	:invoke	:write	[[:w 30 28]]
+:nemesis	:info	:start-partition	[:isolated {"n3" #{"n2" "n5" "n1" "n4"}, "n2" #{"n3"}, "n5" #{"n3"}, "n1" #{"n3"}, "n4" #{"n3"}}]
+:nemesis	:info	:kill	:minority-third
+1104	:info	:write	[[:w 30 26]]	:timeout
+1109	:invoke	:read	[[:r 30 nil]]
+1146	:info	:read	[[:r 29 nil]]	:timeout
+1138	:info	:write	[[:w 30 27]]	:timeout
+1151	:invoke	:txn	[[:r 30 nil] [:w 29 28]]
+1143	:invoke	:txn	[[:r 5 nil] [:w 30 29]]
+1145	:info	:read	[[:r 31 nil]]	:timeout
+1150	:invoke	:txn	[[:r 30 nil] [:w 31 1]]
+1097	:info	:write	[[:w 30 28]]	:timeout
+1102	:invoke	:write	[[:w 29 29]]
+1109	:info	:read	[[:r 30 nil]]	:timeout
+1114	:invoke	:read	[[:r 30 nil]]
+1151	:info	:txn	[[:r 30 nil] [:w 29 28]]	:timeout
+1156	:invoke	:read	[[:r 30 nil] [:r 29 nil]]
+:nemesis	:info	:kill	{"n3" ""}
+:nemesis	:info	:start-node	nil
+1143	:info	:txn	[[:r 5 nil] [:w 30 29]]	:timeout
+1148	:invoke	:txn	[[:r 29 nil] [:w 30 30]]
+1150	:info	:txn	[[:r 30 nil] [:w 31 1]]	:timeout
+1155	:invoke	:write	[[:w 31 2] [:w 30 31]]
+1102	:info	:write	[[:w 29 29]]	:timeout
+1107	:invoke	:txn	[[:r 30 nil] [:w 29 30]]
+1114	:info	:read	[[:r 30 nil]]	:timeout
+1119	:invoke	:write	[[:w 30 32]]
+1156	:info	:read	[[:r 30 nil] [:r 29 nil]]	:timeout
+1161	:invoke	:write	[[:w 29 31] [:w 32 1]]
+1148	:info	:txn	[[:r 29 nil] [:w 30 30]]	:timeout
+1153	:invoke	:txn	[[:w 32 2] [:r 23 nil]]
+1155	:info	:write	[[:w 31 2] [:w 30 31]]	:timeout
+1160	:invoke	:txn	[[:w 32 3] [:r 32 nil]]
+1107	:info	:txn	[[:r 30 nil] [:w 29 30]]	:timeout
+1112	:invoke	:write	[[:w 32 4]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:resume	:all
+1119	:info	:write	[[:w 30 32]]	:timeout
+1124	:invoke	:write	[[:w 31 3]]
+1161	:info	:write	[[:w 29 31] [:w 32 1]]	:timeout
+1166	:invoke	:write	[[:w 32 5] [:w 23 22]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+1160	:info	:txn	[[:w 32 3] [:r 32 nil]]	:timeout
+1165	:invoke	:txn	[[:w 32 6] [:r 32 nil]]
+1112	:info	:write	[[:w 32 4]]	:timeout
+1117	:invoke	:read	[[:r 32 nil]]
+1153	:info	:txn	[[:w 32 2] [:r 23 nil]]	:timeout
+1158	:invoke	:txn	[[:r 32 nil] [:w 32 7]]
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+1124	:info	:write	[[:w 31 3]]	:timeout
+1129	:invoke	:write	[[:w 29 32]]
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+:nemesis	:info	:resume	:all
+1166	:info	:write	[[:w 32 5] [:w 23 22]]	:timeout
+1171	:invoke	:write	[[:w 32 8]]
+1165	:info	:txn	[[:w 32 6] [:r 32 nil]]	:timeout
+1170	:invoke	:write	[[:w 32 9]]
+1117	:info	:read	[[:r 32 nil]]	:timeout
+1122	:invoke	:read	[[:r 32 nil]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start	:all
+1158	:info	:txn	[[:r 32 nil] [:w 32 7]]	:timeout
+1163	:invoke	:txn	[[:r 32 nil] [:w 23 23]]
+1129	:info	:write	[[:w 29 32]]	:timeout
+1134	:invoke	:write	[[:w 32 10] [:w 31 4]]
+1170	:info	:write	[[:w 32 9]]	:timeout
+1175	:invoke	:write	[[:w 32 11] [:w 32 12]]
+1171	:info	:write	[[:w 32 8]]	:timeout
+1176	:invoke	:write	[[:w 31 5] [:w 33 1]]
+1122	:info	:read	[[:r 32 nil]]	:timeout
+1127	:invoke	:txn	[[:r 31 nil] [:w 32 13]]
+1163	:info	:txn	[[:r 32 nil] [:w 23 23]]	:timeout
+1168	:invoke	:write	[[:w 32 14]]
+1134	:info	:write	[[:w 32 10] [:w 31 4]]	:timeout
+1139	:invoke	:read	[[:r 5 nil]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+1175	:info	:write	[[:w 32 11] [:w 32 12]]	:timeout
+:nemesis	:info	:start-node	nil
+1180	:invoke	:read	[[:r 33 nil]]
+1176	:info	:write	[[:w 31 5] [:w 33 1]]	:timeout
+1181	:invoke	:txn	[[:r 3 nil] [:w 32 15]]
+1127	:info	:txn	[[:r 31 nil] [:w 32 13]]	:timeout
+1132	:invoke	:txn	[[:w 31 6] [:r 33 nil]]
+1168	:info	:write	[[:w 32 14]]	:timeout
+1173	:invoke	:write	[[:w 33 2]]
+1180	:info	:read	[[:r 33 nil]]	:timeout
+1185	:invoke	:read	[[:r 31 nil]]
+1139	:info	:read	[[:r 5 nil]]	:timeout
+1144	:invoke	:read	[[:r 33 nil]]
+1181	:info	:txn	[[:r 3 nil] [:w 32 15]]	:timeout
+1186	:invoke	:read	[[:r 5 nil]]
+1173	:info	:write	[[:w 33 2]]	:timeout
+1178	:invoke	:read	[[:r 33 nil]]
+1132	:info	:txn	[[:w 31 6] [:r 33 nil]]	:timeout
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+1137	:invoke	:read	[[:r 32 nil] [:r 32 nil]]
+1185	:info	:read	[[:r 31 nil]]	:timeout
+1190	:invoke	:txn	[[:r 33 nil] [:w 32 16]]
+:nemesis	:info	:stop-node	"n5"
+1144	:info	:read	[[:r 33 nil]]	:timeout
+1149	:invoke	:write	[[:w 32 17] [:w 32 18]]
+1186	:info	:read	[[:r 5 nil]]	:timeout
+1191	:invoke	:read	[[:r 33 nil]]
+1178	:info	:read	[[:r 33 nil]]	:timeout
+1183	:invoke	:txn	[[:r 31 nil] [:w 32 19]]
+1190	:info	:txn	[[:r 33 nil] [:w 32 16]]	:timeout
+1195	:invoke	:read	[[:r 32 nil]]
+1137	:info	:read	[[:r 32 nil] [:r 32 nil]]	:timeout
+1142	:invoke	:write	[[:w 32 20] [:w 31 7]]
+1149	:info	:write	[[:w 32 17] [:w 32 18]]	:timeout
+1154	:invoke	:read	[[:r 33 nil]]
+1183	:info	:txn	[[:r 31 nil] [:w 32 19]]	:timeout
+1188	:invoke	:write	[[:w 32 21] [:w 31 8]]
+:nemesis	:info	:stop-node	{"n5" ""}
+1191	:info	:read	[[:r 33 nil]]	:timeout
+1196	:invoke	:read	[[:r 33 nil]]
+1195	:info	:read	[[:r 32 nil]]	:timeout
+:nemesis	:info	:start-partition	:minority-third
+1200	:invoke	:write	[[:w 32 22] [:w 33 3]]
+:nemesis	:info	:start-partition	[:isolated {"n3" #{"n2" "n5" "n1" "n4"}, "n2" #{"n3"}, "n5" #{"n3"}, "n1" #{"n3"}, "n4" #{"n3"}}]
+1142	:info	:write	[[:w 32 20] [:w 31 7]]	:timeout
+1147	:invoke	:txn	[[:r 31 nil] [:w 32 23]]
+:nemesis	:info	:pause	:all
+1188	:info	:write	[[:w 32 21] [:w 31 8]]	:timeout
+1154	:info	:read	[[:r 33 nil]]	:timeout
+1159	:invoke	:read	[[:r 33 nil] [:r 1 nil]]
+1193	:invoke	:txn	[[:r 32 nil] [:w 32 24]]
+:nemesis	:info	:pause	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:resume	:all
+1196	:info	:read	[[:r 33 nil]]	:timeout
+1201	:invoke	:write	[[:w 33 4] [:w 33 5]]
+1200	:info	:write	[[:w 32 22] [:w 33 3]]	:timeout
+1205	:invoke	:read	[[:r 32 nil]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-node	nil
+1147	:info	:txn	[[:r 31 nil] [:w 32 23]]	:timeout
+1152	:invoke	:read	[[:r 23 nil]]
+1193	:info	:txn	[[:r 32 nil] [:w 32 24]]	:timeout
+1198	:invoke	:read	[[:r 32 nil]]
+1159	:info	:read	[[:r 33 nil] [:r 1 nil]]	:timeout
+1164	:invoke	:read	[[:r 32 nil]]
+1201	:info	:write	[[:w 33 4] [:w 33 5]]	:timeout
+1206	:invoke	:write	[[:w 32 25]]
+1152	:info	:read	[[:r 23 nil]]	:timeout
+1157	:invoke	:txn	[[:w 1 2] [:r 32 nil]]
+1205	:info	:read	[[:r 32 nil]]	:timeout
+1210	:invoke	:read	[[:r 33 nil]]
+1198	:info	:read	[[:r 32 nil]]	:timeout
+1203	:invoke	:txn	[[:w 32 26] [:r 23 nil]]
+1164	:info	:read	[[:r 32 nil]]	:timeout
+1169	:invoke	:write	[[:w 31 9]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+:nemesis	:info	:pause	:majority
+1206	:info	:write	[[:w 32 25]]	:timeout
+1211	:invoke	:txn	[[:r 32 nil] [:w 33 6]]
+:nemesis	:info	:pause	{"n1" "", "n3" "", "n4" ""}
+:nemesis	:info	:kill	:minority
+1210	:info	:read	[[:r 33 nil]]	:timeout
+1215	:invoke	:write	[[:w 32 27] [:w 5 25]]
+1169	:info	:write	[[:w 31 9]]	:timeout
+1174	:invoke	:write	[[:w 32 28]]
+1157	:info	:txn	[[:w 1 2] [:r 32 nil]]	:timeout
+1203	:info	:txn	[[:w 32 26] [:r 23 nil]]	:timeout
+1208	:invoke	:txn	[[:w 33 7] [:r 33 nil]]
+1162	:invoke	:read	[[:r 32 nil]]
+1211	:info	:txn	[[:r 32 nil] [:w 33 6]]	:timeout
+1216	:invoke	:txn	[[:w 32 29] [:r 32 nil]]
+1215	:info	:write	[[:w 32 27] [:w 5 25]]	:timeout
+1220	:invoke	:write	[[:w 31 10] [:w 32 30]]
+1174	:info	:write	[[:w 32 28]]	:timeout
+1179	:invoke	:write	[[:w 32 31]]
+1162	:info	:read	[[:r 32 nil]]	:timeout
+1208	:info	:txn	[[:w 33 7] [:r 33 nil]]	:timeout
+1213	:invoke	:read	[[:r 32 nil]]
+1167	:invoke	:txn	[[:w 32 32] [:r 32 nil]]
+1216	:info	:txn	[[:w 32 29] [:r 32 nil]]	:timeout
+1221	:invoke	:write	[[:w 33 8] [:w 4 10]]
+:nemesis	:info	:kill	{"n4" "", "n2" ""}
+:nemesis	:info	:start	:all
+1179	:info	:write	[[:w 32 31]]	:timeout
+1220	:info	:write	[[:w 31 10] [:w 32 30]]	:timeout
+1184	:invoke	:txn	[[:r 31 nil] [:w 34 1]]
+1225	:invoke	:write	[[:w 34 2]]
+1167	:info	:txn	[[:w 32 32] [:r 32 nil]]	:timeout
+1172	:invoke	:read	[[:r 34 nil] [:r 23 nil]]
+1213	:info	:read	[[:r 32 nil]]	:timeout
+1218	:invoke	:txn	[[:w 31 11] [:r 34 nil]]
+1221	:info	:write	[[:w 33 8] [:w 4 10]]	:timeout
+1226	:invoke	:txn	[[:w 3 9] [:r 34 nil]]
+1184	:info	:txn	[[:r 31 nil] [:w 34 1]]	:timeout
+1225	:info	:write	[[:w 34 2]]	:timeout
+1189	:invoke	:read	[[:r 34 nil]]
+1172	:info	:read	[[:r 34 nil] [:r 23 nil]]	:timeout
+1230	:invoke	:txn	[[:r 34 nil] [:w 34 3]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:resume	:all
+1218	:info	:txn	[[:w 31 11] [:r 34 nil]]	:timeout
+1177	:invoke	:read	[[:r 34 nil]]
+1223	:invoke	:write	[[:w 33 9]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+1226	:info	:txn	[[:w 3 9] [:r 34 nil]]	:timeout
+1231	:invoke	:txn	[[:r 34 nil] [:w 34 4]]
+1189	:info	:read	[[:r 34 nil]]	:timeout
+1194	:invoke	:read	[[:r 33 nil]]
+1230	:info	:txn	[[:r 34 nil] [:w 34 3]]	:timeout
+1235	:invoke	:txn	[[:w 31 12] [:r 34 nil]]
+:nemesis	:info	:start-node	nil
+1177	:info	:read	[[:r 34 nil]]	:timeout
+1182	:invoke	:write	[[:w 23 24]]
+1223	:info	:write	[[:w 33 9]]	:timeout
+1228	:invoke	:txn	[[:w 33 10] [:r 33 nil]]
+1231	:info	:txn	[[:r 34 nil] [:w 34 4]]	:timeout
+1236	:invoke	:write	[[:w 34 5]]
+1235	:info	:txn	[[:w 31 12] [:r 34 nil]]	:timeout
+1240	:invoke	:txn	[[:w 34 6] [:r 34 nil]]
+1194	:info	:read	[[:r 33 nil]]	:timeout
+1199	:invoke	:write	[[:w 34 7]]
+1228	:info	:txn	[[:w 33 10] [:r 33 nil]]	:timeout
+1233	:invoke	:txn	[[:r 34 nil] [:w 34 8]]
+1236	:info	:write	[[:w 34 5]]	:timeout
+1241	:invoke	:read	[[:r 34 nil] [:r 34 nil]]
+1182	:info	:write	[[:w 23 24]]	:timeout
+1187	:invoke	:read	[[:r 23 nil] [:r 34 nil]]
+1240	:info	:txn	[[:w 34 6] [:r 34 nil]]	:timeout
+1245	:invoke	:txn	[[:w 34 9] [:r 34 nil]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start	:all
+1199	:info	:write	[[:w 34 7]]	:timeout
+1204	:invoke	:write	[[:w 34 10] [:w 33 11]]
+1233	:info	:txn	[[:r 34 nil] [:w 34 8]]	:timeout
+1238	:invoke	:write	[[:w 23 25]]
+1241	:info	:read	[[:r 34 nil] [:r 34 nil]]	:timeout
+1246	:invoke	:write	[[:w 5 26]]
+1245	:info	:txn	[[:w 34 9] [:r 34 nil]]	:timeout
+1250	:invoke	:write	[[:w 34 11]]
+1187	:info	:read	[[:r 23 nil] [:r 34 nil]]	:timeout
+1192	:invoke	:txn	[[:r 5 nil] [:w 31 13]]
+1204	:info	:write	[[:w 34 10] [:w 33 11]]	:timeout
+1209	:invoke	:write	[[:w 34 12]]
+1238	:info	:write	[[:w 23 25]]	:timeout
+1243	:invoke	:write	[[:w 33 12]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:resume	:all
+1246	:info	:write	[[:w 5 26]]	:timeout
+1251	:invoke	:write	[[:w 0 3] [:w 34 13]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" nil}
+:nemesis	:info	:stop-node	"n1"
+1250	:info	:write	[[:w 34 11]]	:timeout
+1255	:invoke	:txn	[[:r 2 nil] [:w 33 13]]
+1192	:info	:txn	[[:r 5 nil] [:w 31 13]]	:timeout
+1197	:invoke	:write	[[:w 5 27]]
+1243	:info	:write	[[:w 33 12]]	:timeout
+1248	:invoke	:read	[[:r 34 nil]]
+1209	:info	:write	[[:w 34 12]]	:timeout
+1214	:invoke	:read	[[:r 34 nil] [:r 31 nil]]
+1251	:info	:write	[[:w 0 3] [:w 34 13]]	:timeout
+1256	:invoke	:txn	[[:r 31 nil] [:w 34 14]]
+1255	:info	:txn	[[:r 2 nil] [:w 33 13]]	:timeout
+1260	:invoke	:read	[[:r 34 nil] [:r 34 nil]]
+1248	:info	:read	[[:r 34 nil]]	:timeout
+1253	:invoke	:read	[[:r 5 nil]]
+1197	:info	:write	[[:w 5 27]]	:timeout
+1202	:invoke	:write	[[:w 33 14]]
+:nemesis	:info	:stop-node	{"n1" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+1256	:info	:txn	[[:r 31 nil] [:w 34 14]]	:timeout
+1261	:invoke	:write	[[:w 33 15]]
+:nemesis	:info	:stop-node	"n4"
+1214	:info	:read	[[:r 34 nil] [:r 31 nil]]	:timeout
+1219	:invoke	:txn	[[:w 31 14] [:r 3 nil]]
+1260	:info	:read	[[:r 34 nil] [:r 34 nil]]	:timeout
+1265	:invoke	:read	[[:r 34 nil]]
+1253	:info	:read	[[:r 5 nil]]	:timeout
+1258	:invoke	:write	[[:w 33 16]]
+1202	:info	:write	[[:w 33 14]]	:timeout
+1207	:invoke	:write	[[:w 34 15]]
+1261	:info	:write	[[:w 33 15]]	:timeout
+1266	:invoke	:write	[[:w 31 15]]
+1219	:info	:txn	[[:w 31 14] [:r 3 nil]]	:timeout
+1224	:invoke	:txn	[[:r 31 nil] [:w 34 16]]
+1265	:info	:read	[[:r 34 nil]]	:timeout
+1270	:invoke	:read	[[:r 5 nil]]
+1258	:info	:write	[[:w 33 16]]	:timeout
+1263	:invoke	:read	[[:r 34 nil]]
+:nemesis	:info	:stop-node	{"n4" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+1207	:info	:write	[[:w 34 15]]	:timeout
+1212	:invoke	:read	[[:r 34 nil] [:r 34 nil]]
+:nemesis	:info	:pause	:minority-third
+1266	:info	:write	[[:w 31 15]]	:timeout
+1271	:invoke	:txn	[[:r 34 nil] [:w 34 17]]
+:nemesis	:info	:pause	{"n3" ""}
+1224	:info	:txn	[[:r 31 nil] [:w 34 16]]	:timeout
+1229	:invoke	:write	[[:w 34 18]]
+1270	:info	:read	[[:r 5 nil]]	:timeout
+1275	:invoke	:read	[[:r 23 nil] [:r 34 nil]]
+1212	:info	:read	[[:r 34 nil] [:r 34 nil]]	:timeout
+1263	:info	:read	[[:r 34 nil]]	:timeout
+:nemesis	:info	:kill	:majority
+1268	:invoke	:write	[[:w 33 17]]
+1217	:invoke	:txn	[[:r 5 nil] [:w 34 19]]
+1271	:info	:txn	[[:r 34 nil] [:w 34 17]]	:timeout
+1276	:invoke	:read	[[:r 33 nil]]
+1229	:info	:write	[[:w 34 18]]	:timeout
+1234	:invoke	:write	[[:w 5 28]]
+1275	:info	:read	[[:r 23 nil] [:r 34 nil]]	:timeout
+1280	:invoke	:write	[[:w 33 18] [:w 34 20]]
+1268	:info	:write	[[:w 33 17]]	:timeout
+1273	:invoke	:write	[[:w 34 21] [:w 34 22]]
+1217	:info	:txn	[[:r 5 nil] [:w 34 19]]	:timeout
+1222	:invoke	:read	[[:r 23 nil] [:r 33 nil]]
+1276	:info	:read	[[:r 33 nil]]	:timeout
+1281	:invoke	:write	[[:w 34 23]]
+:nemesis	:info	:kill	{"n4" "", "n1" "", "n5" ""}
+:nemesis	:info	:stop-node	"n3"
+1234	:info	:write	[[:w 5 28]]	:timeout
+1280	:info	:write	[[:w 33 18] [:w 34 20]]	:timeout
+1285	:invoke	:txn	[[:w 34 24] [:r 34 nil]]
+1239	:invoke	:txn	[[:r 34 nil] [:w 34 25]]
+1273	:info	:write	[[:w 34 21] [:w 34 22]]	:timeout
+1278	:invoke	:write	[[:w 34 26] [:w 33 19]]
+1281	:info	:write	[[:w 34 23]]	:timeout
+1286	:invoke	:read	[[:r 34 nil] [:r 34 nil]]
+1222	:info	:read	[[:r 23 nil] [:r 33 nil]]	:timeout
+1227	:invoke	:txn	[[:r 34 nil] [:w 33 20]]
+1239	:info	:txn	[[:r 34 nil] [:w 34 25]]	:timeout
+1244	:invoke	:read	[[:r 23 nil] [:r 34 nil]]
+1285	:info	:txn	[[:w 34 24] [:r 34 nil]]	:timeout
+1290	:invoke	:read	[[:r 34 nil]]
+1278	:info	:write	[[:w 34 26] [:w 33 19]]	:timeout
+1283	:invoke	:txn	[[:w 34 27] [:r 34 nil]]
+:nemesis	:info	:stop-node	{"n3" ""}
+:nemesis	:info	:resume	:all
+1286	:info	:read	[[:r 34 nil] [:r 34 nil]]	:timeout
+1291	:invoke	:txn	[[:r 33 nil] [:w 34 28]]
+1227	:info	:txn	[[:r 34 nil] [:w 33 20]]	:timeout
+1232	:invoke	:read	[[:r 34 nil] [:r 34 nil]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:resume	:all
+1244	:info	:read	[[:r 23 nil] [:r 34 nil]]	:timeout
+1249	:invoke	:read	[[:r 34 nil] [:r 33 nil]]
+1290	:info	:read	[[:r 34 nil]]	:timeout
+1295	:invoke	:read	[[:r 33 nil]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:pause	nil
+1283	:info	:txn	[[:w 34 27] [:r 34 nil]]	:timeout
+1288	:invoke	:read	[[:r 34 nil]]
+:nemesis	:info	:pause	{"n3" "", "n2" ""}
+:nemesis	:info	:kill	:minority
+1291	:info	:txn	[[:r 33 nil] [:w 34 28]]	:timeout
+1296	:invoke	:txn	[[:r 33 nil] [:w 33 21]]
+1232	:info	:read	[[:r 34 nil] [:r 34 nil]]	:timeout
+1237	:invoke	:read	[[:r 33 nil]]
+1295	:info	:read	[[:r 33 nil]]	:timeout
+1249	:info	:read	[[:r 34 nil] [:r 33 nil]]	:timeout
+1254	:invoke	:read	[[:r 34 nil]]
+1300	:invoke	:read	[[:r 33 nil]]
+1288	:info	:read	[[:r 34 nil]]	:timeout
+1293	:invoke	:write	[[:w 34 29]]
+1296	:info	:txn	[[:r 33 nil] [:w 33 21]]	:timeout
+1301	:invoke	:read	[[:r 34 nil]]
+:nemesis	:info	:kill	{"n5" "", "n3" ""}
+:nemesis	:info	:start-partition	:minority-third
+:nemesis	:info	:start-partition	[:isolated {"n5" #{"n2" "n1" "n4" "n3"}, "n2" #{"n5"}, "n1" #{"n5"}, "n4" #{"n5"}, "n3" #{"n5"}}]
+1237	:info	:read	[[:r 33 nil]]	:timeout
+1242	:invoke	:read	[[:r 23 nil]]
+1254	:info	:read	[[:r 34 nil]]	:timeout
+1259	:invoke	:txn	[[:r 31 nil] [:w 31 16]]
+:nemesis	:info	:start-node	nil
+1300	:info	:read	[[:r 33 nil]]	:timeout
+1305	:invoke	:txn	[[:w 33 22] [:r 31 nil]]
+1293	:info	:write	[[:w 34 29]]	:timeout
+1298	:invoke	:write	[[:w 4 11]]
+1301	:info	:read	[[:r 34 nil]]	:timeout
+1306	:invoke	:txn	[[:r 31 nil] [:w 34 30]]
+1242	:info	:read	[[:r 23 nil]]	:timeout
+1247	:invoke	:write	[[:w 33 23]]
+1259	:info	:txn	[[:r 31 nil] [:w 31 16]]	:timeout
+1264	:invoke	:txn	[[:w 34 31] [:r 33 nil]]
+1305	:info	:txn	[[:w 33 22] [:r 31 nil]]	:timeout
+1310	:invoke	:txn	[[:r 34 nil] [:w 4 12]]
+1306	:info	:txn	[[:r 31 nil] [:w 34 30]]	:timeout
+1298	:info	:write	[[:w 4 11]]	:timeout
+1303	:invoke	:txn	[[:r 33 nil] [:w 34 32]]
+1311	:invoke	:txn	[[:w 31 17] [:r 31 nil]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-node	"n4"
+1247	:info	:write	[[:w 33 23]]	:timeout
+1252	:invoke	:txn	[[:w 33 24] [:r 34 nil]]
+1264	:info	:txn	[[:w 34 31] [:r 33 nil]]	:timeout
+1269	:invoke	:write	[[:w 33 25]]
+1310	:info	:txn	[[:r 34 nil] [:w 4 12]]	:timeout
+1315	:invoke	:write	[[:w 35 1]]
+1303	:info	:txn	[[:r 33 nil] [:w 34 32]]	:timeout
+1311	:info	:txn	[[:w 31 17] [:r 31 nil]]	:timeout
+1316	:invoke	:read	[[:r 31 nil]]
+1308	:invoke	:write	[[:w 31 18] [:w 35 2]]
+1252	:info	:txn	[[:w 33 24] [:r 34 nil]]	:timeout
+1257	:invoke	:write	[[:w 35 3]]
+1269	:info	:write	[[:w 33 25]]	:timeout
+1274	:invoke	:read	[[:r 35 nil]]
+:nemesis	:info	:stop-node	{"n4" ""}
+:nemesis	:info	:start-node	nil
+1315	:info	:write	[[:w 35 1]]	:timeout
+1320	:invoke	:read	[[:r 35 nil]]
+1308	:info	:write	[[:w 31 18] [:w 35 2]]	:timeout
+1313	:invoke	:read	[[:r 35 nil] [:r 35 nil]]
+1316	:info	:read	[[:r 31 nil]]	:timeout
+1321	:invoke	:read	[[:r 33 nil]]
+1257	:info	:write	[[:w 35 3]]	:timeout
+1262	:invoke	:txn	[[:r 33 nil] [:w 35 4]]
+1274	:info	:read	[[:r 35 nil]]	:timeout
+1279	:invoke	:txn	[[:r 23 nil] [:w 31 19]]
+1320	:info	:read	[[:r 35 nil]]	:timeout
+1325	:invoke	:txn	[[:r 33 nil] [:w 35 5]]
+1313	:info	:read	[[:r 35 nil] [:r 35 nil]]	:timeout
+1318	:invoke	:write	[[:w 31 20]]
+1321	:info	:read	[[:r 33 nil]]	:timeout
+1326	:invoke	:txn	[[:w 35 6] [:r 31 nil]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:pause	:minority-third
+1262	:info	:txn	[[:r 33 nil] [:w 35 4]]	:timeout
+1267	:invoke	:write	[[:w 35 7] [:w 33 26]]
+1279	:info	:txn	[[:r 23 nil] [:w 31 19]]	:timeout
+1284	:invoke	:write	[[:w 33 27]]
+1325	:info	:txn	[[:r 33 nil] [:w 35 5]]	:timeout
+1330	:invoke	:read	[[:r 35 nil]]
+1318	:info	:write	[[:w 31 20]]	:timeout
+1323	:invoke	:txn	[[:w 33 28] [:r 33 nil]]
+:nemesis	:info	:pause	{"n1" ""}
+:nemesis	:info	:kill	:majority
+1326	:info	:txn	[[:w 35 6] [:r 31 nil]]	:timeout
+1331	:invoke	:read	[[:r 33 nil] [:r 23 nil]]
+1323	:info	:txn	[[:w 33 28] [:r 33 nil]]	:timeout
+1328	:invoke	:write	[[:w 33 29]]
+1330	:info	:read	[[:r 35 nil]]	:timeout
+1335	:invoke	:txn	[[:r 35 nil] [:w 31 21]]
+1284	:info	:write	[[:w 33 27]]	:timeout
+1289	:invoke	:write	[[:w 35 8]]
+1267	:info	:write	[[:w 35 7] [:w 33 26]]	:timeout
+1272	:invoke	:read	[[:r 33 nil]]
+1331	:info	:read	[[:r 33 nil] [:r 23 nil]]	:timeout
+1336	:invoke	:read	[[:r 31 nil]]
+1328	:info	:write	[[:w 33 29]]	:timeout
+1333	:invoke	:read	[[:r 33 nil]]
+:nemesis	:info	:kill	{"n5" "", "n2" "", "n3" ""}
+:nemesis	:info	:stop-node	"n4"
+1335	:info	:txn	[[:r 35 nil] [:w 31 21]]	:timeout
+1340	:invoke	:txn	[[:w 33 30] [:r 35 nil]]
+1289	:info	:write	[[:w 35 8]]	:timeout
+1294	:invoke	:read	[[:r 23 nil]]
+1272	:info	:read	[[:r 33 nil]]	:timeout
+1277	:invoke	:txn	[[:r 5 nil] [:w 31 22]]
+1336	:info	:read	[[:r 31 nil]]	:timeout
+1341	:invoke	:write	[[:w 35 9] [:w 31 23]]
+1333	:info	:read	[[:r 33 nil]]	:timeout
+1338	:invoke	:read	[[:r 35 nil]]
+1294	:info	:read	[[:r 23 nil]]	:timeout
+1299	:invoke	:read	[[:r 31 nil]]
+1340	:info	:txn	[[:w 33 30] [:r 35 nil]]	:timeout
+1277	:info	:txn	[[:r 5 nil] [:w 31 22]]	:timeout
+1345	:invoke	:read	[[:r 33 nil]]
+1341	:info	:write	[[:w 35 9] [:w 31 23]]	:timeout
+1346	:invoke	:write	[[:w 33 31]]
+1282	:invoke	:txn	[[:r 33 nil] [:w 33 32]]
+:nemesis	:info	:stop-node	{"n4" ""}
+:nemesis	:info	:pause	:minority-third
+1338	:info	:read	[[:r 35 nil]]	:timeout
+1343	:invoke	:write	[[:w 36 1] [:w 31 24]]
+1299	:info	:read	[[:r 31 nil]]	:timeout
+1304	:invoke	:read	[[:r 36 nil]]
+:nemesis	:info	:pause	{"n1" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+1345	:info	:read	[[:r 33 nil]]	:timeout
+1350	:invoke	:write	[[:w 35 10]]
+1346	:info	:write	[[:w 33 31]]	:timeout
+1351	:invoke	:read	[[:r 36 nil]]
+1282	:info	:txn	[[:r 33 nil] [:w 33 32]]	:timeout
+1287	:invoke	:txn	[[:r 35 nil] [:w 31 25]]
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+1343	:info	:write	[[:w 36 1] [:w 31 24]]	:timeout
+1348	:invoke	:read	[[:r 35 nil]]
+1304	:info	:read	[[:r 36 nil]]	:timeout
+1309	:invoke	:read	[[:r 35 nil]]
+1350	:info	:write	[[:w 35 10]]	:timeout
+1351	:info	:read	[[:r 36 nil]]	:timeout
+:nemesis	:info	:start-node	nil
+1356	:invoke	:read	[[:r 35 nil]]
+1355	:invoke	:write	[[:w 36 2]]
+1287	:info	:txn	[[:r 35 nil] [:w 31 25]]	:timeout
+1292	:invoke	:read	[[:r 35 nil] [:r 35 nil]]
+1348	:info	:read	[[:r 35 nil]]	:timeout
+1353	:invoke	:txn	[[:r 35 nil] [:w 36 3]]
+1309	:info	:read	[[:r 35 nil]]	:timeout
+1314	:invoke	:read	[[:r 31 nil] [:r 35 nil]]
+1356	:info	:read	[[:r 35 nil]]	:timeout
+1361	:invoke	:write	[[:w 35 11]]
+1355	:info	:write	[[:w 36 2]]	:timeout
+1360	:invoke	:write	[[:w 35 12]]
+1292	:info	:read	[[:r 35 nil] [:r 35 nil]]	:timeout
+1297	:invoke	:write	[[:w 31 26]]
+1353	:info	:txn	[[:r 35 nil] [:w 36 3]]	:timeout
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-node	nil
+1358	:invoke	:write	[[:w 36 4]]
+1314	:info	:read	[[:r 31 nil] [:r 35 nil]]	:timeout
+1319	:invoke	:txn	[[:r 31 nil] [:w 31 27]]
+1360	:info	:write	[[:w 35 12]]	:timeout
+1365	:invoke	:write	[[:w 36 5]]
+1361	:info	:write	[[:w 35 11]]	:timeout
+1297	:info	:write	[[:w 31 26]]	:timeout
+1366	:invoke	:read	[[:r 23 nil] [:r 35 nil]]
+1302	:invoke	:read	[[:r 36 nil]]
+1358	:info	:write	[[:w 36 4]]	:timeout
+1363	:invoke	:write	[[:w 5 29]]
+1319	:info	:txn	[[:r 31 nil] [:w 31 27]]	:timeout
+1324	:invoke	:txn	[[:r 35 nil] [:w 36 6]]
+1365	:info	:write	[[:w 36 5]]	:timeout
+1370	:invoke	:write	[[:w 31 28]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:kill	:one
+1366	:info	:read	[[:r 23 nil] [:r 35 nil]]	:timeout
+1371	:invoke	:read	[[:r 36 nil]]
+1302	:info	:read	[[:r 36 nil]]	:timeout
+1307	:invoke	:write	[[:w 35 13] [:w 23 26]]
+1363	:info	:write	[[:w 5 29]]	:timeout
+1368	:invoke	:write	[[:w 23 27]]
+1324	:info	:txn	[[:r 35 nil] [:w 36 6]]	:timeout
+1329	:invoke	:read	[[:r 36 nil] [:r 36 nil]]
+1370	:info	:write	[[:w 31 28]]	:timeout
+1375	:invoke	:read	[[:r 35 nil]]
+1371	:info	:read	[[:r 36 nil]]	:timeout
+1376	:invoke	:write	[[:w 35 14]]
+1368	:info	:write	[[:w 23 27]]	:timeout
+1373	:invoke	:txn	[[:r 35 nil] [:w 35 15]]
+1307	:info	:write	[[:w 35 13] [:w 23 26]]	:timeout
+1312	:invoke	:read	[[:r 31 nil]]
+1329	:info	:read	[[:r 36 nil] [:r 36 nil]]	:timeout
+1334	:invoke	:read	[[:r 36 nil] [:r 35 nil]]
+:nemesis	:info	:kill	{"n3" ""}
+:nemesis	:info	:start-node	nil
+1375	:info	:read	[[:r 35 nil]]	:timeout
+1380	:invoke	:read	[[:r 35 nil] [:r 35 nil]]
+1376	:info	:write	[[:w 35 14]]	:timeout
+1381	:invoke	:read	[[:r 36 nil]]
+1373	:info	:txn	[[:r 35 nil] [:w 35 15]]	:timeout
+1378	:invoke	:write	[[:w 31 29]]
+1312	:info	:read	[[:r 31 nil]]	:timeout
+1334	:info	:read	[[:r 36 nil] [:r 35 nil]]	:timeout
+1339	:invoke	:txn	[[:w 36 7] [:r 31 nil]]
+1317	:invoke	:write	[[:w 36 8] [:w 36 9]]
+1380	:info	:read	[[:r 35 nil] [:r 35 nil]]	:timeout
+1385	:invoke	:write	[[:w 35 16] [:w 35 17]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:kill	:one
+1381	:info	:read	[[:r 36 nil]]	:timeout
+1386	:invoke	:txn	[[:r 36 nil] [:w 36 10]]
+1378	:info	:write	[[:w 31 29]]	:timeout
+1339	:info	:txn	[[:w 36 7] [:r 31 nil]]	:timeout
+1344	:invoke	:write	[[:w 35 18]]
+1383	:invoke	:read	[[:r 31 nil]]
+1317	:info	:write	[[:w 36 8] [:w 36 9]]	:timeout
+1322	:invoke	:write	[[:w 35 19] [:w 36 11]]
+1385	:info	:write	[[:w 35 16] [:w 35 17]]	:timeout
+1390	:invoke	:read	[[:r 35 nil]]
+1386	:info	:txn	[[:r 36 nil] [:w 36 10]]	:timeout
+1391	:invoke	:txn	[[:w 36 12] [:r 36 nil]]
+1383	:info	:read	[[:r 31 nil]]	:timeout
+1388	:invoke	:write	[[:w 36 13] [:w 35 20]]
+1344	:info	:write	[[:w 35 18]]	:timeout
+1349	:invoke	:read	[[:r 36 nil]]
+:nemesis	:info	:kill	{"n2" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+:nemesis	:info	:resume	:all
+1390	:info	:read	[[:r 35 nil]]	:timeout
+1395	:invoke	:txn	[[:r 36 nil] [:w 31 30]]
+1322	:info	:write	[[:w 35 19] [:w 36 11]]	:timeout
+1327	:invoke	:read	[[:r 35 nil]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start	:all
+1391	:info	:txn	[[:w 36 12] [:r 36 nil]]	:timeout
+1396	:invoke	:read	[[:r 35 nil] [:r 36 nil]]
+1349	:info	:read	[[:r 36 nil]]	:timeout
+1354	:invoke	:write	[[:w 36 14]]
+1388	:info	:write	[[:w 36 13] [:w 35 20]]	:timeout
+1393	:invoke	:txn	[[:w 36 15] [:r 35 nil]]
+1327	:info	:read	[[:r 35 nil]]	:timeout
+1332	:invoke	:write	[[:w 23 28]]
+1395	:info	:txn	[[:r 36 nil] [:w 31 30]]	:timeout
+1400	:invoke	:read	[[:r 36 nil] [:r 35 nil]]
+1396	:info	:read	[[:r 35 nil] [:r 36 nil]]	:timeout
+1401	:invoke	:txn	[[:r 23 nil] [:w 23 29]]
+1354	:info	:write	[[:w 36 14]]	:timeout
+1359	:invoke	:read	[[:r 35 nil]]
+1393	:info	:txn	[[:w 36 15] [:r 35 nil]]	:timeout
+1398	:invoke	:read	[[:r 23 nil]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+1332	:info	:write	[[:w 23 28]]	:timeout
+1337	:invoke	:write	[[:w 35 21] [:w 31 31]]
+1400	:info	:read	[[:r 36 nil] [:r 35 nil]]	:timeout
+1405	:invoke	:read	[[:r 35 nil] [:r 35 nil]]
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+:nemesis	:info	:kill	:minority
+1401	:info	:txn	[[:r 23 nil] [:w 23 29]]	:timeout
+1406	:invoke	:write	[[:w 36 16] [:w 35 22]]
+1398	:info	:read	[[:r 23 nil]]	:timeout
+1403	:invoke	:write	[[:w 31 32]]
+1359	:info	:read	[[:r 35 nil]]	:timeout
+1364	:invoke	:write	[[:w 36 17] [:w 36 18]]
+1337	:info	:write	[[:w 35 21] [:w 31 31]]	:timeout
+1342	:invoke	:txn	[[:r 35 nil] [:w 35 23]]
+1405	:info	:read	[[:r 35 nil] [:r 35 nil]]	:timeout
+1410	:invoke	:read	[[:r 35 nil] [:r 35 nil]]
+1406	:info	:write	[[:w 36 16] [:w 35 22]]	:timeout
+1411	:invoke	:read	[[:r 36 nil]]
+1364	:info	:write	[[:w 36 17] [:w 36 18]]	:timeout
+1369	:invoke	:read	[[:r 35 nil]]
+1403	:info	:write	[[:w 31 32]]	:timeout
+1408	:invoke	:write	[[:w 36 19]]
+1410	:info	:read	[[:r 35 nil] [:r 35 nil]]	:timeout
+1415	:invoke	:read	[[:r 35 nil]]
+1342	:info	:txn	[[:r 35 nil] [:w 35 23]]	:timeout
+1347	:invoke	:read	[[:r 31 nil]]
+:nemesis	:info	:kill	{"n3" "", "n4" ""}
+:nemesis	:info	:resume	:all
+1369	:info	:read	[[:r 35 nil]]	:timeout
+1374	:invoke	:read	[[:r 36 nil]]
+1411	:info	:read	[[:r 36 nil]]	:timeout
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-node	nil
+1408	:info	:write	[[:w 36 19]]	:timeout
+1416	:invoke	:write	[[:w 36 20]]
+1415	:info	:read	[[:r 35 nil]]	:timeout
+1420	:invoke	:txn	[[:r 36 nil] [:w 36 21]]
+1413	:invoke	:write	[[:w 36 22]]
+1347	:info	:read	[[:r 31 nil]]	:timeout
+1352	:invoke	:write	[[:w 36 23]]
+1416	:info	:write	[[:w 36 20]]	:timeout
+1374	:info	:read	[[:r 36 nil]]	:timeout
+1379	:invoke	:read	[[:r 37 nil]]
+1420	:info	:txn	[[:r 36 nil] [:w 36 21]]	:timeout
+1421	:invoke	:write	[[:w 36 24] [:w 23 30]]
+1425	:invoke	:read	[[:r 35 nil]]
+1413	:info	:write	[[:w 36 22]]	:timeout
+1418	:invoke	:read	[[:r 2 nil]]
+1352	:info	:write	[[:w 36 23]]	:timeout
+1357	:invoke	:read	[[:r 36 nil]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-partition	:majority
+:nemesis	:info	:start-partition	[:isolated {"n4" #{"n2" "n5" "n1"}, "n3" #{"n2" "n5" "n1"}, "n2" #{"n4" "n3"}, "n5" #{"n4" "n3"}, "n1" #{"n4" "n3"}}]
+:nemesis	:info	:kill	:all
+1421	:info	:write	[[:w 36 24] [:w 23 30]]	:timeout
+1426	:invoke	:txn	[[:w 35 24] [:r 36 nil]]
+1379	:info	:read	[[:r 37 nil]]	:timeout
+1384	:invoke	:read	[[:r 35 nil]]
+1425	:info	:read	[[:r 35 nil]]	:timeout
+1430	:invoke	:read	[[:r 37 nil]]
+1418	:info	:read	[[:r 2 nil]]	:timeout
+1423	:invoke	:txn	[[:r 35 nil] [:w 35 25]]
+1357	:info	:read	[[:r 36 nil]]	:timeout
+1362	:invoke	:read	[[:r 35 nil]]
+1426	:info	:txn	[[:w 35 24] [:r 36 nil]]	:timeout
+1431	:invoke	:txn	[[:r 35 nil] [:w 35 26]]
+1384	:info	:read	[[:r 35 nil]]	:timeout
+1389	:invoke	:txn	[[:w 35 27] [:r 35 nil]]
+1430	:info	:read	[[:r 37 nil]]	:timeout
+1435	:invoke	:write	[[:w 35 28]]
+1423	:info	:txn	[[:r 35 nil] [:w 35 25]]	:timeout
+1428	:invoke	:write	[[:w 36 25] [:w 35 29]]
+:nemesis	:info	:kill	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:resume	:all
+1362	:info	:read	[[:r 35 nil]]	:timeout
+1367	:invoke	:write	[[:w 35 30] [:w 37 1]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+1431	:info	:txn	[[:r 35 nil] [:w 35 26]]	:timeout
+1436	:invoke	:txn	[[:r 35 nil] [:w 35 31]]
+1428	:info	:write	[[:w 36 25] [:w 35 29]]	:timeout
+1433	:invoke	:write	[[:w 35 32] [:w 37 2]]
+1435	:info	:write	[[:w 35 28]]	:timeout
+1389	:info	:txn	[[:w 35 27] [:r 35 nil]]	:timeout
+:nemesis	:info	:stop-node	"n3"
+1440	:invoke	:write	[[:w 38 1] [:w 36 26]]
+1394	:invoke	:txn	[[:r 23 nil] [:w 38 2]]
+1367	:info	:write	[[:w 35 30] [:w 37 1]]	:timeout
+1372	:invoke	:read	[[:r 38 nil] [:r 37 nil]]
+1436	:info	:txn	[[:r 35 nil] [:w 35 31]]	:timeout
+1441	:invoke	:txn	[[:w 38 3] [:r 38 nil]]
+1433	:info	:write	[[:w 35 32] [:w 37 2]]	:timeout
+1438	:invoke	:txn	[[:r 38 nil] [:w 36 27]]
+1440	:info	:write	[[:w 38 1] [:w 36 26]]	:timeout
+1445	:invoke	:write	[[:w 38 4] [:w 38 5]]
+1394	:info	:txn	[[:r 23 nil] [:w 38 2]]	:timeout
+1399	:invoke	:read	[[:r 38 nil] [:r 38 nil]]
+1441	:info	:txn	[[:w 38 3] [:r 38 nil]]	:timeout
+1446	:invoke	:write	[[:w 36 28]]
+1372	:info	:read	[[:r 38 nil] [:r 37 nil]]	:timeout
+:nemesis	:info	:stop-node	{"n3" ""}
+:nemesis	:info	:start	:all
+1377	:invoke	:read	[[:r 37 nil] [:r 36 nil]]
+1438	:info	:txn	[[:r 38 nil] [:w 36 27]]	:timeout
+1443	:invoke	:write	[[:w 36 29]]
+1445	:info	:write	[[:w 38 4] [:w 38 5]]	:timeout
+1399	:info	:read	[[:r 38 nil] [:r 38 nil]]	:timeout
+1404	:invoke	:write	[[:w 5 30]]
+1450	:invoke	:read	[[:r 38 nil]]
+1446	:info	:write	[[:w 36 28]]	:timeout
+1451	:invoke	:txn	[[:w 38 6] [:r 36 nil]]
+1443	:info	:write	[[:w 36 29]]	:timeout
+1448	:invoke	:read	[[:r 37 nil]]
+1377	:info	:read	[[:r 37 nil] [:r 36 nil]]	:timeout
+1382	:invoke	:txn	[[:w 38 7] [:r 38 nil]]
+1404	:info	:write	[[:w 5 30]]	:timeout
+1409	:invoke	:read	[[:r 38 nil]]
+1450	:info	:read	[[:r 38 nil]]	:timeout
+1455	:invoke	:txn	[[:w 36 30] [:r 37 nil]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start	:all
+1451	:info	:txn	[[:w 38 6] [:r 36 nil]]	:timeout
+1456	:invoke	:write	[[:w 38 8]]
+1448	:info	:read	[[:r 37 nil]]	:timeout
+1453	:invoke	:write	[[:w 38 9]]
+1382	:info	:txn	[[:w 38 7] [:r 38 nil]]	:timeout
+1409	:info	:read	[[:r 38 nil]]	:timeout
+1387	:invoke	:read	[[:r 37 nil]]
+1414	:invoke	:txn	[[:w 36 31] [:r 3 nil]]
+1455	:info	:txn	[[:w 36 30] [:r 37 nil]]	:timeout
+1460	:invoke	:write	[[:w 36 32] [:w 39 1]]
+1456	:info	:write	[[:w 38 8]]	:timeout
+1461	:invoke	:txn	[[:w 38 10] [:r 39 nil]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-node	nil
+1453	:info	:write	[[:w 38 9]]	:timeout
+1458	:invoke	:read	[[:r 38 nil]]
+1387	:info	:read	[[:r 37 nil]]	:timeout
+1392	:invoke	:read	[[:r 5 nil] [:r 37 nil]]
+1414	:info	:txn	[[:w 36 31] [:r 3 nil]]	:timeout
+1460	:info	:write	[[:w 36 32] [:w 39 1]]	:timeout
+1461	:info	:txn	[[:w 38 10] [:r 39 nil]]	:timeout
+1466	:invoke	:read	[[:r 39 nil] [:r 38 nil]]
+1465	:invoke	:write	[[:w 38 11]]
+1419	:invoke	:write	[[:w 37 3]]
+1458	:info	:read	[[:r 38 nil]]	:timeout
+1463	:invoke	:txn	[[:r 39 nil] [:w 38 12]]
+1392	:info	:read	[[:r 5 nil] [:r 37 nil]]	:timeout
+1466	:info	:read	[[:r 39 nil] [:r 38 nil]]	:timeout
+1397	:invoke	:read	[[:r 37 nil] [:r 38 nil]]
+1471	:invoke	:read	[[:r 39 nil]]
+1465	:info	:write	[[:w 38 11]]	:timeout
+1419	:info	:write	[[:w 37 3]]	:timeout
+1424	:invoke	:read	[[:r 39 nil]]
+1470	:invoke	:write	[[:w 37 4]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-node	nil
+1463	:info	:txn	[[:r 39 nil] [:w 38 12]]	:timeout
+1468	:invoke	:read	[[:r 38 nil] [:r 37 nil]]
+1471	:info	:read	[[:r 39 nil]]	:timeout
+1476	:invoke	:txn	[[:r 38 nil] [:w 38 13]]
+1397	:info	:read	[[:r 37 nil] [:r 38 nil]]	:timeout
+1402	:invoke	:read	[[:r 37 nil]]
+1470	:info	:write	[[:w 37 4]]	:timeout
+1475	:invoke	:read	[[:r 38 nil]]
+1424	:info	:read	[[:r 39 nil]]	:timeout
+1429	:invoke	:write	[[:w 38 14] [:w 38 15]]
+1468	:info	:read	[[:r 38 nil] [:r 37 nil]]	:timeout
+1473	:invoke	:write	[[:w 39 2]]
+1476	:info	:txn	[[:r 38 nil] [:w 38 13]]	:timeout
+1481	:invoke	:write	[[:w 39 3]]
+1402	:info	:read	[[:r 37 nil]]	:timeout
+1407	:invoke	:write	[[:w 37 5]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-partition	:majorities-ring
+:nemesis	:info	:start-partition	[:isolated {"n1" #{"n2" "n4"}, "n3" #{"n2" "n5"}, "n4" #{"n5" "n1"}, "n2" #{"n1" "n3"}, "n5" #{"n4" "n3"}}]
+:nemesis	:info	:stop-node	"n1"
+1475	:info	:read	[[:r 38 nil]]	:timeout
+1480	:invoke	:write	[[:w 38 16] [:w 38 17]]
+1473	:info	:write	[[:w 39 2]]	:timeout
+1478	:invoke	:read	[[:r 38 nil]]
+1429	:info	:write	[[:w 38 14] [:w 38 15]]	:timeout
+1434	:invoke	:write	[[:w 23 31]]
+1481	:info	:write	[[:w 39 3]]	:timeout
+1486	:invoke	:read	[[:r 38 nil]]
+1407	:info	:write	[[:w 37 5]]	:timeout
+1412	:invoke	:read	[[:r 38 nil]]
+1480	:info	:write	[[:w 38 16] [:w 38 17]]	:timeout
+1485	:invoke	:read	[[:r 39 nil] [:r 39 nil]]
+1478	:info	:read	[[:r 38 nil]]	:timeout
+1483	:invoke	:txn	[[:w 38 18] [:r 38 nil]]
+:nemesis	:info	:stop-node	{"n1" ""}
+:nemesis	:info	:start-partition	:one
+:nemesis	:info	:start-partition	[:isolated {"n1" #{"n2" "n5" "n4" "n3"}, "n2" #{"n1"}, "n5" #{"n1"}, "n4" #{"n1"}, "n3" #{"n1"}}]
+1434	:info	:write	[[:w 23 31]]	:timeout
+1439	:invoke	:read	[[:r 38 nil]]
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+1486	:info	:read	[[:r 38 nil]]	:timeout
+1491	:invoke	:write	[[:w 38 19]]
+1412	:info	:read	[[:r 38 nil]]	:timeout
+1417	:invoke	:read	[[:r 37 nil] [:r 38 nil]]
+1485	:info	:read	[[:r 39 nil] [:r 39 nil]]	:timeout
+1490	:invoke	:txn	[[:w 38 20] [:r 38 nil]]
+:nemesis	:info	:start-partition	:majorities-ring
+:nemesis	:info	:start-partition	[:isolated {"n1" #{"n2" "n3"}, "n4" #{"n2" "n5"}, "n3" #{"n5" "n1"}, "n2" #{"n1" "n4"}, "n5" #{"n4" "n3"}}]
+1483	:info	:txn	[[:w 38 18] [:r 38 nil]]	:timeout
+1488	:invoke	:txn	[[:r 38 nil] [:w 38 21]]
+1491	:info	:write	[[:w 38 19]]	:timeout
+1496	:invoke	:txn	[[:r 39 nil] [:w 39 4]]
+1439	:info	:read	[[:r 38 nil]]	:timeout
+1444	:invoke	:read	[[:r 39 nil]]
+1490	:info	:txn	[[:w 38 20] [:r 38 nil]]	:timeout
+1495	:invoke	:write	[[:w 39 5]]
+:nemesis	:info	:stop-node	"n4"
+1417	:info	:read	[[:r 37 nil] [:r 38 nil]]	:timeout
+1422	:invoke	:read	[[:r 38 nil]]
+1488	:info	:txn	[[:r 38 nil] [:w 38 21]]	:timeout
+1493	:invoke	:read	[[:r 37 nil]]
+1444	:info	:read	[[:r 39 nil]]	:timeout
+1449	:invoke	:write	[[:w 39 6]]
+1496	:info	:txn	[[:r 39 nil] [:w 39 4]]	:timeout
+1501	:invoke	:txn	[[:r 39 nil] [:w 38 22]]
+1495	:info	:write	[[:w 39 5]]	:timeout
+1500	:invoke	:txn	[[:r 23 nil] [:w 38 23]]
+1422	:info	:read	[[:r 38 nil]]	:timeout
+1427	:invoke	:read	[[:r 39 nil]]
+:nemesis	:info	:stop-node	{"n4" ""}
+:nemesis	:info	:start-node	nil
+1493	:info	:read	[[:r 37 nil]]	:timeout
+1498	:invoke	:write	[[:w 38 24]]
+1449	:info	:write	[[:w 39 6]]	:timeout
+1454	:invoke	:read	[[:r 38 nil] [:r 39 nil]]
+1501	:info	:txn	[[:r 39 nil] [:w 38 22]]	:timeout
+1506	:invoke	:write	[[:w 38 25] [:w 23 32]]
+1500	:info	:txn	[[:r 23 nil] [:w 38 23]]	:timeout
+1505	:invoke	:txn	[[:w 39 7] [:r 38 nil]]
+1427	:info	:read	[[:r 39 nil]]	:timeout
+1432	:invoke	:read	[[:r 38 nil]]
+1498	:info	:write	[[:w 38 24]]	:timeout
+1503	:invoke	:write	[[:w 38 26]]
+1454	:info	:read	[[:r 38 nil] [:r 39 nil]]	:timeout
+1459	:invoke	:txn	[[:w 38 27] [:r 39 nil]]
+1506	:info	:write	[[:w 38 25] [:w 23 32]]	:timeout
+1511	:invoke	:txn	[[:r 38 nil] [:w 38 28]]
+1505	:info	:txn	[[:w 39 7] [:r 38 nil]]	:timeout
+1510	:invoke	:read	[[:r 38 nil]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+1432	:info	:read	[[:r 38 nil]]	:timeout
+1437	:invoke	:read	[[:r 23 nil]]
+:nemesis	:info	:resume	:all
+1503	:info	:write	[[:w 38 26]]	:timeout
+1508	:invoke	:write	[[:w 38 29]]
+1459	:info	:txn	[[:w 38 27] [:r 39 nil]]	:timeout
+1464	:invoke	:read	[[:r 38 nil] [:r 38 nil]]
+1511	:info	:txn	[[:r 38 nil] [:w 38 28]]	:timeout
+1516	:invoke	:write	[[:w 38 30]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:pause	nil
+1510	:info	:read	[[:r 38 nil]]	:timeout
+1515	:invoke	:txn	[[:r 38 nil] [:w 39 8]]
+:nemesis	:info	:pause	{"n2" "", "n4" ""}
+:nemesis	:info	:stop-node	"n5"
+1437	:info	:read	[[:r 23 nil]]	:timeout
+1442	:invoke	:write	[[:w 38 31] [:w 37 6]]
+1508	:info	:write	[[:w 38 29]]	:timeout
+1513	:invoke	:read	[[:r 37 nil]]
+1464	:info	:read	[[:r 38 nil] [:r 38 nil]]	:timeout
+1469	:invoke	:txn	[[:w 38 32] [:r 39 nil]]
+1516	:info	:write	[[:w 38 30]]	:timeout
+1521	:invoke	:read	[[:r 39 nil]]
+1515	:info	:txn	[[:r 38 nil] [:w 39 8]]	:timeout
+1520	:invoke	:txn	[[:w 39 9] [:r 38 nil]]
+1442	:info	:write	[[:w 38 31] [:w 37 6]]	:timeout
+1447	:invoke	:read	[[:r 37 nil]]
+1513	:info	:read	[[:r 37 nil]]	:timeout
+1469	:info	:txn	[[:w 38 32] [:r 39 nil]]	:timeout
+1521	:info	:read	[[:r 39 nil]]	:timeout
+1474	:invoke	:write	[[:w 39 10]]
+1518	:invoke	:write	[[:w 5 31]]
+1526	:invoke	:write	[[:w 40 1]]
+:nemesis	:info	:stop-node	{"n5" ""}
+:nemesis	:info	:start	:all
+1520	:info	:txn	[[:w 39 9] [:r 38 nil]]	:timeout
+1525	:invoke	:write	[[:w 39 11]]
+1447	:info	:read	[[:r 37 nil]]	:timeout
+1452	:invoke	:read	[[:r 40 nil]]
+1518	:info	:write	[[:w 5 31]]	:timeout
+1474	:info	:write	[[:w 39 10]]	:timeout
+1479	:invoke	:write	[[:w 40 2]]
+1523	:invoke	:read	[[:r 40 nil]]
+1526	:info	:write	[[:w 40 1]]	:timeout
+1531	:invoke	:txn	[[:r 39 nil] [:w 40 3]]
+1525	:info	:write	[[:w 39 11]]	:timeout
+1530	:invoke	:txn	[[:r 37 nil] [:w 40 4]]
+1452	:info	:read	[[:r 40 nil]]	:timeout
+1457	:invoke	:read	[[:r 40 nil]]
+1479	:info	:write	[[:w 40 2]]	:timeout
+1484	:invoke	:txn	[[:w 40 5] [:r 37 nil]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:pause	:all
+1523	:info	:read	[[:r 40 nil]]	:timeout
+1528	:invoke	:read	[[:r 5 nil]]
+1530	:info	:txn	[[:r 37 nil] [:w 40 4]]	:timeout
+1535	:invoke	:read	[[:r 39 nil]]
+1531	:info	:txn	[[:r 39 nil] [:w 40 3]]	:timeout
+1536	:invoke	:txn	[[:r 39 nil] [:w 37 7]]
+:nemesis	:info	:pause	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-node	"n4"
+1457	:info	:read	[[:r 40 nil]]	:timeout
+1462	:invoke	:read	[[:r 37 nil]]
+1484	:info	:txn	[[:w 40 5] [:r 37 nil]]	:timeout
+1489	:invoke	:read	[[:r 40 nil] [:r 40 nil]]
+1528	:info	:read	[[:r 5 nil]]	:timeout
+1533	:invoke	:read	[[:r 40 nil] [:r 39 nil]]
+1535	:info	:read	[[:r 39 nil]]	:timeout
+1540	:invoke	:read	[[:r 40 nil]]
+1536	:info	:txn	[[:r 39 nil] [:w 37 7]]	:timeout
+1541	:invoke	:read	[[:r 39 nil] [:r 39 nil]]
+1489	:info	:read	[[:r 40 nil] [:r 40 nil]]	:timeout
+1494	:invoke	:read	[[:r 40 nil]]
+1462	:info	:read	[[:r 37 nil]]	:timeout
+1467	:invoke	:write	[[:w 40 6] [:w 41 1]]
+:nemesis	:info	:stop-node	{"n4" ""}
+1533	:info	:read	[[:r 40 nil] [:r 39 nil]]	:timeout
+1540	:info	:read	[[:r 40 nil]]	:timeout
+1538	:invoke	:txn	[[:w 39 12] [:r 40 nil]]
+1545	:invoke	:read	[[:r 37 nil] [:r 40 nil]]
+1541	:info	:read	[[:r 39 nil] [:r 39 nil]]	:timeout
+1546	:invoke	:read	[[:r 37 nil]]
+:nemesis	:info	:resume	:all
+1494	:info	:read	[[:r 40 nil]]	:timeout
+1499	:invoke	:txn	[[:w 39 13] [:r 40 nil]]
+1467	:info	:write	[[:w 40 6] [:w 41 1]]	:timeout
+1472	:invoke	:read	[[:r 39 nil]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:kill	:all
+1538	:info	:txn	[[:w 39 12] [:r 40 nil]]	:timeout
+1543	:invoke	:write	[[:w 37 8] [:w 37 9]]
+1545	:info	:read	[[:r 37 nil] [:r 40 nil]]	:timeout
+1550	:invoke	:read	[[:r 40 nil] [:r 40 nil]]
+1546	:info	:read	[[:r 37 nil]]	:timeout
+1551	:invoke	:write	[[:w 39 14]]
+1499	:info	:txn	[[:w 39 13] [:r 40 nil]]	:timeout
+1504	:invoke	:read	[[:r 40 nil]]
+1543	:info	:write	[[:w 37 8] [:w 37 9]]	:timeout
+1472	:info	:read	[[:r 39 nil]]	:timeout
+1477	:invoke	:read	[[:r 39 nil] [:r 39 nil]]
+1548	:invoke	:txn	[[:r 39 nil] [:w 41 2]]
+1551	:info	:write	[[:w 39 14]]	:timeout
+1556	:invoke	:read	[[:r 40 nil] [:r 40 nil]]
+1550	:info	:read	[[:r 40 nil] [:r 40 nil]]	:timeout
+1555	:invoke	:write	[[:w 40 7]]
+:nemesis	:info	:kill	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:pause	:majority
+1504	:info	:read	[[:r 40 nil]]	:timeout
+1509	:invoke	:txn	[[:w 4 13] [:r 40 nil]]
+1477	:info	:read	[[:r 39 nil] [:r 39 nil]]	:timeout
+1548	:info	:txn	[[:r 39 nil] [:w 41 2]]	:timeout
+:nemesis	:info	:pause	{"n4" "", "n1" "", "n5" ""}
+:nemesis	:info	:resume	:all
+1482	:invoke	:read	[[:r 40 nil]]
+1553	:invoke	:write	[[:w 37 10] [:w 40 8]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-partition	:minority-third
+:nemesis	:info	:start-partition	[:isolated {"n1" #{"n2" "n5" "n4" "n3"}, "n2" #{"n1"}, "n5" #{"n1"}, "n4" #{"n1"}, "n3" #{"n1"}}]
+1556	:info	:read	[[:r 40 nil] [:r 40 nil]]	:timeout
+1561	:invoke	:read	[[:r 40 nil]]
+:nemesis	:info	:kill	:majority
+1555	:info	:write	[[:w 40 7]]	:timeout
+1560	:invoke	:write	[[:w 41 3]]
+1509	:info	:txn	[[:w 4 13] [:r 40 nil]]	:timeout
+1514	:invoke	:write	[[:w 40 9] [:w 40 10]]
+1482	:info	:read	[[:r 40 nil]]	:timeout
+1487	:invoke	:txn	[[:w 5 32] [:r 39 nil]]
+1561	:info	:read	[[:r 40 nil]]	:timeout
+1566	:invoke	:txn	[[:r 40 nil] [:w 40 11]]
+1553	:info	:write	[[:w 37 10] [:w 40 8]]	:timeout
+1558	:invoke	:write	[[:w 40 12] [:w 41 4]]
+1560	:info	:write	[[:w 41 3]]	:timeout
+1514	:info	:write	[[:w 40 9] [:w 40 10]]	:timeout
+1519	:invoke	:write	[[:w 40 13] [:w 40 14]]
+1487	:info	:txn	[[:w 5 32] [:r 39 nil]]	:timeout
+1492	:invoke	:write	[[:w 40 15]]
+1565	:invoke	:read	[[:r 40 nil]]
+:nemesis	:info	:kill	{"n1" "", "n4" "", "n2" ""}
+:nemesis	:info	:start-partition	:majority
+:nemesis	:info	:start-partition	[:isolated {"n1" #{"n2" "n5" "n3"}, "n4" #{"n2" "n5" "n3"}, "n2" #{"n1" "n4"}, "n5" #{"n1" "n4"}, "n3" #{"n1" "n4"}}]
+1566	:info	:txn	[[:r 40 nil] [:w 40 11]]	:timeout
+1571	:invoke	:write	[[:w 40 16]]
+1558	:info	:write	[[:w 40 12] [:w 41 4]]	:timeout
+1563	:invoke	:write	[[:w 40 17]]
+:nemesis	:info	:start	:all
+1519	:info	:write	[[:w 40 13] [:w 40 14]]	:timeout
+1524	:invoke	:write	[[:w 40 18]]
+1492	:info	:write	[[:w 40 15]]	:timeout
+1497	:invoke	:write	[[:w 39 15] [:w 39 16]]
+1565	:info	:read	[[:r 40 nil]]	:timeout
+1570	:invoke	:read	[[:r 39 nil]]
+1571	:info	:write	[[:w 40 16]]	:timeout
+1576	:invoke	:read	[[:r 39 nil]]
+1563	:info	:write	[[:w 40 17]]	:timeout
+1568	:invoke	:read	[[:r 40 nil]]
+1524	:info	:write	[[:w 40 18]]	:timeout
+1529	:invoke	:txn	[[:w 40 19] [:r 37 nil]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:pause	:majority
+1570	:info	:read	[[:r 39 nil]]	:timeout
+1497	:info	:write	[[:w 39 15] [:w 39 16]]	:timeout
+1575	:invoke	:read	[[:r 40 nil]]
+1576	:info	:read	[[:r 39 nil]]	:timeout
+1502	:invoke	:read	[[:r 41 nil] [:r 40 nil]]
+1581	:invoke	:txn	[[:r 39 nil] [:w 39 17]]
+:nemesis	:info	:pause	{"n3" "", "n2" "", "n4" ""}
+:nemesis	:info	:stop-node	"n5"
+1529	:info	:txn	[[:w 40 19] [:r 37 nil]]	:timeout
+1534	:invoke	:write	[[:w 40 20] [:w 39 18]]
+1568	:info	:read	[[:r 40 nil]]	:timeout
+1573	:invoke	:read	[[:r 37 nil] [:r 40 nil]]
+1575	:info	:read	[[:r 40 nil]]	:timeout
+1580	:invoke	:write	[[:w 37 11]]
+1502	:info	:read	[[:r 41 nil] [:r 40 nil]]	:timeout
+1507	:invoke	:write	[[:w 40 21] [:w 40 22]]
+1581	:info	:txn	[[:r 39 nil] [:w 39 17]]	:timeout
+1586	:invoke	:read	[[:r 40 nil]]
+1534	:info	:write	[[:w 40 20] [:w 39 18]]	:timeout
+1539	:invoke	:write	[[:w 39 19] [:w 37 12]]
+1573	:info	:read	[[:r 37 nil] [:r 40 nil]]	:timeout
+1578	:invoke	:read	[[:r 40 nil]]
+1580	:info	:write	[[:w 37 11]]	:timeout
+1585	:invoke	:write	[[:w 40 23]]
+1507	:info	:write	[[:w 40 21] [:w 40 22]]	:timeout
+:nemesis	:info	:stop-node	{"n5" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+1512	:invoke	:write	[[:w 37 13] [:w 40 24]]
+1586	:info	:read	[[:r 40 nil]]	:timeout
+1591	:invoke	:read	[[:r 41 nil] [:r 40 nil]]
+:nemesis	:info	:start-partition	:majorities-ring
+:nemesis	:info	:start-partition	[:isolated {"n5" #{"n4" "n3"}, "n2" #{"n1" "n3"}, "n4" #{"n5" "n1"}, "n3" #{"n2" "n5"}, "n1" #{"n2" "n4"}}]
+1539	:info	:write	[[:w 39 19] [:w 37 12]]	:timeout
+1544	:invoke	:write	[[:w 40 25] [:w 39 20]]
+:nemesis	:info	:kill	:minority
+1578	:info	:read	[[:r 40 nil]]	:timeout
+1583	:invoke	:write	[[:w 39 21]]
+1585	:info	:write	[[:w 40 23]]	:timeout
+1590	:invoke	:write	[[:w 40 26] [:w 40 27]]
+1512	:info	:write	[[:w 37 13] [:w 40 24]]	:timeout
+1517	:invoke	:write	[[:w 40 28]]
+1591	:info	:read	[[:r 41 nil] [:r 40 nil]]	:timeout
+1596	:invoke	:read	[[:r 40 nil] [:r 40 nil]]
+1544	:info	:write	[[:w 40 25] [:w 39 20]]	:timeout
+1549	:invoke	:write	[[:w 40 29]]
+1583	:info	:write	[[:w 39 21]]	:timeout
+1588	:invoke	:read	[[:r 39 nil]]
+1590	:info	:write	[[:w 40 26] [:w 40 27]]	:timeout
+1595	:invoke	:read	[[:r 37 nil]]
+1517	:info	:write	[[:w 40 28]]	:timeout
+1596	:info	:read	[[:r 40 nil] [:r 40 nil]]	:timeout
+1601	:invoke	:txn	[[:r 39 nil] [:w 37 14]]
+1522	:invoke	:read	[[:r 40 nil] [:r 40 nil]]
+:nemesis	:info	:kill	{"n2" "", "n4" ""}
+:nemesis	:info	:resume	:all
+1549	:info	:write	[[:w 40 29]]	:timeout
+1554	:invoke	:read	[[:r 40 nil]]
+1588	:info	:read	[[:r 39 nil]]	:timeout
+1593	:invoke	:write	[[:w 40 30]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-node	nil
+1595	:info	:read	[[:r 37 nil]]	:timeout
+1600	:invoke	:write	[[:w 41 5] [:w 39 22]]
+1522	:info	:read	[[:r 40 nil] [:r 40 nil]]	:timeout
+1527	:invoke	:write	[[:w 40 31] [:w 39 23]]
+1601	:info	:txn	[[:r 39 nil] [:w 37 14]]	:timeout
+1606	:invoke	:txn	[[:r 40 nil] [:w 40 32]]
+1554	:info	:read	[[:r 40 nil]]	:timeout
+1559	:invoke	:write	[[:w 39 24]]
+1593	:info	:write	[[:w 40 30]]	:timeout
+1606	:info	:txn	[[:r 40 nil] [:w 40 32]]	:timeout
+1598	:invoke	:txn	[[:r 39 nil] [:w 43 1]]
+1611	:invoke	:write	[[:w 43 2]]
+1600	:info	:write	[[:w 41 5] [:w 39 22]]	:timeout
+1605	:invoke	:write	[[:w 43 3]]
+1527	:info	:write	[[:w 40 31] [:w 39 23]]	:timeout
+1532	:invoke	:txn	[[:w 43 4] [:r 43 nil]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+1598	:info	:txn	[[:r 39 nil] [:w 43 1]]	:timeout
+1603	:invoke	:write	[[:w 42 1]]
+1611	:info	:write	[[:w 43 2]]	:timeout
+1616	:invoke	:txn	[[:w 43 5] [:r 4 nil]]
+1559	:info	:write	[[:w 39 24]]	:timeout
+:nemesis	:info	:pause	nil
+1564	:invoke	:read	[[:r 43 nil]]
+1605	:info	:write	[[:w 43 3]]	:timeout
+1610	:invoke	:read	[[:r 43 nil]]
+1532	:info	:txn	[[:w 43 4] [:r 43 nil]]	:timeout
+1537	:invoke	:read	[[:r 39 nil] [:r 39 nil]]
+:nemesis	:info	:pause	{"n2" ""}
+:nemesis	:info	:start-node	nil
+1603	:info	:write	[[:w 42 1]]	:timeout
+1608	:invoke	:read	[[:r 37 nil]]
+1616	:info	:txn	[[:w 43 5] [:r 4 nil]]	:timeout
+1621	:invoke	:read	[[:r 39 nil]]
+1564	:info	:read	[[:r 43 nil]]	:timeout
+1569	:invoke	:read	[[:r 41 nil] [:r 43 nil]]
+1610	:info	:read	[[:r 43 nil]]	:timeout
+1615	:invoke	:write	[[:w 43 6]]
+1537	:info	:read	[[:r 39 nil] [:r 39 nil]]	:timeout
+1542	:invoke	:txn	[[:w 43 7] [:r 39 nil]]
+1621	:info	:read	[[:r 39 nil]]	:timeout
+1608	:info	:read	[[:r 37 nil]]	:timeout
+1626	:invoke	:write	[[:w 41 6] [:w 37 15]]
+1613	:invoke	:txn	[[:w 39 25] [:r 43 nil]]
+1569	:info	:read	[[:r 41 nil] [:r 43 nil]]	:timeout
+1574	:invoke	:txn	[[:w 39 26] [:r 43 nil]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+:nemesis	:info	:start-node	nil
+1615	:info	:write	[[:w 43 6]]	:timeout
+1620	:invoke	:write	[[:w 43 8] [:w 43 9]]
+1542	:info	:txn	[[:w 43 7] [:r 39 nil]]	:timeout
+1547	:invoke	:write	[[:w 3 10]]
+1626	:info	:write	[[:w 41 6] [:w 37 15]]	:timeout
+1631	:invoke	:read	[[:r 37 nil] [:r 43 nil]]
+1613	:info	:txn	[[:w 39 25] [:r 43 nil]]	:timeout
+1618	:invoke	:read	[[:r 43 nil] [:r 43 nil]]
+1574	:info	:txn	[[:w 39 26] [:r 43 nil]]	:timeout
+1579	:invoke	:write	[[:w 39 27]]
+1547	:info	:write	[[:w 3 10]]	:timeout
+1552	:invoke	:write	[[:w 39 28] [:w 43 10]]
+1620	:info	:write	[[:w 43 8] [:w 43 9]]	:timeout
+1625	:invoke	:read	[[:r 43 nil] [:r 43 nil]]
+1631	:info	:read	[[:r 37 nil] [:r 43 nil]]	:timeout
+1636	:invoke	:read	[[:r 39 nil]]
+1618	:info	:read	[[:r 43 nil] [:r 43 nil]]	:timeout
+1623	:invoke	:read	[[:r 43 nil]]
+1579	:info	:write	[[:w 39 27]]	:timeout
+1584	:invoke	:read	[[:r 4 nil] [:r 43 nil]]
+:nemesis	:info	:start-node	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+1552	:info	:write	[[:w 39 28] [:w 43 10]]	:timeout
+1557	:invoke	:txn	[[:w 43 11] [:r 43 nil]]
+1625	:info	:read	[[:r 43 nil] [:r 43 nil]]	:timeout
+1636	:info	:read	[[:r 39 nil]]	:timeout
+1630	:invoke	:read	[[:r 43 nil]]
+1641	:invoke	:write	[[:w 37 16]]
+:nemesis	:info	:start-partition	:minority-third
+:nemesis	:info	:start-partition	[:isolated {"n4" #{"n2" "n5" "n1" "n3"}, "n2" #{"n4"}, "n5" #{"n4"}, "n1" #{"n4"}, "n3" #{"n4"}}]
+1623	:info	:read	[[:r 43 nil]]	:timeout
+1628	:invoke	:write	[[:w 37 17]]
+1584	:info	:read	[[:r 4 nil] [:r 43 nil]]	:timeout
+1589	:invoke	:read	[[:r 39 nil] [:r 43 nil]]
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+:nemesis	:info	:kill	:all
+1557	:info	:txn	[[:w 43 11] [:r 43 nil]]	:timeout
+1562	:invoke	:read	[[:r 43 nil]]
+1630	:info	:read	[[:r 43 nil]]	:timeout
+1635	:invoke	:read	[[:r 39 nil] [:r 43 nil]]
+1628	:info	:write	[[:w 37 17]]	:timeout
+1641	:info	:write	[[:w 37 16]]	:timeout
+1633	:invoke	:txn	[[:w 41 7] [:r 37 nil]]
+1646	:invoke	:read	[[:r 39 nil]]
+1589	:info	:read	[[:r 39 nil] [:r 43 nil]]	:timeout
+1594	:invoke	:write	[[:w 42 2] [:w 41 8]]
+1562	:info	:read	[[:r 43 nil]]	:timeout
+1567	:invoke	:read	[[:r 39 nil]]
+1635	:info	:read	[[:r 39 nil] [:r 43 nil]]	:timeout
+1640	:invoke	:write	[[:w 43 12]]
+1646	:info	:read	[[:r 39 nil]]	:timeout
+1651	:invoke	:txn	[[:w 37 18] [:r 37 nil]]
+1633	:info	:txn	[[:w 41 7] [:r 37 nil]]	:timeout
+1638	:invoke	:read	[[:r 43 nil]]
+:nemesis	:info	:kill	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:stop-partition	nil
+:nemesis	:info	:stop-partition	:network-healed
+:nemesis	:info	:resume	:all
+1594	:info	:write	[[:w 42 2] [:w 41 8]]	:timeout
+1599	:invoke	:read	[[:r 41 nil] [:r 43 nil]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start-partition	:majority
+:nemesis	:info	:start-partition	[:isolated {"n2" #{"n5" "n1" "n3"}, "n4" #{"n5" "n1" "n3"}, "n5" #{"n2" "n4"}, "n1" #{"n2" "n4"}, "n3" #{"n2" "n4"}}]
+1567	:info	:read	[[:r 39 nil]]	:timeout
+1572	:invoke	:write	[[:w 42 3]]
+:nemesis	:info	:resume	:all
+1640	:info	:write	[[:w 43 12]]	:timeout
+1645	:invoke	:txn	[[:r 42 nil] [:w 43 13]]
+1638	:info	:read	[[:r 43 nil]]	:timeout
+1643	:invoke	:write	[[:w 43 14]]
+1651	:info	:txn	[[:w 37 18] [:r 37 nil]]	:timeout
+1656	:invoke	:txn	[[:w 43 15] [:r 43 nil]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:start	:all
+1599	:info	:read	[[:r 41 nil] [:r 43 nil]]	:timeout
+1604	:invoke	:txn	[[:r 39 nil] [:w 39 29]]
+1572	:info	:write	[[:w 42 3]]	:timeout
+1577	:invoke	:read	[[:r 43 nil]]
+1645	:info	:txn	[[:r 42 nil] [:w 43 13]]	:timeout
+1650	:invoke	:read	[[:r 4 nil] [:r 41 nil]]
+1643	:info	:write	[[:w 43 14]]	:timeout
+1648	:invoke	:txn	[[:r 41 nil] [:w 43 16]]
+1656	:info	:txn	[[:w 43 15] [:r 43 nil]]	:timeout
+1661	:invoke	:write	[[:w 43 17]]
+1604	:info	:txn	[[:r 39 nil] [:w 39 29]]	:timeout
+1609	:invoke	:read	[[:r 43 nil]]
+:nemesis	:info	:start	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:resume	:all
+1577	:info	:read	[[:r 43 nil]]	:timeout
+1582	:invoke	:write	[[:w 39 30]]
+1650	:info	:read	[[:r 4 nil] [:r 41 nil]]	:timeout
+1655	:invoke	:read	[[:r 37 nil]]
+1648	:info	:txn	[[:r 41 nil] [:w 43 16]]	:timeout
+1653	:invoke	:txn	[[:w 43 18] [:r 43 nil]]
+:nemesis	:info	:resume	{"n1" "", "n2" "", "n3" "", "n4" "", "n5" ""}
+:nemesis	:info	:kill	:minority
+1661	:info	:write	[[:w 43 17]]	:timeout
+1666	:invoke	:write	[[:w 39 31] [:w 43 19]]
+1609	:info	:read	[[:r 43 nil]]	:timeout
+1655	:info	:read	[[:r 37 nil]]	:timeout
+1582	:info	:write	[[:w 39 30]]	:timeout
+1653	:info	:txn	[[:w 43 18] [:r 43 nil]]	:timeout
+1666	:info	:write	[[:w 39 31] [:w 43 19]]	:timeout
+:nemesis	:info	:kill	{"n5" "", "n2" ""}
